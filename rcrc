@@ -1,0 +1,111 @@
+#### see https://github.com/thoughtbot/rcm
+
+## examples
+# COPY_ALWAYS="ssh/id_* weechat/* netrc"
+# COPY_ALWAYS="*"
+# DOTFILES_DIRS="/home/mike/.dotfiles /usr/share/dotfiles"
+# EXCLUDES="irbrc *:*emacs* dotfiles:python*"
+# HOSTNAME="eggplant"
+# TAGS="freebsd development email git laptop gmail notmuch"
+# SYMLINK_DIRS="zprezto texmf"
+# UNDOTTED="texmf"
+
+
+HOSTNAME=$(hostname -s)
+DOTFILES_DIRS=".dotfiles"
+EXCLUDES="lists inc"
+#SYMLINK_DIRS="etc cheats cheat sheets"
+#SYMLINK_DIRS=".dotfiles/local:*"
+
+
+
+
+
+
+ # COPY_ALWAYS    always copy files that match the listed globs, never symlink them.
+ #
+ # DOTFILES_DIRS  the source directories for dotfiles. The first in the list is the canonical source. The default
+ #                value is ~/.dotfiles
+ #
+ # EXCLUDES       a space-separated list of exclude patterns. Exclude patterns are explained in detail in lsrc(1)
+ #                under the section EXCLUDE PATTERN.
+ #
+ # HOSTNAME       the hostname for this computer. This is normally computed using the hostname(1) command, but this
+ #                command is non-standard and can prove unreliable. The HOSTNAME variable forces a known hostname.
+ #
+ # TAGS           the default tags.
+ #
+ # SYMLINK_DIRS   a space-separated list of patterns. Directories matching a pattern are symlinked instead of
+ #                descended. Patterns are explained in detail in lsrc(1) under the section EXCLUDE PATTERN.
+	 
+#######
+	 
+#    COMMON PROBLEM: EXISTING INSTALL SCRIPTS
+#      Many existing dotfile directories have scripts named install or Makefile in the directory directory. This will
+#      cause a ~/.install or ~/.Makefile symlink to be created in your home directory. Use an exclusion pattern to
+#      ignore these.
+#
+#    COMMON PROBLEM: DOTFILES DIRECTORY NOT IN ~/.dotfiles
+#      This all assumes that your dotfiles directory is ~/.dotfiles.  If it is elsewhere and you do not want to move it
+#      you can use the -d DIR option to rcup(1) or modify DOTFILES_DIRS in rcrc(5).
+#
+#            rcup -d configs -v
+#
+#            rcup -x install -x Rakefile -x Makefile -x install.sh
+# HOST-SPECIFIC DOTFILES
+#      You can also mark host-specific files. This will go by the hostname. The rcrc(5) configuration file is a popular
+#      candidate for a host-specific file, since the tags and dotfile directories listed in there are often specific to
+#      a single machine.
+#
+#            mkrc -o .rcrc
+#
+#      If your hostname is difficult to compute, or you otherwise want to use a different hostname, you can use the -B
+#      flag.
+#
+#            mkrc -B eggplant .rcrc
+#
+#      OS X users should see the BUGS section for more details.
+#
+#
+# BUGS
+#      For OS X systems, we strongly encourage the use of the HOSTNAME variable in your rcrc(5).  We use the hostname(1)
+#      program to determine the unique identifier for the host. This program is not specified by POSIX and can vary by
+#      system. On OS X the hostname is unpredictable, and can even change as part of the DHCP handshake.
+#
+#      Hooks go in a directory named hooks.  Two hooks are supported by rcup: pre-up and post-up. These go in files or
+#      directories with predictable filenames: .dotfiles/hooks/pre-up and .dotfiles/hooks/post-up, or
+#      .dotfiles/hooks/pre-up/* and .dotfiles/hooks/post-up/*.  These files must be executable. They are run every time
+#      rcup is run, and therefore must be idempotent.
+#
+# ALGORITHM
+#      It is instructive to understand the process rcup uses when synchronizing your rc files:
+#
+#      1.   The pre-up hook is run.
+#
+#      2.   All non-host, non-tag files without a dot prefix are symlinked to the dotted filename in your home direc-
+#           tory. So, .dotfiles/tigrc is symlinked to ~/.tigrc.
+#
+#      3.   All non-host, non-tag directories have their structure copied to your home directory, then a non-dotted sym-
+#           link is created within.  So for example, .dotfiles/vim/autoload/haskell.vim causes the ~/.vim/autoload
+#           directory to be created, then haskell.vim is symlinked within.
+#
+#      4.   Steps (1) and (2) are applied to host-specific files. These are files under a directory named
+#           host-$HOSTNAME.
+#
+#      5.   Steps (1) and (2) are applied to tag-specific files. These are files under directories named tag-$TAG_NAME,
+#           where $TAG_NAME is the name of each specified tag in turn, taken from the command line or from rcrc(5).
+#
+#      6.   The post-up hook is run.
+
+
+
+
+
+
+
+
+
+
+
+
+

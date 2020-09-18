@@ -1,0 +1,240 @@
+# freshshell.com
+#
+# Examples:
+#
+#   fresh twe4ked/dotfiles shell/functions.sh
+#   fresh jasoncodes/dotfiles aliases/rails.sh
+#   fresh jasoncodes/dotfiles config/tmux.conf --file
+#
+# See http://freshshell.com/readme for documentation.
+
+# export FRESH_RCFILE="$HOME/.freshrc"
+# export FRESH_PATH="$HOME/.fresh"
+# export FRESH_LOCAL="$HOME/.dotfiles"
+
+# FRESH_BIN_PATH="$HOME/Applications/bin"
+# FRESH_NO_PATH_EXPORT=1
+
+export FRESH_PATH="$HOME/.fresh"
+FRESH_BIN_PATH="$HOME/.local/bin"
+
+fresh freshshell/fresh bin/fresh --bin
+fresh freshshell/fresh README.markdown --file=docs/fresh.md
+
+
+
+############ bash #############
+
+
+#fresh  		ashikahmad/PrettyPrompt   	pretty_prompt.sh		
+
+# ####  Filters
+# 
+# Filters allow you to run specified files through arbitrary commands at build time.
+# 
+#     fresh neersighted/dotfiles config/muttrc.erb.asc --file=~/.muttrc --filter="gpg | erb"
+# 
+
+
+#### directory bookmarks 
+	# fresh huyng/bashmarks		bashmarks.sh
+	# fresh rupa/z 		        z.sh
+	#
+	# fresh huyng/bashmarks		README.md       --file=docs/bashmarks.md
+	# fresh rupa/z				README       --file=docs/z.README
+	# fresh rupa/z				z.1       --file=man/man1   ## manpage
+
+
+
+### dircolors
+### the folder ~/.dircolorsdb is arbituary
+
+# To use any of the database files, run this:
+#
+# eval `dircolors /path/to/dircolorsdb`
+#
+# To activate the theme for all future shell sessions, copy or link that file to ~/.dir_colors,
+# and include the above command in your ~/.profile (for bash) or ~/.zshrc (for zsh).
+
+# for c in 256dark ansi-dark ansi-light ansi-universal ;
+# do
+# 	fresh seebi/dircolors-solarized		dircolors.$c		--file=~/.dircolors/dircolors.$c
+# done
+
+
+#### bash completion
+
+# fresh freshshell/fresh contrib/completion/fresh-completion.bash
+# fresh bobthecow/git-flow-completion git-flow-completion.bash
+
+
+# ## provides: editlast
+# # `editlast` opens the last modified file in the editor
+# fresh jasoncodes/dotfiles shell/aliases/editor.sh
+#
+#
+# ## bundler and git aliases
+# fresh jasoncodes/dotfiles shell/aliases/ruby.sh
+# fresh jasoncodes/dotfiles shell/aliases/git.sh
+
+
+
+
+########### zsh #############
+
+
+fresh		ohmyzsh/ohmyzsh		.		--file=~/.oh-my-zsh/
+# fresh		jeremyFreeAgent/oh-my-zsh-powerline-theme		powerline.zsh-theme		--file=~/.oh-my-zsh/themes/
+
+
+
+
+####### vim ########
+
+### https://github.com/overcache/NeoSolarized
+fresh	overcache/NeoSolarized		colors/NeoSolarized.vim		--file=~/.config/nvim/colors/NeoSolarized.vim
+fresh	overcache/NeoSolarized		colors/NeoSolarized.vim		--file=~/.vim/colors/NeoSolarized.vim
+
+### https://github.com/altercation/vim-colors-solarized
+fresh	altercation/vim-colors-solarized		colors/solarized.vim		--file=~/.config/nvim/colors/solarized.vim
+fresh	altercation/vim-colors-solarized		colors/solarized.vim		--file=~/.vim/colors/solarized.vim
+
+## then in .vimrc or ~/.config/nvim/init.vim
+# syntax enable
+# set background=dark
+# colorscheme solarized
+
+
+### https://github.com/junegunn/vim-plug
+fresh		junegunn/vim-plug		plug.vim		--file=~/.config/nvim/site/autoload/plug.vim
+
+
+
+
+
+########## thrid party shell scripts ##########
+
+## https://myrepos.branchable.com/ also available via homebrew
+#fresh joeyh/myrepos				mr	--bin
+
+## https://github.com/visionmedia/deploy
+fresh visionmedia/deploy		bin/deploy	--bin
+
+
+### ======= cheats =======
+	
+	### WARNING: lucaswerkmeister/cheats.sh works in bash only
+	# fresh lucaswerkmeister/cheats	cheats.sh     # bash include
+	
+	### jahendrie/cheat: reimplementation of cheat (python) 
+	## https://github.com/jahendrie/cheat
+	### provides data in .cheat
+	fresh jahendrie/cheat src/cheat.sh  --bin=~/.local/bin/cheat
+	fresh jahendrie/cheat doc/cheat.1.gz --file=man/man1 --filter=gunzip 
+	
+    ## also cheat (pip) and sheets (gems)
+
+
+### git-go
+### see https://github.com/pengwynn/dotfiles
+
+
+## needs hub installed and in PATH. http://defunkt.io/hub
+## define GH_LOGIN with your GitHub user
+
+# fresh pengwynn/dotfiles    bin/git-go  --bin
+
+
+
+### git-subdir
+### see https://github.com/andreyvit/git-subdir
+# fresh andreyvit/git-subdir		git-subdir  --bin
+
+
+
+
+
+################ fresh help ################
+
+
+# # handles updating fresh
+# fresh freshshell/fresh bin/fresh --bin
+#
+# # links your local ~/.dotfiles/gitconfig to ~/.gitconfig (you can change your local directory by setting $FRESH_LOCAL)
+# fresh gitconfig --file
+#
+# # builds jasoncodes' aliases into ~/.fresh/build.sh
+# fresh jasoncodes/dotfiles shell/aliases/\*
+#
+# # builds the shell/aliases/git.sh file into ~/.fresh/build/shell.sh
+# fresh twe4ked/dotfiles shell/aliases/git.sh
+#
+# # links the config/ackrc file to ~/.ackrc
+# fresh twe4ked/dotfiles config/ackrc --file
+#
+# # builds config/notmuch-config.erb with erb and links it to ~/.notmuch-config
+# fresh neersighted/dotfiles config/notmuch-config.erb --file=~/.notmuch-config --filter=erb
+#
+# # links the gemdiff file to ~/bin/gem-diff
+# fresh jasoncodes/dotfiles bin/gemdiff --bin=~/bin/gem-diff
+#
+# # builds the aliases/github.sh file locked to the specified git ref
+# fresh twe4ked/dotfiles aliases/github.sh --ref=bea8134
+
+
+# Config files
+#
+# fresh twe4ked/dotfiles config/ackrc --file
+# fresh example/dotfiles pry.rb --file=~/.pryrc
+# Links the config/ackrc file from twe4ked/dotfiles to ~/.ackrc and the pry.rb file from example/dotfiles to ~/.pryrc.
+#
+# A single config file built from multiple sources
+#
+# fresh jasoncodes/dotfiles config/tmux.conf --file
+# fresh twe4ked/dotfiles config/tmux.conf --file
+#
+# Builds tmux configuration from both jasoncodes/dotfiles and twe4ked/dotfiles together into a single ~/.tmux.conf output.
+
+
+# Conditionally include based on operating system or hostname
+#
+# if [[ "$(uname)" == "Darwin" ]]; then
+#   fresh systems/darwin.sh
+# fi
+# if [[ "$(hostname -s)" == "myhost" ]]; then
+#   fresh systems/myhost.sh
+# fi
+#
+# Merge in host specific configuration
+#
+# e.g. You might want your git user.name and user.email to be set differently at work and at home.
+#
+# fresh-options --file=~/.gitconfig
+#   fresh git/gitconfig.$(hostname -s)
+#   fresh git/gitconfig
+# fresh-options
+#
+# Use loops to generate multiple fresh lines
+#
+# for REPO in tpope/vim-{pathogen,liquid,rsi}; do
+#   fresh $REPO . --file=~/.vim/bundle/$(basename $REPO)/
+# done
+#
+# Ignoring missing files
+#
+# You may wish to silently ignore missing files when scripting your freshrc. You can use the --ignore-missing to do so.
+#
+# fresh zsh/$PROFILE --file=~/.zshrc --ignore-missing
+
+# If you have a section of your freshrc file where multiple lines need the same options you can consider using fresh-options.
+#
+# # ~/.freshrc
+# fresh-options --file=~/.zshrc --marker
+#   fresh rupa/z z.sh
+#   fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
+#   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
+#   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
+#   fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
+# fresh-options # this resets the fresh-options
+
+
