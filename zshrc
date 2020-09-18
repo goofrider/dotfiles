@@ -1,8 +1,11 @@
+##### default editor
+
+export EDITOR=/usr/bin/nano
+export VISUAL="$EDITOR"
+
 ##### ohmyzsh
 
 source ~/.dotfiles/inc/zsh/ohmyzsh.zshrc
-
-
 
 
 
