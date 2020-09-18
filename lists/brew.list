@@ -25,7 +25,7 @@ direnv		# see https://github.com/direnv/direnv
 node
 dnsmasq		# for faking pow.cx
 dive		# inspect docker layers
-
+puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 
 ######### not used #########
 # antigen		# see https://github.com/zsh-users/antigen
