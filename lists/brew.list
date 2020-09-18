@@ -11,7 +11,7 @@ lunchy		# see https://github.com/eddiezane/lunchy
 afsctool	# apfs compression
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
-tag			# Manipulate and query tags on macOS files. See https://github.com/jdberry/tag/
+tag			# Manipulate and query tags on macOS files https://github.com/jdberry/tag/
 
 
 
@@ -19,35 +19,59 @@ tag			# Manipulate and query tags on macOS files. See https://github.com/jdberry
 smartmontools
 
 
-###### handy tools ######
-ack 		# see https://beyondgrep.com/
+###### search tools ######
+ack 					# see https://beyondgrep.com/
 the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
-jq			# see https://github.com/stedolan/jq
+ripgrep					# see https://github.com/BurntSushi/ripgrep
+jq						# see https://github.com/stedolan/jq
+fzf						# general-purpose interactive command-line fuzzy finder https://github.com/junegunn/fzf
+fd						# find alternative		https://github.com/sharkdp/fd
+
+
+
+###### other tools ######
 pigz		# multithreaded zip
-fzf			# general-purpose interactive command-line fuzzy finder. see https://github.com/junegunn/fzf
+
+
+
+###### more shell goodies ######
+## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
+
+z			# bash dir jump 		https://github.com/rupa/z
+autojump	# dir jump 				https://github.com/wting/autojump
+bat			# syntax highlighting 	https://github.com/sharkdp/bat
+exa			# ls alternative
+asciinema	# record terminal actions as animations https://asciinema.org/
+			# and then use 'svg-term' (npm) to convert to SVG  https://github.com/marionebl/svg-term-cli
 
 
 ###### cheatsheets ######
-cheat		# see https://github.com/cheat/cheat
-isacikgoz/taps/tldr		# interactive tldr in golang. see https://github.com/isacikgoz/tldr
-tealdeer	# tldr in rust. see https://github.com/dbrgn/tealdeer
-
+cheat					# now in golang					https://github.com/cheat/cheat
 ## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
+isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
+tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
+
 
 
 
 ################## devel #################
-rbenv		# see https://github.com/rbenv/rbenv
-pyenv		# see https://github.com/pyenv/pyenv
-direnv		# see https://github.com/direnv/direnv
+rbenv					# see https://github.com/rbenv/rbenv
+pyenv					# see https://github.com/pyenv/pyenv
+direnv					# see https://github.com/direnv/direnv
 node
-dnsmasq		# for faking pow.cx
-dive		# inspect docker layers
+dnsmasq					# for faking pow.cx
+dive					# inspect docker layers
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
+
+wrk						# benchmarking your HTTP APIs			https://github.com/wg/wrk
+bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
+hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
+
+
 
 
 ######### not used #########
-antibody	# see https://github.com/getantibody/antibody
+antibody		# see https://github.com/getantibody/antibody
 # antigen		# see https://github.com/zsh-users/antigen
 chruby
 ruby-install
@@ -66,8 +90,8 @@ hub			# see https://hub.github.com/
 
 ### manage git repos
 repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
-ghq		# centralized cloned repos. see https://github.com/x-motemen/ghq
-# mr		# last updated in 2018. Use 'repo' instead. see https://myrepos.branchable.com/
+ghq			# centralized cloned repos https://github.com/x-motemen/ghq
+# mr		# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
 
 ## also 'gita' in pip3. see https://github.com/nosarthur/gita
 
@@ -83,7 +107,7 @@ ghq		# centralized cloned repos. see https://github.com/x-motemen/ghq
 # gnupg2
 # gpg-agent
 # pinentry-mac
-# autojump	# see https://github.com/wting/autojump
+# autojump		# see https://github.com/wting/autojump
 
 
 # android-platform-tools

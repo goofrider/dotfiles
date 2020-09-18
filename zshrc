@@ -39,5 +39,36 @@ eval "$(pyenv init -)"
 eval "$(direnv hook zsh)"
 
 
+########## homebrew ##########
+
+##### homebrew completions
+# Bash completion has been installed to:
+#   /Users/goofrider/.brew/etc/bash_completion.d
+#
+# zsh completions have been installed to:
+#   /Users/goofrider/.brew/share/zsh/site-functions
+
+
+#### z (via homebrew)
+# see see https://github.com/rupa/z
+#
+# For Bash or Zsh, put something like this in your $HOME/.bashrc or $HOME/.zshrc:
+  . /Users/goofrider/.brew/etc/profile.d/z.sh
+
+
+#### automjump (via homebrew)
+# see https://github.com/wting/autojump
+#
+# Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
+# to source the file to update your current session):
+  [ -f /Users/goofrider/.brew/etc/profile.d/autojump.sh ] && . /Users/goofrider/.brew/etc/profile.d/autojump.sh
+
+# If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
+#   [ -f /Users/goofrider/.brew/share/autojump/autojump.fish ]; and source /Users/goofrider/.brew/share/autojump/autojump.fish
+
+
+  
+
+
 
 
