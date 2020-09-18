@@ -32,6 +32,8 @@ cheat		# see https://github.com/cheat/cheat
 isacikgoz/taps/tldr		# tldr in golang. see https://github.com/isacikgoz/tldr
 tealdeer	# tldr in rust. see https://github.com/dbrgn/tealdeer
 
+## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
+
 
 
 ################## devel #################
