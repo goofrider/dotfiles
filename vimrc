@@ -1,5 +1,7 @@
 " ##### solarized theme #####
-syntax enable
-set background=dark
-colorscheme solarized
+" ## unreadable in terminal
+
+""syntax enable
+""set background=dark
+""colorscheme solarized
 
