@@ -14,7 +14,8 @@ mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
 tag			# Manipulate and query tags on macOS files. See https://github.com/jdberry/tag/
 tmux
-rcm
+rcm			# see https://github.com/thoughtbot/rcm
+antibody	# see https://github.com/getantibody/antibody
 
 
 ######### devel #########
@@ -27,8 +28,7 @@ dive		# inspect docker layers
 
 
 ######### not used #########
-antibody	# see https://github.com/getantibody/antibody
-antigen		# see https://github.com/zsh-users/antigen
+# antigen		# see https://github.com/zsh-users/antigen
 chruby
 ruby-install
 
