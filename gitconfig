@@ -2,3 +2,6 @@
 	protocol = https
 [core]
 	editor = nano
+[user]
+	name = Goofrider
+	email = goofrider@gmail.com
