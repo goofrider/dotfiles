@@ -1,5 +1,10 @@
 ####### PATH #######
 
+
+## VSCode code command
+export PATH="/Applications/Code/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+
 ## system ruby user-gem path
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 
