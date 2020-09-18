@@ -1,25 +1,40 @@
 ############## Brew 2020 ##############
-smartmontools
-hub			# see https://hub.github.com/
-rcm			# see https://github.com/thoughtbot/rcm
-ack 		# see https://beyondgrep.com/
-the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
-jq			# see https://github.com/stedolan/jq
-lunchy		# see https://github.com/eddiezane/lunchy
-pwgen
+
+###### core tools ######
+rcm			# see https://github.com/thoughtbot/rcmpwgen
 wget
+tmux
+
+
+###### osx tools ######
+lunchy		# see https://github.com/eddiezane/lunchy
 afsctool	# apfs compression
-pigz		# multithreaded zip
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
 tag			# Manipulate and query tags on macOS files. See https://github.com/jdberry/tag/
-tmux
-rcm			# see https://github.com/thoughtbot/rcm
-antibody	# see https://github.com/getantibody/antibody
+
+
+
+###### system tools ######
+smartmontools
+
+
+###### handy tools ######
+ack 		# see https://beyondgrep.com/
+the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
+jq			# see https://github.com/stedolan/jq
+pigz		# multithreaded zip
+fzf			# general-purpose interactive command-line fuzzy finder. see https://github.com/junegunn/fzf
+
+
+###### cheatsheets ######
 cheat		# see https://github.com/cheat/cheat
+isacikgoz/taps/tldr		# tldr in golang. see https://github.com/isacikgoz/tldr
+tealdeer	# tldr in rust. see https://github.com/dbrgn/tealdeer
 
 
-######### devel #########
+
+################## devel #################
 rbenv		# see https://github.com/rbenv/rbenv
 pyenv		# see https://github.com/pyenv/pyenv
 direnv		# see https://github.com/direnv/direnv
@@ -28,14 +43,16 @@ dnsmasq		# for faking pow.cx
 dive		# inspect docker layers
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 
+
 ######### not used #########
+antibody	# see https://github.com/getantibody/antibody
 # antigen		# see https://github.com/zsh-users/antigen
 chruby
 ruby-install
 
 
 ######### git tools #########
-
+hub			# see https://hub.github.com/
 # gist
 # git-crypt
 # git-deploy
@@ -47,11 +64,10 @@ ruby-install
 
 ### manage git repos
 repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
-# ghq		# centralized cloned repos. see https://github.com/x-motemen/ghq
-# mr		# last updated 2018. Use 'repo' instead. see https://myrepos.branchable.com/
+ghq		# centralized cloned repos. see https://github.com/x-motemen/ghq
+# mr		# last updated in 2018. Use 'repo' instead. see https://myrepos.branchable.com/
 
-### also in pip3
-# gita		# see https://github.com/nosarthur/gita
+## also 'gita' in pip3. see https://github.com/nosarthur/gita
 
 
 ######### more #########
@@ -62,12 +78,10 @@ repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
 # todo-txt
 # doing
 # tree
-# direnv		# see https://github.com/direnv/direnv
 # gnupg2
 # gpg-agent
 # pinentry-mac
 # autojump	# see https://github.com/wting/autojump
-# tag		# see https://github.com/jdberry/tag/
 
 
 # android-platform-tools
@@ -80,7 +94,7 @@ repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
 
 # brew-cask
 # brew-desc # DEAD
-# brew-gem  # Installs to Cellar, see https://github.com/sportngin/brew-gem
+# brew-gem  # Installs gems to Cellar, see https://github.com/sportngin/brew-gem
 # brew-pip	# see https://github.com/hanxue/brew-pip
 
 
@@ -103,7 +117,6 @@ repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
 # hub
 # jsvc
 # logstash
-# mr
 # mysql-connector-c
 # notmuch
 # osxutils
@@ -115,7 +128,6 @@ repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
 # redis
 # sqlite
 # tinyproxy
-# tmux
 # todo-txt
 # tree
 # unrar
