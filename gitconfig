@@ -2,6 +2,7 @@
 	protocol = https
 [core]
 	editor = nano
+	excludesfile = /Users/goofrider/.gitignore_global
 [user]
 	name = Goofrider
 	email = goofrider@gmail.com
@@ -10,3 +11,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /private/var/folders/cn/w1j661_543v9g958mt_5t7br0000gn/T/AppTranslocation/BC2D6F87-D3F2-4DBA-AEC9-A9401226C5FC/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/goofrider/.stCommitMsg
