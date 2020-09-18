@@ -121,19 +121,6 @@ fresh		junegunn/vim-plug		plug.vim		--file=~/.config/nvim/site/autoload/plug.vim
 fresh visionmedia/deploy		bin/deploy	--bin
 
 
-### ======= cheats =======
-	
-	### WARNING: lucaswerkmeister/cheats.sh works in bash only
-	# fresh lucaswerkmeister/cheats	cheats.sh     # bash include
-	
-	### jahendrie/cheat: reimplementation of cheat (python) 
-	## https://github.com/jahendrie/cheat
-	### provides data in .cheat
-	fresh jahendrie/cheat src/cheat.sh  --bin=~/.local/bin/cheat
-	fresh jahendrie/cheat doc/cheat.1.gz --file=man/man1 --filter=gunzip 
-	
-    ## also cheat (pip) and sheets (gems)
-
 
 ### git-go
 ### see https://github.com/pengwynn/dotfiles

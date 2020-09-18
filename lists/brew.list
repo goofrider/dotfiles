@@ -16,6 +16,7 @@ tag			# Manipulate and query tags on macOS files. See https://github.com/jdberry
 tmux
 rcm			# see https://github.com/thoughtbot/rcm
 antibody	# see https://github.com/getantibody/antibody
+cheat		# see https://github.com/cheat/cheat
 
 
 ######### devel #########
