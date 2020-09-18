@@ -31,10 +31,15 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 ###### other tools ######
 pigz		# multithreaded zip
+p7zip		# 7zip cli
 tree
 
 
 ###### more shell goodies ######
+starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
+			# dep: nerd font
+
+
 ## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
 
 z			# bash dir jump 		https://github.com/rupa/z
@@ -48,6 +53,8 @@ asciinema	# record terminal actions as animations https://asciinema.org/
 
 ###### cheatsheets ######
 cheat					# now in golang					https://github.com/cheat/cheat
+navi					# https://github.com/denisidoro/navi
+
 ## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
 #isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
 tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
@@ -81,6 +88,7 @@ ruby-install
 
 
 ######### git tools #########
+gh			# Official Github CLI https://cli.github.com/
 hub			# see https://hub.github.com/
 # gist
 # git-crypt
@@ -100,10 +108,25 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 
 
 
+
+
 ######## fonts #########
 # Usage:
 #     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
 #     $ brew cask install font-inconsolata
+
+font-roboto-mono					# dependancy: svn
+font-roboto-mono-for-powerline
+font-menlo-for-powerline
+font-source-code-pro
+font-source-code-pro-for-powerline	# dependancy: svn
+
+
+
+######### casks ########
+lepton			# snippet manager https://github.com/hackjutsu/Lepton
+
+
 
 
 

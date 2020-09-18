@@ -66,6 +66,11 @@ eval "$(direnv hook zsh)"
 # If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
 #   [ -f /Users/goofrider/.brew/share/autojump/autojump.fish ]; and source /Users/goofrider/.brew/share/autojump/autojump.fish
 
+#### starship (cross-shell prompt)
+## see https://github.com/starship/starship
+
+# eval "$(starship init zsh)"
+
 
   
 
