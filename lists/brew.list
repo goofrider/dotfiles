@@ -31,7 +31,7 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 ###### other tools ######
 pigz		# multithreaded zip
-
+tree
 
 
 ###### more shell goodies ######
@@ -42,13 +42,14 @@ autojump	# dir jump 				https://github.com/wting/autojump
 bat			# syntax highlighting 	https://github.com/sharkdp/bat
 exa			# ls alternative
 asciinema	# record terminal actions as animations https://asciinema.org/
+			# dependancy: python 3.8
 			# and then use 'svg-term' (npm) to convert to SVG  https://github.com/marionebl/svg-term-cli
 
 
 ###### cheatsheets ######
 cheat					# now in golang					https://github.com/cheat/cheat
 ## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
-isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
+#isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
 tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
 
 
@@ -63,7 +64,9 @@ dnsmasq					# for faking pow.cx
 dive					# inspect docker layers
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 
-wrk						# benchmarking your HTTP APIs			https://github.com/wg/wrk
+#wrk					# benchmarking your HTTP APIs			https://github.com/wg/wrk
+						# also https://github.com/giltene/wrk2
+						# A constant throughput, correct latency recording variant of wrk
 bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
 hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
 
@@ -96,6 +99,15 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 ## also 'gita' in pip3. see https://github.com/nosarthur/gita
 
 
+
+######## fonts #########
+# Usage:
+#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
+#     $ brew cask install font-inconsolata
+
+
+
+
 ######### more #########
 
 # osxutils		# see https://github.com/specious/osxutils
@@ -122,6 +134,43 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 # brew-desc # DEAD
 # brew-gem  # Installs gems to Cellar, see https://github.com/sportngin/brew-gem
 # brew-pip	# see https://github.com/hanxue/brew-pip
+
+
+
+
+########### notes ###########
+
+
+# ==> Caveats
+# ==> sqlite
+# sqlite is keg-only, which means it was not symlinked into /Users/goofrider/.brew,
+# because macOS already provides this software and installing another version in
+# parallel can cause all kinds of trouble.
+#
+# If you need to have sqlite first in your PATH run:
+#   echo 'export PATH="/Users/goofrider/.brew/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+#
+# For compilers to find sqlite you may need to set:
+#   export LDFLAGS="-L/Users/goofrider/.brew/opt/sqlite/lib"
+#   export CPPFLAGS="-I/Users/goofrider/.brew/opt/sqlite/include"
+#
+# For pkg-config to find sqlite you may need to set:
+#   export PKG_CONFIG_PATH="/Users/goofrider/.brew/opt/sqlite/lib/pkgconfig"
+#
+# ==> python@3.8
+# Python has been installed as
+#   /Users/goofrider/.brew/bin/python3
+#
+# Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+# `python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+#   /Users/goofrider/.brew/opt/python@3.8/libexec/bin
+#
+# You can install Python packages with
+#   pip3 install <package>
+# They will install into the site-package directory
+#   /Users/goofrider/.brew/lib/python3.8/site-packages
+#
+# See: https://docs.brew.sh/Homebrew-and-Python
 
 
 
