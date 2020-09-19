@@ -1,10 +1,11 @@
-##### default editor
+BREWHOME="$(brew --prefix)"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
+##### default editor
 export EDITOR=/usr/bin/nano
 export VISUAL="$EDITOR"
 
 ##### ohmyzsh
-
 source ~/.dotfiles/inc/zsh/ohmyzsh.zshrc
 
 
@@ -53,7 +54,8 @@ eval "$(direnv hook zsh)"
 # see see https://github.com/rupa/z
 #
 # For Bash or Zsh, put something like this in your $HOME/.bashrc or $HOME/.zshrc:
-  . /Users/goofrider/.brew/etc/profile.d/z.sh
+  . "$BREWHOME/etc/profile.d/z.sh"
+
 
 
 #### automjump (via homebrew)
@@ -61,15 +63,21 @@ eval "$(direnv hook zsh)"
 #
 # Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
 # to source the file to update your current session):
-  [ -f /Users/goofrider/.brew/etc/profile.d/autojump.sh ] && . /Users/goofrider/.brew/etc/profile.d/autojump.sh
+  [ -f "$BREWHOME/etc/profile.d/autojump.sh" ] && . "$BREWHOME/etc/profile.d/autojump.sh"
 
 # If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
 #   [ -f /Users/goofrider/.brew/share/autojump/autojump.fish ]; and source /Users/goofrider/.brew/share/autojump/autojump.fish
 
+
+
 #### starship (cross-shell prompt)
 ## see https://github.com/starship/starship
-
 # eval "$(starship init zsh)"
+
+
+
+#### byobu
+export BYOBU_PREFIX=$BREWHOME
 
 
   

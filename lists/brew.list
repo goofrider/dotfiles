@@ -4,7 +4,7 @@
 rcm			# see https://github.com/thoughtbot/rcmpwgen
 wget
 tmux
-
+byobu
 
 ###### osx tools ######
 lunchy		# see https://github.com/eddiezane/lunchy
@@ -29,16 +29,30 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 
 
+
 ###### other tools ######
 pigz		# multithreaded zip
 p7zip		# 7zip cli
 tree
+htop
 
 
-###### more shell goodies ######
+#### fonts 
+# Usage:
+#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
+#     $ brew cask install font-inconsolata
+
+font-roboto-mono					# dependancy: svn
+font-roboto-mono-for-powerline
+font-menlo-for-powerline
+font-source-code-pro
+font-source-code-pro-for-powerline	# dependancy: svn
+
+
+
+########### more shell goodies ############
 starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
 			# dep: nerd font
-
 
 ## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
 
@@ -66,28 +80,37 @@ tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
 rbenv					# see https://github.com/rbenv/rbenv
 pyenv					# see https://github.com/pyenv/pyenv
 direnv					# see https://github.com/direnv/direnv
-node
 dnsmasq					# for faking pow.cx
 dive					# inspect docker layers
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
+node
+
+
+#### deploy
+ansible
+salt					# dep: python, zeromq
+
+
+#### node tools
+nodeenv
+pnpm
+yarn
+rush
+
+#### other tools
+bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
+hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
 
 #wrk					# benchmarking your HTTP APIs			https://github.com/wg/wrk
 						# also https://github.com/giltene/wrk2
 						# A constant throughput, correct latency recording variant of wrk
-bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
-hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
 
 
 
 
-######### not used #########
-antibody		# see https://github.com/getantibody/antibody
-# antigen		# see https://github.com/zsh-users/antigen
-chruby
-ruby-install
 
 
-######### git tools #########
+##### git tools
 gh			# Official Github CLI https://cli.github.com/
 hub			# see https://hub.github.com/
 # gist
@@ -108,18 +131,12 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 
 
 
+######### not used #########
+antibody		# see https://github.com/getantibody/antibody
+# antigen		# see https://github.com/zsh-users/antigen
+chruby
+ruby-install
 
-
-######## fonts #########
-# Usage:
-#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
-#     $ brew cask install font-inconsolata
-
-font-roboto-mono					# dependancy: svn
-font-roboto-mono-for-powerline
-font-menlo-for-powerline
-font-source-code-pro
-font-source-code-pro-for-powerline	# dependancy: svn
 
 
 

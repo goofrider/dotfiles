@@ -117,10 +117,12 @@ fresh		junegunn/vim-plug		plug.vim		--file=~/.config/nvim/site/autoload/plug.vim
 ## https://myrepos.branchable.com/ also available via homebrew
 #fresh joeyh/myrepos				mr	--bin
 
-## https://github.com/visionmedia/deploy
+## deploy		https://github.com/visionmedia/deploy
 fresh visionmedia/deploy		bin/deploy	--bin
 
 
+## tmpmail		https://github.com/sdushantha/tmpmail
+fresh sdushantha/tmpmail		tmpmail		--bin
 
 ### git-go
 ### see https://github.com/pengwynn/dotfiles
