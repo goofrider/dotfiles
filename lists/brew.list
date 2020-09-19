@@ -95,7 +95,11 @@ salt					# dep: python, zeromq
 nodeenv
 pnpm
 yarn
-rush
+
+
+### static gen
+hugo
+eleventy
 
 #### other tools
 bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
@@ -137,11 +141,6 @@ antibody		# see https://github.com/getantibody/antibody
 chruby
 ruby-install
 
-
-
-
-######### casks ########
-lepton			# snippet manager https://github.com/hackjutsu/Lepton
 
 
 
