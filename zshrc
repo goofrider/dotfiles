@@ -15,40 +15,34 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 
 
 
-######### rbenv #########
-## https://github.com/rbenv/rbenv
+##### asdf #####
+# source $(brew --prefix asdf)/asdf.sh
+source $BREWHOME/opt/asdf/asdf.sh
 
+##### rbenv #####
+## https://github.com/rbenv/rbenv
 eval "$(rbenv init -)"
 
 
-
-######### pyenv #########
+##### pyenv #####
 ## https://github.com/pyenv/pyenv
 ## Please make sure eval "$(pyenv init -)" is placed toward the end of the shell configuration file 
 ## since it manipulates PATH during the initialization.
-
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 
-
-
-######### direnv #########
+##### direnv #####
 ## https://direnv.net/
 ## https://github.com/direnv/direnv
-
 eval "$(direnv hook zsh)"
 
 
+
+
+
+
 ########## homebrew ##########
-
-##### homebrew completions
-# Bash completion has been installed to:
-#   /Users/goofrider/.brew/etc/bash_completion.d
-#
-# zsh completions have been installed to:
-#   /Users/goofrider/.brew/share/zsh/site-functions
-
 
 #### z (via homebrew)
 # see see https://github.com/rupa/z
@@ -75,9 +69,10 @@ eval "$(direnv hook zsh)"
 # eval "$(starship init zsh)"
 
 
-
 #### byobu
 export BYOBU_PREFIX=$BREWHOME
+
+
 
 
   

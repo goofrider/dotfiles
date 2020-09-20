@@ -12,14 +12,16 @@ afsctool	# apfs compression
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
 tag			# Manipulate and query tags on macOS files https://github.com/jdberry/tag/
-
-
+osxutils	# see https://github.com/specious/osxutils
 
 ###### system tools ######
 smartmontools
 
 
-###### search tools ######
+###### other stuff ######
+buku                    # bookmark manager https://github.com/jarun/Buku
+
+###### txt search tools ######
 ack 					# see https://beyondgrep.com/
 the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
 ripgrep					# see https://github.com/BurntSushi/ripgrep
@@ -30,7 +32,7 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 
 
-###### other tools ######
+###### other utilities ######
 pigz		# multithreaded zip
 p7zip		# 7zip cli
 tree
@@ -77,14 +79,19 @@ tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
 
 
 ################## devel #################
-rbenv					# see https://github.com/rbenv/rbenv
-pyenv					# see https://github.com/pyenv/pyenv
 direnv					# see https://github.com/direnv/direnv
 dnsmasq					# for faking pow.cx
 dive					# inspect docker layers
+
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 node
+kotlin
 
+rbenv					# see https://github.com/rbenv/rbenv
+pyenv					# see https://github.com/pyenv/pyenv
+nodeenv
+n
+asdf
 
 #### deploy
 ansible
@@ -92,10 +99,9 @@ salt					# dep: python, zeromq
 
 
 #### node tools
-nodeenv
 pnpm
 yarn
-
+bower
 
 ### static gen
 hugo
@@ -119,17 +125,18 @@ gh			# Official Github CLI https://cli.github.com/
 hub			# see https://hub.github.com/
 # gist
 # git-crypt
-# git-deploy
-# git-extras
-# git-flow
-# git-url-sub
+git-extras
+git-flow
+git-url-sub
 # gitsh
-# legit		# see https://frostming.github.io/legit/
+legit		# see https://frostming.github.io/legit/
+            # undo, sync might conflict with git-extras
+            # also: switch, publish, unpublish, branches
 
 ### manage git repos
 repo		# manage multiple git repos https://gerrit.googlesource.com/git-repo/
-ghq			# centralized cloned repos https://github.com/x-motemen/ghq
-# mr		# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
+mr		# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
+#ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 
 ## also 'gita' in pip3. see https://github.com/nosarthur/gita
 
@@ -137,7 +144,7 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 
 ######### not used #########
 antibody		# see https://github.com/getantibody/antibody
-# antigen		# see https://github.com/zsh-users/antigen
+# antigen		# see https://github.com/zsh-users/antigen # SLOW
 chruby
 ruby-install
 
@@ -149,22 +156,17 @@ ruby-install
 
 ######### more #########
 
-# osxutils		# see https://github.com/specious/osxutils
 # notmuch
 # unrar
 # todo-txt
 # doing
-# tree
 # gnupg2
 # gpg-agent
 # pinentry-mac
-# autojump		# see https://github.com/wting/autojump
 
 
 # android-platform-tools
-# ansible
 # appswitch  # DEAD formula, see https://github.com/nriley/appswitch/
-# vcsh
 # xapian
 # go
 
@@ -217,35 +219,24 @@ ruby-install
 ############## brew-list 2018 ##############
 
 # android-platform-tools
-# ansible
-# appswitch		# unmaintained https://github.com/nriley/appswitch
-# autojump
-# chbspasswd	# A password generator inspired by XKCD 936
-# direnv
-# dirmngr
-# dock
 # gitbucket
 # gnupg2
 # go
 # gpg-agent
-# hub
 # jsvc
 # logstash
 # mysql-connector-c
 # notmuch
 # osxutils
-# pass
 # platypus
 # pyside
 # pyside-tools
 # qt
 # redis
-# sqlite
 # tinyproxy
 # todo-txt
 # tree
 # unrar
-# vcsh
 # xapian
 # xz
 
