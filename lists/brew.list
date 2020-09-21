@@ -8,6 +8,7 @@ byobu
 
 ###### osx tools ######
 lunchy		# see https://github.com/eddiezane/lunchy
+lunchy-go   # see https://github.com/sosedoff/lunchy-go
 afsctool	# apfs compression
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
