@@ -6,6 +6,10 @@ wget
 tmux
 byobu
 
+#brew-pip       # can't find pip. still need to set path to $(brew --prefix)/share/python
+#brew-gem        # deps: homebrew ruby (when installing gems)
+
+
 ###### osx tools ######
 lunchy		# see https://github.com/eddiezane/lunchy
 lunchy-go   # see https://github.com/sosedoff/lunchy-go
@@ -84,15 +88,28 @@ direnv					# see https://github.com/direnv/direnv
 dnsmasq					# for faking pow.cx
 dive					# inspect docker layers
 
+heroku/brew/heroku
+
+
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 node
 kotlin
 
 rbenv					# see https://github.com/rbenv/rbenv
 pyenv					# see https://github.com/pyenv/pyenv
+asdf
+
+rbenv-communal-gems
+rbenv-default-gems
+# jawshooah/pyenv/pyenv-update              # need HEAD
+# jawshooah/pyenv/pyenv-default-packages      # not working
+# pyenv-virtualenv
+
+
+
 nodeenv
 n
-asdf
+
 
 #### deploy
 ansible

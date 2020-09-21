@@ -40,6 +40,20 @@ eval "$(direnv hook zsh)"
 
 
 
+### tools
+
+### s 
+# https://github.com/davesque/s
+#
+# Clone the s repo into a directory
+# Add the following somewhere in your .bashrc:
+#   export S_BIN_PATH=<path to your script directory>
+#   export PATH="<path to s repo directory>:$S_BIN_PATH:$PATH"
+
+# export S_BIN_PATH="$HOME/.scripts"
+# export PATH="$HOME/.fresh/source/davesque/s:$S_BIN_PATH:$PATH"
+
+
 
 
 ########## homebrew ##########

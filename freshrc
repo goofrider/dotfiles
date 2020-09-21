@@ -29,20 +29,10 @@ fresh freshshell/fresh README.markdown --file=docs/fresh.md
 #fresh  		ashikahmad/PrettyPrompt   	pretty_prompt.sh		
 
 # ####  Filters
-# 
 # Filters allow you to run specified files through arbitrary commands at build time.
-# 
+#
 #     fresh neersighted/dotfiles config/muttrc.erb.asc --file=~/.muttrc --filter="gpg | erb"
 # 
-
-
-#### directory bookmarks 
-	# fresh huyng/bashmarks		bashmarks.sh
-	# fresh rupa/z 		        z.sh
-	#
-	# fresh huyng/bashmarks		README.md       --file=docs/bashmarks.md
-	# fresh rupa/z				README       --file=docs/z.README
-	# fresh rupa/z				z.1       --file=man/man1   ## manpage
 
 
 
@@ -83,7 +73,7 @@ fresh freshshell/fresh README.markdown --file=docs/fresh.md
 ########### zsh #############
 
 
-fresh		ohmyzsh/ohmyzsh		.		--file=~/.oh-my-zsh/
+# fresh		ohmyzsh/ohmyzsh		.		--file=~/.oh-my-zsh/
 # fresh		jeremyFreeAgent/oh-my-zsh-powerline-theme		powerline.zsh-theme		--file=~/.oh-my-zsh/themes/
 
 
@@ -123,6 +113,10 @@ fresh visionmedia/deploy		bin/deploy	--bin
 
 ## tmpmail		https://github.com/sdushantha/tmpmail
 fresh sdushantha/tmpmail		tmpmail		--bin
+
+
+## s            https://github.com/davesque/s
+fresh davesque/s				s			--bin
 
 ### git-go
 ### see https://github.com/pengwynn/dotfiles

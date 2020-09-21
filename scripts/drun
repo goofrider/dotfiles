@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+set -o nounset
+set -o errexit
+
+
+
+case "$1" in
+	ngx-proxy)
+	    docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro \
+			--name ngx-proxy jwilder/nginx-proxy
+		;;
+	dokku)
+		docker run \
+		  -e DOKKU_HOSTNAME=dokku.vm --name dokku -p 3022:22 -p 3020:80 -p 3021:443 \
+		  -e VIRTUAL_HOST="*.dokku.vm,dokku.vm,*.dokku" -e VIRTUAL_PORT=80 \
+		  --volume ~/Local/docker-data/dokku:/mnt/dokku \
+		  --volume /var/run/docker.sock:/var/run/docker.sock \
+		  dokku/dokku:0.21.4
+	    ;;
+	osearch)
+	    docker run -d -p 9013:9090 -e VIRTUAL_HOST=osearch.\* \
+	    --name osearch \
+	    -v ~/Local/docker-data/opensearchserver:/srv \
+	    alexandretoyer/opensearchserver
+	    ;;
+	searx)
+		docker run --rm -d -v ~/Local/docker-data/searx:/etc/searx \
+			-p 9010:8080 -e VIRTUAL_HOST=searx.\* --name searx searx/searx
+	    ;;
+	yacy)
+		docker run -d --name yacy -p 9011:8090  \
+		  --log-opt max-size=200m --log-opt max-file=2 \
+		  -e VIRTUAL_HOST="yacy.*"  -e VIRTUAL_PORT=8090 \
+		  -v ~/Local/docker-data/yacy:/opt/yacy_search_server/DATA \
+		  yacy/yacy_search_server
+	    ;;
+	yacy-pvt)
+		docker run -d --name yacy-pvt -p 9012:8090  \
+		  -v ~/Local/docker-data/yacy-pvt:/opt/yacy_search_server/DATA \
+		  -e VIRTUAL_HOST="yacy-pvt.*"  -e VIRTUAL_PORT=8090 \
+		  --log-opt max-size=200m --log-opt max-file=2 \
+		  yacy/yacy_search_server
+		;;
+	bukuserver)
+		docker run -it --rm -v ~/.local/share/buku:/root/.local/share/buku \
+			-p 5001:5001 bukuserver
+		;;
+	linkding)
+	    docker run -d --name linkding -p 9020:9090 \
+		    -v ~/Local/docker-data/linkding:/etc/linkding/data \
+		    -e VIRTUAL_HOST="linkding.*" \
+		    sissbruecker/linkding:latest
+		;;
+	golinks)
+	    docker run -it -d -p 9021:8000 \
+	    --name golinks -e VIRTUAL_HOST=golinks.\* \
+	    prologic/golinks
+		;;
+	shaarli)
+		docker run -d --name shaarli -p 9022:80 -e VIRTUAL_HOST="shaarli.*" \
+		   -v ~/Local/docker-data/shaarli-data:/var/www/shaarli/data \
+		   -v shaarli-cache:/var/www/shaarli/cache \
+		   shaarli/shaarli:latest
+		;;
+ 
+	*)
+	    echo $"Usage: $0 {image name} {container name}"
+	    exit 1
+
+esac
+

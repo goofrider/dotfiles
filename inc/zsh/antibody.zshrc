@@ -14,7 +14,7 @@ ZSH_THEME=robbyrussell
 
 # you can do plugins the omz way if you want... or load with antibody later
 plugins=(
-	git
+	git rbenv pyenv direnv asdf docker gem pip npm
 )
 
 # tell omz where it lives

@@ -18,3 +18,6 @@ export PATH="$HOME/.brew/bin:$PATH"
 ## ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
+## ~/.scripts
+export PATH="$HOME/.scripts:$PATH"
+
