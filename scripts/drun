@@ -29,14 +29,14 @@ case "$1" in
 			-p 9010:8080 -e VIRTUAL_HOST=searx.\* --name searx searx/searx
 	    ;;
 	yacy)
-		docker run -d --name yacy -p 9011:8090  \
+		docker run -d --name yacy -p 9011:8090 9014:8443 \
 		  --log-opt max-size=200m --log-opt max-file=2 \
 		  -e VIRTUAL_HOST="yacy.*"  -e VIRTUAL_PORT=8090 \
 		  -v ~/Local/docker-data/yacy:/opt/yacy_search_server/DATA \
 		  yacy/yacy_search_server
 	    ;;
 	yacy-pvt)
-		docker run -d --name yacy-pvt -p 9012:8090  \
+		docker run -d --name yacy-pvt -p 9012:8090 9015:8443 \
 		  -v ~/Local/docker-data/yacy-pvt:/opt/yacy_search_server/DATA \
 		  -e VIRTUAL_HOST="yacy-pvt.*"  -e VIRTUAL_PORT=8090 \
 		  --log-opt max-size=200m --log-opt max-file=2 \
