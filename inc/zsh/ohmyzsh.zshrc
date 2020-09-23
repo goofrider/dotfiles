@@ -70,7 +70,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rbenv pyenv direnv asdf docker gem pip npm)
+plugins=(
+	git rbenv pyenv direnv docker gem pip npm #asdf
+)
+
+# dlisabling asdf plugin cuz it's VERY SLOW
 
 source $ZSH/oh-my-zsh.sh
 
