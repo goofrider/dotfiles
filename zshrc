@@ -19,6 +19,18 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 # source $(brew --prefix asdf)/asdf.sh
 source $BREWHOME/opt/asdf/asdf.sh
 
+
+##### rbenv #####
+## https://github.com/jenv/jenv
+eval "$(jenv init -)"
+jenv enable-plugin export
+
+# Use jenv add to inform jenv where your Java environment is located. 
+#	jenv add $(/usr/libexec/java_home
+#	jenv add .brew/opt/java
+
+
+
 ##### rbenv #####
 ## https://github.com/rbenv/rbenv
 eval "$(rbenv init -)"
