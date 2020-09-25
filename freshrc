@@ -116,7 +116,8 @@ fresh visionmedia/deploy		bin/deploy	--bin
 fresh sdushantha/tmpmail		tmpmail		--bin
 
 ## s            https://github.com/davesque/s
-fresh davesque/s				s			--bin
+## Shell script manager. Seems to be pretty useless
+# fresh davesque/s				s			--bin
 
 ### git-go
 ### see https://github.com/pengwynn/dotfiles

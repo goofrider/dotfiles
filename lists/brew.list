@@ -49,9 +49,9 @@ starship	# minimal, blazing-fast shell prompt in rust https://github.com/starshi
 
 ## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
 
-z			# bash dir jump 		https://github.com/rupa/z
-autojump	# dir jump 				https://github.com/wting/autojump
-bat			# syntax highlighting 	https://github.com/sharkdp/bat
+z			# bash dir jump 						https://github.com/rupa/z
+autojump	# dir jump 								https://github.com/wting/autojump
+bat			# cat clone for syntax highlighting 	https://github.com/sharkdp/bat
 exa			# ls alternative
 asciinema	# record terminal actions as animations https://asciinema.org/
 			# dependancy: python 3.8
