@@ -1,0 +1,39 @@
+############## Gems 2020 ##############
+####### 
+(system, user-install, manually symlink to ~/.local/bin)
+dokku-cli		# see https://github.com/SebastianSzturo/dokku-cli
+doing			# see https://brettterpstra.com/projects/doing/
+
+
+############## old default gems (dev) ##############
+# bundler
+# powify
+# powder
+# pkglookup
+# #heroku
+# #zeus
+# pry
+# yard
+# #plist		# no cmdline, see https://github.com/patsplat/plist
+# #spotlight
+
+
+############## old useful gems ##############
+# yard
+# yard-gems
+# pry
+# gem_info  # Adds a gem info command with fuzzy matching on name and version. Designed for scripting use.
+# gem-man   # The gem man command lets you view a gem’s man page.
+# gem-orphan  # Adds a gem orphan command that finds and lists gems on which no other gems are depending.
+# rubygems-desc   # Adds gem desc to describe a gem by name.
+# rubygems-sandbox  # Manages command-line gem tools and dependencies with a gem sandbox command
+# gem-toolbox  $ Adds six commands: gem open, cd, readme, history doc,  visit
+#
+#
+# consular  #  GUI terminal manager
+# 
+# ###  OSX
+# 
+# spotlight   # Library to use Spotlight from Ruby
+
+

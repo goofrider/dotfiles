@@ -29,22 +29,23 @@ case "$1" in
 			-p 9010:8080 -e VIRTUAL_HOST=searx.\* --name searx searx/searx
 	    ;;
 	yacy)
-		docker run -d --name yacy -p 9011:8090 9014:8443 \
+		docker run -d --name yacy -p 9011:9011 -p 9012:9012 \
 		  --log-opt max-size=200m --log-opt max-file=2 \
-		  -e VIRTUAL_HOST="yacy.*"  -e VIRTUAL_PORT=8090 \
-		  -v ~/Local/docker-data/yacy:/opt/yacy_search_server/DATA \
+		  -e VIRTUAL_HOST="yacy.*"  -e VIRTUAL_PORT=9011 \
+		  -v yacy:/opt/yacy_search_server/DATA \
 		  yacy/yacy_search_server
 	    ;;
-	yacy-pvt)
-		docker run -d --name yacy-pvt -p 9012:8090 9015:8443 \
-		  -v ~/Local/docker-data/yacy-pvt:/opt/yacy_search_server/DATA \
-		  -e VIRTUAL_HOST="yacy-pvt.*"  -e VIRTUAL_PORT=8090 \
-		  --log-opt max-size=200m --log-opt max-file=2 \
-		  yacy/yacy_search_server
-		;;
+	# yacy-pvt)
+	# 	docker run -d --name yacy-pvt -p 9014:8090 -p 9015:8443 \
+	# 	  -v ~/Local/docker-data/yacy-pvt:/opt/yacy_search_server/DATA \
+	# 	  -e VIRTUAL_HOST="yacy-pvt.*"  -e VIRTUAL_PORT=8090 \
+	# 	  --log-opt max-size=200m --log-opt max-file=2 \
+	# 	  yacy/yacy_search_server
+	# 	;;
 	bukuserver)
-		docker run -it --rm -v ~/.local/share/buku:/root/.local/share/buku \
-			-p 5001:5001 bukuserver
+		docker run -it -p 5001:5001 \
+			-v ~/.local/share/buku:/root/.local/share/buku \
+			bukuserver
 		;;
 	linkding)
 	    docker run -d --name linkding -p 9020:9090 \
@@ -63,7 +64,17 @@ case "$1" in
 		   -v shaarli-cache:/var/www/shaarli/cache \
 		   shaarli/shaarli:latest
 		;;
- 
+	# rover)
+	# 	# For localuse need to add:
+	# 	#     -e MAIN_NODE_IP_ADDRESS='127.0.0.1'
+	# 	# or
+	# 	# 		 -e BY_PASS_PROXY_CHECK='TRUE'
+	# 	docker run -d -p 3180:80 -p 3143:443 -p 3100:3000 --name rover \
+	# 		-e MAIN_NODE_IP_ADDRESS='127.0.0.1' \
+	# 		-e VIRTUAL_HOST="*.rover.vm,rover.vm,*.rover" -e VIRTUAL_PORT=80 \
+	# 		-v /var/run/docker.sock:/var/run/docker.sock \
+	# 		-v captain:/captain caprover/caprover
+	# 	;;
 	*)
 	    echo $"Usage: $0 {image name} {container name}"
 	    exit 1

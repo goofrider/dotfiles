@@ -1,0 +1,452 @@
+############## older ##############
+
+# actionmailer (4.1.1, 3.2.18, 3.2.16)
+# actionpack (4.1.1, 3.2.18, 3.2.16)
+# actionview (4.1.1)
+# activemodel (4.1.1, 3.2.18, 3.2.16)
+# activerecord (4.1.1, 3.2.18, 3.2.16)
+# activeresource (3.2.18, 3.2.16)
+# activesupport (4.1.1, 4.0.5, 3.2.18, 3.2.16)
+# addressable (2.3.6)
+# alias (0.2.3)
+# annotate (2.6.5)
+# appscrolls (0.11.2)
+# arel (5.0.1.20140414130214, 3.0.3)
+# ast (2.0.0)
+# atlassian-stash (0.2.0)
+# backports (3.6.0)
+# bdoc (0.3.8)
+# better_errors (1.0.1)
+# bitbucket_rest_api (0.1.5)
+# blankslate (2.1.2.4)
+# boom (0.4.0)
+# boson (1.3.0)
+# boson-more (0.3.0)
+# bouncy-castle-java (1.5.0147)
+# bson (1.10.2, 1.10.1, 1.9.2)
+# bson_ext (1.10.2, 1.10.1, 1.9.2)
+# builder (3.2.2, 3.0.4)
+# bundle (0.0.1)
+# bundler (1.7.0, 1.6.5, 1.6.3, 1.6.2, 1.3.6)
+# bundler-unload (1.0.2)
+# celluloid (0.16.0.pre3)
+# CFPropertyList (2.2.8)
+# cheatly (0.1.1)
+# chronic (0.10.2)
+# chunky_png (1.3.1)
+# claide (0.6.1)
+# classifier (1.3.4)
+# cocoapods (0.33.1)
+# cocoapods-core (0.33.1)
+# cocoapods-downloader (0.6.1)
+# cocoapods-plugins (0.2.0)
+# cocoapods-trunk (0.1.3)
+# cocoapods-try (0.3.0)
+# coderay (1.1.0, 1.0.9)
+# coffee-rails (4.0.1)
+# coffee-script (2.2.0)
+# coffee-script-source (1.7.0)
+# colorator (0.1)
+# colored (1.2)
+# colorize (0.6.0, 0.5.8)
+# commander (4.2.0, 4.1.6)
+# commonjs (0.2.7)
+# compass (1.0.0.alpha.19, 0.12.6)
+# compass-core (1.0.0.alpha.19)
+# compass-import-once (1.0.4)
+# daemon_controller (1.2.0)
+# daemons (1.1.9)
+# debase (0.0.9)
+# debugger-ruby_core_source (1.3.5)
+# descendants_tracker (0.0.4)
+# devcenter (1.1.3)
+# devcenter-parser (1.4.9)
+# diff-lcs (1.2.5)
+# doing (0.2.5)
+# dotenv (0.11.1)
+# dotenv-deployment (0.0.2)
+# dragonfly (0.9.15)
+# em-proxy (0.1.8)
+# erubis (2.7.0)
+# escape (0.0.4)
+# eventmachine (1.0.3)
+# excon (0.39.5, 0.37.0, 0.15.5)
+# execjs (2.0.2)
+# executable-hooks (1.3.2)
+# facter (2.1.0 universal-darwin)
+# faker (0.9.5)
+# faraday (0.9.0, 0.8.9)
+# faraday_middleware (0.9.1, 0.8.8)
+# fast-stemmer (1.0.2)
+# ffi (1.9.3)
+# file-tail (1.0.12)
+# foreman (0.74.0, 0.71.0)
+# formatador (0.2.5)
+# foundation (1.0.4)
+# fssm (0.2.10)
+# fuzzy_match (2.0.4)
+# gem-man (0.3.0)
+# gems (0.8.3)
+# genghisapp (2.3.11)
+# gist (4.2.1)
+# git (1.2.7, 1.2.6)
+# git-issues (0.1.5)
+# github_api (0.11.3)
+# gitlab (3.2.0)
+# gitlab_cli (2.0.0)
+# gli (2.11.0, 2.9.0)
+# haml (4.1.0.beta.1, 4.0.5, 4.0.3)
+# hashie (2.1.1, 2.0.5)
+# heroku (3.10.1, 3.8.4, 3.8.2)
+# heroku-api (0.3.19, 0.3.18)
+# highline (1.6.21)
+# hike (1.2.3)
+# hirb (0.7.1)
+# hitimes (1.2.2)
+# hooks (0.4.0)
+# htmlentities (4.3.1)
+# httmultiparty (0.3.10)
+# http-parser-lite (0.6.0)
+# http_router (0.11.1)
+# httparty (0.13.3, 0.13.1)
+# i18n (0.6.9)
+# iniparse (1.3.2)
+# invoker (1.2.0)
+# jbuilder (2.0.7)
+# jekyll (2.2.0, 2.1.1)
+# jekyll-coffeescript (1.0.0)
+# jekyll-gist (1.1.0)
+# jekyll-paginate (1.0.0)
+# jekyll-sass-converter (1.0.0)
+# jekyll-watch (1.0.0)
+# journey (1.0.4)
+# jquery-rails (3.1.0)
+# jruby-launcher (1.1.0 java)
+# jruby-openssl (0.9.4)
+# json (1.8.1, 1.7.7)
+# json_pure (1.8.1)
+# jwt (0.1.13)
+# kramdown (1.3.3)
+# launchy (2.4.2, 2.1.2)
+# less (2.2.2)
+# liquid (2.6.1)
+# listen (2.7.9, 1.3.1, 1.1.6, 0.7.3)
+# little-plugger (1.1.3)
+# local_gem (0.1.4)
+# locomotivecms-liquid (2.6.0)
+# locomotivecms-solid (0.2.2.1)
+# locomotivecms_mounter (1.4.1)
+# locomotivecms_wagon (1.4.0)
+# logger (1.2.8)
+# logging (1.8.2)
+# lucene (0.5.0.beta.1)
+# lunchy (0.8.0)
+# macaddr (1.7.1)
+# macgap (0.0.8)
+# mail (2.5.4)
+# maruku (0.7.0)
+# mercenary (0.3.4)
+# method_source (0.8.2)
+# middleman (3.3.3, 3.3.2)
+# middleman-core (3.3.3, 3.3.2)
+# middleman-ratchet (0.1.5)
+# middleman-sprockets (3.3.3)
+# mime-types (1.25.1)
+# mini_portile (0.6.0)
+# minitest (5.3.4, 4.7.5)
+# moneta (0.7.20)
+# mongo (1.9.2)
+# multi_json (1.10.1, 1.8.4)
+# multi_xml (0.5.5)
+# multipart-post (2.0.0, 1.2.0)
+# mustache (0.99.5)
+# nap (0.8.0.pre)
+# net-ftp-list (3.2.8)
+# net-http-persistent (2.9.4)
+# net-scp (1.2.1)
+# net-sftp (2.1.2)
+# net-ssh (2.9.1)
+# netrc (0.7.7)
+# newrelic_rpm (3.8.1.221)
+# nokogiri (1.6.2.1)
+# oauth2 (0.9.3)
+# octokit (2.7.2)
+# open4 (1.3.4)
+# padrino (0.12.2)
+# padrino-admin (0.12.2)
+# padrino-cache (0.12.2)
+# padrino-core (0.12.2)
+# padrino-gen (0.12.2)
+# padrino-helpers (0.12.2)
+# padrino-mailer (0.12.2)
+# padrino-support (0.12.2)
+# pager (1.0.1)
+# parseconfig (1.0.4)
+# parser (2.1.9)
+# parslet (1.5.0)
+# pinboard_api (1.0.0)
+# pkglookup (0.1.1)
+# plugin_manager (1.5)
+# polyglot (0.3.4)
+# posix-spawn (0.3.8)
+# powder (0.2.1)
+# powerpack (0.0.9)
+# powify (0.9.1, 0.8.5)
+# pry (0.10.1, 0.10.0 java, 0.9.12.6)
+# pygments.rb (0.6.0)
+# qwandry (0.1.5)
+# rack (1.5.2, 1.4.5)
+# rack-cache (1.2)
+# rack-highlighter (0.2.1)
+# rack-protection (1.5.3, 1.3.2)
+# rack-ssl (1.3.4)
+# rack-test (0.6.2)
+# rails (4.1.1, 3.2.18, 3.2.16)
+# rails-api (0.2.1)
+# railties (4.1.1, 3.2.18, 3.2.16)
+# rainbow (2.0.0)
+# rake (10.3.2)
+# rb-fsevent (0.9.4)
+# rb-inotify (0.9.4)
+# rb-kqueue (0.2.2)
+# rdoc (4.1.1, 3.12.2)
+# redcar (0.13)
+# redcar-bundles (0.3)
+# redcar-icons (0.3)
+# redcar-javamateview (0.2)
+# redcar-jruby (0.1)
+# redcar-svnkit (0.2)
+# redcarpet (3.1.2, 3.0.0)
+# RedCloth (4.2.9)
+# rest-client (1.7.2, 1.6.8.rc1, 1.6.7)
+# rspec (3.0.0)
+# rspec-core (3.0.4)
+# rspec-expectations (3.0.4)
+# rspec-mocks (3.0.4)
+# rspec-support (3.0.4)
+# rubocop (0.22.0)
+# ruby-blockcache (0.2)
+# ruby-debug-ide (0.4.23.beta1)
+# ruby-progressbar (1.5.1)
+# ruby2ruby (1.3.1)
+# ruby_parser (2.3.1)
+# rubydns (0.8.4)
+# rubygems-bundler (1.4.4)
+# rubygems-sandbox (1.3.0)
+# rubyzip (1.1.4)
+# safe_yaml (1.0.3)
+# sanitize (2.0.6)
+# sass (3.3.7, 3.2.19)
+# sass-rails (4.0.3)
+# sawyer (0.5.4)
+# scss-lint (0.24.1)
+# sdoc (0.4.0)
+# sexp_processor (3.2.0)
+# sheet (0.2.2)
+# simple_oauth (0.2.0)
+# sinatra (1.4.5, 1.3.6)
+# sinatra-contrib (1.4.2)
+# sinatra-mustache (0.3.1)
+# slop (3.5.0)
+# sourcify (0.6.0.rc4)
+# spoon (0.0.4)
+# spring (1.1.3)
+# sprockets (2.12.1, 2.11.0, 2.2.2)
+# sprockets-helpers (1.1.0)
+# sprockets-rails (2.1.3)
+# sprockets-sass (1.1.0, 1.0.3)
+# sqlite3 (1.3.9)
+# stringex (2.0.11)
+# suspenders (1.11.0)
+# swt (0.18)
+# systemu (2.6.4)
+# terminal-table (1.4.5)
+# thin (1.5.1)
+# thor (0.19.1, 0.18.1)
+# thread_safe (0.3.3)
+# TicGit-ng (1.0.2.18)
+# tilt (1.4.1, 1.3.7)
+# timers (4.0.0)
+# tins (0.13.2)
+# tmuxinator (0.6.8)
+# toml (0.1.1)
+# treetop (1.4.15)
+# trogdoro-el4r (1.0.10)
+# turbolinks (2.2.2)
+# tzinfo (1.1.0, 0.3.39)
+# uber (0.0.6)
+# uglifier (2.5.0)
+# url_mount (0.2.1)
+# uuid (2.3.7)
+# vegas (0.1.11)
+# will_paginate (3.0.5)
+# xcodeproj (0.17.0)
+# xiki (0.6.5)
+# yajl-ruby (1.1.0)
+# yard (0.8.7.4)
+# zeus (0.15.1)
+# zip (2.0.2)
+# zlog (0.9.2)
+# zurb-foundation (4.3.2)
+
+############ even older ###############
+
+# !#  = May not be needed at shell level
+#
+# bundler
+#
+# <<EOF
+# rhc
+# af
+# heroku
+# tugboat
+# hub
+# teleport
+# pry
+# fuzzy_file_finder
+# powify
+# powder
+# dotfiles
+# EOF
+#
+#
+# ## shell
+# fuzzy_file_finder
+#
+# powify
+# powder
+#
+# rhc
+# af
+# heroku
+# tugboat
+#
+# hub
+# octokit
+#
+# pinboard   # use pwd
+# pbl   # cli, search tag only
+# pinup   # cli, open in browser use .netrc and token
+# pinboard-cli  # cli  , use api key
+#
+#
+# teleport
+#
+# compass
+# middleman
+# rails
+# tux  # Tux dresses up sinatra in a shell
+#
+# pry
+# pry-full  # may fail because of pry-debugger
+# ripl   # irb clone
+#
+#
+# !# knife-digital_ocean
+# !# berkshelf
+# !# librarian
+#
+#
+# fission
+# !# veewee
+#
+#
+#
+# guard-shell   # Guard::Shell automatically runs shell commands when watched files are modified.
+#
+# ona   # Simple shell for deployment.
+#
+# rails-sh
+# 	The Rails Shell to execute sub commands of rails quickly.
+#
+# xiki
+# 	Xiki does what shell consoles do, but lets you edit everything at any time. It's trivial to make your own commands and menus to access other tools.
+#
+# arsh
+#
+# 	Provides a shell that can run pure Ruby code as well as ordinary linux commands
+#
+# rutty
+# 	RuTTY is a DSH (distributed / dancer's shell) written in Ruby. It's used to run commands on multiple remote servers at once, based on a tagging system. Also allows for multiple SCP-style uploads.
+#
+# rush
+# 	A Ruby replacement for bash+ssh, providing both an interactive shell and a library. Manage both local and remote unix systems from a single client.
+#
+#
+# https://www.ruby-toolbox.com/categories/deployment_automation
+#
+# Moonshine
+# 	Simple Rails deployment and configuration management. 15 minute deploys of Rails 2 or Rails 3 apps
+# 	capistrano + puppet
+#
+# mina
+# Really fast deployer and server automation tool
+#
+# heroku_san
+# Manage multiple Heroku instances/apps for a single Rails app using Rake
+#
+# whiskey_disk
+# 	Opinionated gem for doing fast git-based server deployments
+# heroku-rails
+# 	Manage multiple Heroku instances/apps for a single Rails app using Rake. It's the Capistrano for Heroku, without the suck.
+# Blazing
+# 	painless git push deployments for everyone
+# 	blazing init, edit your blazing config, run blazing setup [target] to deploy your post-receive hook and you're set. Deploy with git push <target> <branch>.
+#
+#
+# dotfiles
+# 	CLI client for the mydotfiles.com
+#
+# Teleport
+# 	Easy Ubuntu server setup via teleportation.
+#
+# Fog
+# 	The Ruby cloud services library. Supports all major cloud providers including AWS, Rackspace, Linode, Blue Box, StormOnDemand, and many others. Full support for most AWS services including EC2, S3, CloudWatch, SimpleDB, ELB, and RDS.
+#
+#
+#
+# Simple-rss
+# 	A simple, flexible, extensible, and liberal RSS and Atom reader for Ruby. It is designed to be backwards compatible with the standard RSS parser, but will never do RSS generation.
+#
+# http://github.com/cardmagic/simple-rss
+#
+#
+# Pismo
+# 	Pismo extracts and retrieves content-related metadata from HTML pages - you can use the resulting data in an organized way, such as a summary/first paragraph, body text, keywords, RSS feed URL, favicon, etc.
+#
+# http://github.com/peterc/pismo
+#
+# metainspector
+# 	MetaInspector lets you scrape a web page and get its title, charset, link and meta tags
+#
+# https://github.com/jaimeiniesta/metainspector
+#
+#
+# sinew
+# 	Crawl web sites easily using ruby recipes, with caching and nokogiri
+#
+# http://github.com/gurgeous/sinew
+#
+# cobweb
+# 	Cobweb is a web crawler that can use resque to cluster crawls to quickly crawl extremely large sites which is much more performant than multi-threaded crawlers. It is also a standalone crawler that has a sophisticated statistics monitoring interface to monitor the progress of the crawls.
+#
+#
+#
+# http://github.com/stewartmckee/cobweb
+#
+#
+# Rest-client
+# 	A simple HTTP and REST client for Ruby, inspired by the Sinatra microframework style of specifying actions: get, put, post, delete.
+#
+# https://github.com/rest-client/rest-client
+#
+#
+# Httparty
+# 	Makes http fun! Also, makes consuming restful web services dead easy
+#
+# http://jnunemaker.github.com/httparty
+#
+# araday
+# 	HTTP/REST API client library.
+#
+# https://github.com/lostisland/faraday

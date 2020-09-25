@@ -13,8 +13,8 @@
 
 HOSTNAME=$(hostname -s)
 DOTFILES_DIRS="$HOME/.dotfiles"
-EXCLUDES="lists inc root"
-#SYMLINK_DIRS="etc cheats cheat sheets"
+EXCLUDES="inc root"
+SYMLINK_DIRS="scripts lists"
 #SYMLINK_DIRS=".dotfiles/local:*"
 
 

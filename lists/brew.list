@@ -1,0 +1,294 @@
+############## Brew list 2020 ##############
+
+###### core tools ######
+rcm			# see https://github.com/thoughtbot/rcmpwgen
+wget
+tmux
+byobu
+git			# newer then the one provided in Xcode, less likely to have problem with xcodebuild at startup
+pipx		# execute pypi packages without installing
+
+
+#brew-pip       # can't find pip. still need to set path to $(brew --prefix)/share/python
+#brew-gem        # deps: homebrew ruby (when installing gems)
+
+
+###### osx tools ######
+lunchy		# see https://github.com/eddiezane/lunchy
+# lunchy-go   # see https://github.com/sosedoff/lunchy-go
+afsctool	# apfs compression
+mas			# mac app store tool
+duti		# Select default apps for documents and URL schemes on macOS
+tag			# Manipulate and query tags on macOS files https://github.com/jdberry/tag/
+osxutils	# see https://github.com/specious/osxutils
+
+
+###### system tools ######
+smartmontools
+
+
+###### other stuff ######
+buku          				# Bookmark manager 					https://github.com/jarun/Buku
+googler						# Google search cli 				https://github.com/jarun/googler
+# citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
+							# https://github.com/citizen428/unsavory
+croc						# cli file transfer utility 		https://github.com/schollz/croc
+
+###### txt search tools ######
+ack 					# see https://beyondgrep.com/
+the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
+ripgrep					# see https://github.com/BurntSushi/ripgrep
+jq						# see https://github.com/stedolan/jq
+fzf						# general-purpose interactive command-line fuzzy finder https://github.com/junegunn/fzf
+fd						# find alternative		https://github.com/sharkdp/fd
+
+
+
+
+###### other utilities ######
+pigz		# multithreaded zip
+p7zip		# 7zip cli
+unrar
+tree
+htop
+
+
+#### fonts 
+# Usage:
+#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
+#     $ brew cask install font-inconsolata
+
+# font-roboto-mono					# dependancy: svn
+# font-roboto-mono-for-powerline
+# font-menlo-for-powerline
+# font-source-code-pro
+# font-source-code-pro-for-powerline	# dependancy: svn
+
+
+
+########### more shell goodies ############
+starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
+			# dep: nerd font
+
+## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
+
+z			# bash dir jump 		https://github.com/rupa/z
+autojump	# dir jump 				https://github.com/wting/autojump
+bat			# syntax highlighting 	https://github.com/sharkdp/bat
+exa			# ls alternative
+asciinema	# record terminal actions as animations https://asciinema.org/
+			# dependancy: python 3.8
+			# and then use 'svg-term' (npm) to convert to SVG  https://github.com/marionebl/svg-term-cli
+
+
+###### cheatsheets ######
+cheat					# now in golang					https://github.com/cheat/cheat
+navi					# https://github.com/denisidoro/navi
+
+## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
+#isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
+tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
+
+
+
+
+################## devel #################
+direnv					# see https://github.com/direnv/direnv
+dnsmasq					# for faking pow.cx
+dive					# inspect docker layers
+gibo					# Easy access to gitignore boilerplates https://github.com/simonwhitaker/gibo
+
+
+puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
+node
+kotlin
+
+rbenv					# see https://github.com/rbenv/rbenv
+pyenv					# see https://github.com/pyenv/pyenv
+jenv          # see https://github.com/jenv/jenv
+asdf          # see https://github.com/asdf-vm/asdf
+
+# rbenv-communal-gems		# install with rbenv-plug instead
+# rbenv-default-gems		# install with rbenv-plug instead
+# jawshooah/pyenv/pyenv-update              # need HEAD
+# jawshooah/pyenv/pyenv-default-packages      # not working
+# pyenv-virtualenv
+
+
+### hosting provier cli
+heroku/brew/heroku			# NPM
+netlify-cli					# NPM
+## Also:
+# gem dokku-cli
+
+### static gen
+hugo
+eleventy			# NPM
+gatsby-cli			# NPM
+
+## Also:
+# gem jekyll
+# npm gridsome
+
+
+
+#### node tools
+pnpm				# NPM
+yarn				# NPM. Usage: yarn global add [package]
+bower				# NPM
+
+
+nodeenv
+n
+
+
+#### deploy
+ansible
+salt					# dep: python, zeromq
+
+
+#### other tools
+bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
+hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
+
+#wrk					# benchmarking your HTTP APIs			https://github.com/wg/wrk
+						# also https://github.com/giltene/wrk2
+						# A constant throughput, correct latency recording variant of wrk
+
+
+
+
+
+
+##### git tools
+gh			# Official Github CLI https://cli.github.com/
+hub			# see https://hub.github.com/
+# gist
+# git-crypt
+git-extras
+git-flow
+hubflow
+git-url-sub
+# gitsh
+legit		# see https://frostming.github.io/legit/
+            # undo, sync might conflict with git-extras
+            # also: switch, publish, unpublish, branches
+
+### manage git repos
+repo		# manage multiple git repos. By Google. https://gerrit.googlesource.com/git-repo/
+mr			# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
+ghq			# centralized cloned repos https://github.com/x-motemen/ghq
+
+## also 'gita' in pip3. see https://github.com/nosarthur/gita
+
+
+
+######### not used #########
+antibody		# see https://github.com/getantibody/antibody
+# antigen		# see https://github.com/zsh-users/antigen # SLOW
+chruby
+ruby-install
+
+
+
+
+
+
+
+######### more #########
+
+# notmuch
+# unrar
+# todo-txt
+# doing
+# gnupg2
+# gpg-agent
+# pinentry-mac
+
+
+# android-platform-tools
+# appswitch  # DEAD formula, see https://github.com/nriley/appswitch/
+# xapian
+# go
+
+
+
+########### brew search git #########
+
+# bagit                            git-game                         git-series                       gitlab-gem
+# bash-git-prompt                  git-gerrit                       git-sh                           gitlab-runner
+# cgit                             git-gui                          git-sizer                        gitleaks
+# digitemp                         git-hooks                        git-ssh                          gitless
+# easy-git                         git-hooks-go                     git-standup                      gitmoji
+# git ✔                            git-if                           git-subrepo                      gitslave
+# git-absorb                       git-imerge                       git-svn-abandon                  gitter-cli
+# git-annex                        git-integration                  git-test                         gitui
+# git-annex-remote-rclone          git-interactive-rebase-tool      git-tf                           gitup
+# git-appraise                     git-lfs                          git-tig                          gitversion
+# git-archive-all                  git-multipush                    git-town                         lazygit
+# git-bug                          git-now                          git-tracker                      legit ✔
+# git-cal                          git-number                       git-trim                         libgit2 ✔
+# git-cinnabar                     git-octopus                      git-url-sub ✔                    libgit2-glib
+# git-cola                         git-open                         git-utils                        literate-git
+# git-credential-manager           git-plus                         git-vendor                       modgit
+# git-crypt                        git-quick-stats                  git-when-merged                  moz-git-tools
+# git-delta                        git-recent                       gitbatch                         pass-git-helper
+# git-extras ✔                     git-remote-codecommit            gitbucket                        pygitup
+# git-filter-repo                  git-remote-gcrypt                giter8                           sagittarius-scheme
+# git-fixup                        git-remote-hg                    gitfs                            stgit
+# git-flow ✔                       git-review                       gitg                             topgit
+# git-flow-avh                     git-revise                       github-keygen                    ungit
+# git-fresh                        git-secret                       github-markdown-toc              willgit
+# git-ftp                          git-secrets                      github-release                   zsh-git-prompt
+# ==> Casks
+# adobe-digital-editions    gitbox                    githubpulse               gitup                     smartgit
+# deepgit                   gitee                     gitify                    gitx                      snagit
+# font-digital-numbers      giteye                    gitkraken                 lego-digital-designer     subgit
+# git-it                    gitfiend                  gitnote                   logitech-presentation     webplotdigitizer
+# gitahead                  gitfinder                 gitpigeon                 plotdigitizer
+# gitblade                  gitfox                    gitscout                  refined-github-safari
+# gitbook                   github                    gitter            rowanj-gitx
+
+
+
+########### notes ###########
+
+
+# ==> Caveats
+# ==> sqlite
+# sqlite is keg-only, which means it was not symlinked into /Users/goofrider/.brew,
+# because macOS already provides this software and installing another version in
+# parallel can cause all kinds of trouble.
+#
+# If you need to have sqlite first in your PATH run:
+#   echo 'export PATH="/Users/goofrider/.brew/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+#
+# For compilers to find sqlite you may need to set:
+#   export LDFLAGS="-L/Users/goofrider/.brew/opt/sqlite/lib"
+#   export CPPFLAGS="-I/Users/goofrider/.brew/opt/sqlite/include"
+#
+# For pkg-config to find sqlite you may need to set:
+#   export PKG_CONFIG_PATH="/Users/goofrider/.brew/opt/sqlite/lib/pkgconfig"
+#
+# ==> python@3.8
+# Python has been installed as
+#   /Users/goofrider/.brew/bin/python3
+#
+# Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+# `python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+#   /Users/goofrider/.brew/opt/python@3.8/libexec/bin
+#
+# You can install Python packages with
+#   pip3 install <package>
+# They will install into the site-package directory
+#   /Users/goofrider/.brew/lib/python3.8/site-packages
+#
+# See: https://docs.brew.sh/Homebrew-and-Python
+
+
+
+
+
+
+
+

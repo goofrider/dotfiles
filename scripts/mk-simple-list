@@ -1,0 +1,16 @@
+#! /bin/sh
+
+# # first strip frontmatter
+# gsed '1 { /^---/ { :a N; /\n---/! ba; d} }
+# 		# then strip comments
+# 		s/[[:space:]]*#.*$//
+# 		# then strip leading spaces, trailing spaces and empty lines
+# 		s/[[:space:]]//g  ;  /^$/d' "$1"
+		
+
+# ### sed only alternative
+# first strip comme
+sed 's/#.*$//
+		# then stri
+		s/[[:space:
+		/^$/d' "$1"
