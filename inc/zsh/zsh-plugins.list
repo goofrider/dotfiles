@@ -2,12 +2,14 @@
 # antibody bundle ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 
 
-## Init omz
+##### Init omz
 # following omz plugins might not load if this is not loaded first
-# Rails plugin has this problem
+# Rails plugin has this problem, also needed ZSH to be set
 ohmyzsh/ohmyzsh
 
-## Goodies
+
+
+##### Goodies
 ohmyzsh/ohmyzsh     path:plugins/frontend-search
         # search packagaes online. Usage: frontend <context> <term> [<term>…] 
 ohmyzsh/ohmyzsh     path:plugins/urltools
@@ -15,7 +17,8 @@ ohmyzsh/ohmyzsh     path:plugins/urltools
 # ohmyzsh/ohmyzsh       path:plugins/git-prompt
         # installs zsh-git-prompt. Appears like so: (master↑3|✚1)
 
-## completion
+
+##### completion
 ohmyzsh/ohmyzsh     path:plugins/docker
         # completion    
 ohmyzsh/ohmyzsh     path:plugins/thor
@@ -31,7 +34,8 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/npx
         # automatically registers npx command-not-found handler if npx exists in your $PATH
 
-# installed with Homebrew, may already have completions
+
+##### installed with Homebrew, may already have completions
 # ohmyzsh/ohmyzsh       path:plugins/git
         # only provides short aliase
 # ohmyzsh/ohmyzsh       path:plugins/github
@@ -50,9 +54,11 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/heroku
         # completion
 
-## completion and prompt for version managers
-## using starship instead for prompt
-## completion seems to already working for homebrew installed packages
+
+##### completion and prompt for version managers
+#   using starship instead for prompt
+#   completion seems to already working for homebrew installed packages
+
 # ohmyzsh/ohmyzsh       path:plugins/rbenv
         # prompt
 # ohmyzsh/ohmyzsh       path:plugins/pyenv
@@ -66,7 +72,8 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/pipenv
         # only provides short aliases
 
-## shell helpers
+##### shell helpers
+
 # ohmyzsh/ohmyzsh       plugins/autojump
         # Initializes autojump. Must have autojump already installed.
 # rupa/z

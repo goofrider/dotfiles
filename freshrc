@@ -91,6 +91,7 @@ fresh	altercation/vim-colors-solarized		colors/solarized.vim		--file=~/.config/n
 fresh	altercation/vim-colors-solarized		colors/solarized.vim		--file=~/.vim/colors/solarized.vim
 
 ## then in .vimrc or ~/.config/nvim/init.vim
+## disabled solarized in regular vim as it's basically unreadable in terminal
 # syntax enable
 # set background=dark
 # colorscheme solarized
@@ -111,10 +112,8 @@ fresh		junegunn/vim-plug		plug.vim		--file=~/.config/nvim/site/autoload/plug.vim
 ## deploy		https://github.com/visionmedia/deploy
 fresh visionmedia/deploy		bin/deploy	--bin
 
-
 ## tmpmail		https://github.com/sdushantha/tmpmail
 fresh sdushantha/tmpmail		tmpmail		--bin
-
 
 ## s            https://github.com/davesque/s
 fresh davesque/s				s			--bin

@@ -65,7 +65,10 @@ eval "$(pyenv init -)"
 ## https://github.com/direnv/direnv
 debug_log "Setup direnv"
 eval "$(direnv hook zsh)"
-
+[ -x "$(command -v tmux)" ] && alias tmux='direnv exec / tmux'
+    # This will make sure that direnv is unloaded before executing tmux,
+    # and avoid issues with environment variables mangling in tmux's subshells.
+    # See https://github.com/direnv/direnv/wiki/Tmux
 
 
 ##### jenv #####
