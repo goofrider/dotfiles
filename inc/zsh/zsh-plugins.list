@@ -1,0 +1,74 @@
+# this is the antibody way of loading omz plugins if you don't use the plugins variable
+# antibody bundle ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+
+## Init omz
+# following omz plugins might not load if this is not loaded first
+# Rails plugin has this problem
+ohmyzsh/ohmyzsh
+
+## Goodies
+ohmyzsh/ohmyzsh     path:plugins/frontend-search
+        # search packagaes online. Usage: frontend <context> <term> [<term>…] 
+ohmyzsh/ohmyzsh     path:plugins/urltools
+        # provides `urlencode` and `urldecode`
+# ohmyzsh/ohmyzsh       path:plugins/git-prompt
+        # installs zsh-git-prompt. Appears like so: (master↑3|✚1)
+
+## completion
+ohmyzsh/ohmyzsh     path:plugins/docker
+        # completion    
+ohmyzsh/ohmyzsh     path:plugins/thor
+        # completion
+ohmyzsh/ohmyzsh     path:plugins/rails
+        # completion and aliases r*
+        # !!!!! Only works with omz !!!!
+ohmyzsh/ohmyzsh     path:plugins/bundler
+        # completion and aliases b*
+        # Adds a wrapper for common gems:
+        #       Looks for a binstub under ./bin/ and executes it (if present)
+        #       Calls bundle exec <gem executable> otherwise
+# ohmyzsh/ohmyzsh       path:plugins/npx
+        # automatically registers npx command-not-found handler if npx exists in your $PATH
+
+# installed with Homebrew, may already have completions
+# ohmyzsh/ohmyzsh       path:plugins/git
+        # only provides short aliase
+# ohmyzsh/ohmyzsh       path:plugins/github
+        # completion for github gem and hub
+# ohmyzsh/ohmyzsh       path:plugins/git-flow
+    # completion and aliases g*
+# ohmyzsh/ohmyzsh       path:plugins/gem
+        # completion for gem subcommands and installed gems 
+        # (NOT woroking, already working under Homebrew?)
+# ohmyzsh/ohmyzsh       path:plugins/pip
+        # completion
+# ohmyzsh/ohmyzsh       path:plugins/npm
+        # completion and aliases npm* (NOT WORKING)
+# ohmyzsh/ohmyzsh       path:plugins/yarn
+        # completion and aliases y*
+# ohmyzsh/ohmyzsh       path:plugins/heroku
+        # completion
+
+## completion and prompt for version managers
+## using starship instead for prompt
+## completion seems to already working for homebrew installed packages
+# ohmyzsh/ohmyzsh       path:plugins/rbenv
+        # prompt
+# ohmyzsh/ohmyzsh       path:plugins/pyenv
+        # shell init + prompt
+# ohmyzsh/ohmyzsh       path:plugins/jenv
+            # shell init + prompt
+# ohmyzsh/ohmyzsh       path:plugins/asdf
+        # init + completion
+# ohmyzsh/ohmyzsh       path:plugins/direnv
+        # only provides shell init
+# ohmyzsh/ohmyzsh       path:plugins/pipenv
+        # only provides short aliases
+
+## shell helpers
+# ohmyzsh/ohmyzsh       plugins/autojump
+        # Initializes autojump. Must have autojump already installed.
+# rupa/z
+        # installs z, dir jumper
+

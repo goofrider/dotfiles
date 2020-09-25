@@ -74,6 +74,7 @@ fresh freshshell/fresh README.markdown --file=docs/fresh.md
 
 
 # fresh		ohmyzsh/ohmyzsh		.		--file=~/.oh-my-zsh/
+			# Manually install it instead. omz already has a built-in update function
 # fresh		jeremyFreeAgent/oh-my-zsh-powerline-theme		powerline.zsh-theme		--file=~/.oh-my-zsh/themes/
 
 

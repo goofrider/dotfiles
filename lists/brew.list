@@ -6,11 +6,6 @@ wget
 tmux
 byobu
 git			# newer then the one provided in Xcode, less likely to have problem with xcodebuild at startup
-pipx		# execute pypi packages without installing
-
-
-#brew-pip       # can't find pip. still need to set path to $(brew --prefix)/share/python
-#brew-gem        # deps: homebrew ruby (when installing gems)
 
 
 ###### osx tools ######
@@ -30,9 +25,10 @@ smartmontools
 ###### other stuff ######
 buku          				# Bookmark manager 					https://github.com/jarun/Buku
 googler						# Google search cli 				https://github.com/jarun/googler
+croc						# cli file transfer utility 		https://github.com/schollz/croc
 # citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
 							# https://github.com/citizen428/unsavory
-croc						# cli file transfer utility 		https://github.com/schollz/croc
+
 
 ###### txt search tools ######
 ack 					# see https://beyondgrep.com/
@@ -44,29 +40,10 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 
 
-
-###### other utilities ######
-pigz		# multithreaded zip
-p7zip		# 7zip cli
-unrar
-tree
-htop
-
-
-#### fonts 
-# Usage:
-#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
-#     $ brew cask install font-inconsolata
-
-# font-roboto-mono					# dependancy: svn
-# font-roboto-mono-for-powerline
-# font-menlo-for-powerline
-# font-source-code-pro
-# font-source-code-pro-for-powerline	# dependancy: svn
-
-
-
+###########################################
 ########### more shell goodies ############
+###########################################
+
 starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
 			# dep: nerd font
 
@@ -91,28 +68,90 @@ tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
 
 
 
+###### other utilities ######
+pigz		# multithreaded zip
+p7zip		# 7zip cli
+unrar
+tree
+htop
 
+
+###### fonts ######
+# Usage:
+#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
+#     $ brew cask install font-inconsolata
+
+# font-roboto-mono					# dependancy: svn
+# font-roboto-mono-for-powerline
+# font-menlo-for-powerline
+# font-source-code-pro
+# font-source-code-pro-for-powerline	# dependancy: svn
+
+
+
+##########################################
 ################## devel #################
-direnv					# see https://github.com/direnv/direnv
-dnsmasq					# for faking pow.cx
-dive					# inspect docker layers
-gibo					# Easy access to gitignore boilerplates https://github.com/simonwhitaker/gibo
+##########################################
+
+dnsmasq			# for faking pow.cx
+dive			# inspect docker layers
+
+
+pipx			# installs pypi packages in virtualenv
 
 
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 node
 kotlin
 
-rbenv					# see https://github.com/rbenv/rbenv
-pyenv					# see https://github.com/pyenv/pyenv
-jenv          # see https://github.com/jenv/jenv
-asdf          # see https://github.com/asdf-vm/asdf
+direnv			# see https://github.com/direnv/direnv
+rbenv			# see https://github.com/rbenv/rbenv
+pyenv			# see https://github.com/pyenv/pyenv
+
+jenv			# see https://github.com/jenv/jenv
+asdf			# see https://github.com/asdf-vm/asdf
+
+pipenv			# Manages python verions and virtualenvs together
+				# Uses Pipfile instead of requirements.txt
+
+#### node version managers
+#nodeenv		# Not a port of rbenv. It's baed on python virtualenv
+nodenv			# based on rbenv
+n
+
+
 
 # rbenv-communal-gems		# install with rbenv-plug instead
 # rbenv-default-gems		# install with rbenv-plug instead
 # jawshooah/pyenv/pyenv-update              # need HEAD
 # jawshooah/pyenv/pyenv-default-packages      # not working
 # pyenv-virtualenv
+
+
+
+
+##### git tools
+gh			# Official Github CLI https://cli.github.com/
+hub			# see https://hub.github.com/
+gibo			# Easy access to gitignore boilerplates https://github.com/simonwhitaker/gibo
+# gist
+# git-crypt
+git-extras
+git-flow
+hubflow
+git-url-sub
+# gitsh
+legit		# see https://frostming.github.io/legit/
+            # undo, sync might conflict with git-extras
+            # also: switch, publish, unpublish, branches
+
+### manage git repos
+repo		# manage multiple git repos. By Google. https://gerrit.googlesource.com/git-repo/
+mr			# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
+ghq			# centralized cloned repos https://github.com/x-motemen/ghq
+
+## also 'gita' in pip3. see https://github.com/nosarthur/gita
+
 
 
 ### hosting provier cli
@@ -138,8 +177,7 @@ yarn				# NPM. Usage: yarn global add [package]
 bower				# NPM
 
 
-nodeenv
-n
+
 
 
 #### deploy
@@ -147,7 +185,7 @@ ansible
 salt					# dep: python, zeromq
 
 
-#### other tools
+#### other dev tools
 bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
 hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
 
@@ -160,28 +198,6 @@ hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyper
 
 
 
-##### git tools
-gh			# Official Github CLI https://cli.github.com/
-hub			# see https://hub.github.com/
-# gist
-# git-crypt
-git-extras
-git-flow
-hubflow
-git-url-sub
-# gitsh
-legit		# see https://frostming.github.io/legit/
-            # undo, sync might conflict with git-extras
-            # also: switch, publish, unpublish, branches
-
-### manage git repos
-repo		# manage multiple git repos. By Google. https://gerrit.googlesource.com/git-repo/
-mr			# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
-ghq			# centralized cloned repos https://github.com/x-motemen/ghq
-
-## also 'gita' in pip3. see https://github.com/nosarthur/gita
-
-
 
 ######### not used #########
 antibody		# see https://github.com/getantibody/antibody
@@ -189,6 +205,8 @@ antibody		# see https://github.com/getantibody/antibody
 chruby
 ruby-install
 
+#brew-pip       # can't find pip. still need to set path to $(brew --prefix)/share/python
+#brew-gem        # deps: homebrew ruby (when installing gems)
 
 
 

@@ -1,9 +1,9 @@
 ## ~/.zshrc
 
+### Debugging
+# DEBUG=1
 
-#DEBUG=1
 DATECMD="gdate"
-
 debug_log ()
 {
 	[[ $DEBUG -eq 1 ]] && echo "[DEBUG] `$DATECMD +"%T.%3N"`: $1"
@@ -21,17 +21,9 @@ export VISUAL="$EDITOR"
 
 
 
-##### Homebrew
-debug_log "Setup Hombrew"
+##### My Homebrew settings
 BREWHOME="$(brew --prefix)"
 export HOMEBREW_NO_AUTO_UPDATE=1
-
-
-
-##### ohmyzsh
-debug_log "Setup Oh My Zsh"
-source ~/.dotfiles/inc/zsh/ohmyzsh.zshrc
-
 
 
 
@@ -42,29 +34,13 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 
 
 
-##### Homebrew packages #######
+########## Version Managers ##########
 
 ##### asdf #####
 
-# source $(brew --prefix asdf)/asdf.sh
 debug_log "Setup asdf"
+# source $(brew --prefix asdf)/asdf.sh
 source $BREWHOME/opt/asdf/asdf.sh
-
-
-
-
-##### rbenv #####
-## https://github.com/jenv/jenv
-debug_log "Setup jenv"
-eval "$(jenv init -)"
-
-# Use jenv add to inform jenv where your Java environment is located. 
-#	jenv add $(/usr/libexec/java_home
-#	jenv add .brew/opt/java
-#
-# And enable export plugin so JAVA_HOME is set correctly (run just once)
-#   jenv enable-plugin export
-
 
 
 
@@ -92,8 +68,30 @@ eval "$(direnv hook zsh)"
 
 
 
+##### jenv #####
+## https://github.com/jenv/jenv
+## jenv seens to be slow
 
-### tools
+# debug_log "Setup jenv"
+# eval "$(jenv init -)"
+
+# Use jenv add to inform jenv where your Java environment is located. 
+#	jenv add $(/usr/libexec/java_home
+#	jenv add .brew/opt/java
+#
+# And enable export plugin so JAVA_HOME is set correctly (run just once)
+#   jenv enable-plugin export
+
+
+
+##### nodenv #####
+debug_log "Setup nodenv"
+eval "$(nodenv init -)"
+
+
+
+
+########## tools ##########
 
 ### s 
 # https://github.com/davesque/s
@@ -113,9 +111,21 @@ eval "$(direnv hook zsh)"
 
 ########## Other homebrew packages ##########
 
+#### byobu
+debug_log "Setup byobu"
+export BYOBU_PREFIX=$BREWHOME
+
+
+#### starship (cross-shell prompt)
+## see https://github.com/starship/starship
+debug_log "Setup Starship"
+eval "$(starship init zsh)"
+
+
 
 #### z (via homebrew)
 # see see https://github.com/rupa/z
+# also available as ohmyzsh plugin
 #
 # For Bash or Zsh, put something like this in your $HOME/.bashrc or $HOME/.zshrc:
 
@@ -125,6 +135,8 @@ debug_log "Setup z"
 
 #### automjump (via homebrew)
 # see https://github.com/wting/autojump
+# also available as ohmyzsh plugin
+
 # Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
 # to source the file to update your current session):
 
@@ -136,15 +148,33 @@ debug_log "Setup z"
 
 
 
-#### starship (cross-shell prompt)
-## see https://github.com/starship/starship
-# debug_log "Setup Starship"
-# eval "$(starship init zsh)"
 
 
-#### byobu
-debug_log "Setup byobu"
-export BYOBU_PREFIX=$BREWHOME
+
+### ZSH completion for Homebrew
+# See https://docs.brew.sh/Shell-Completion
+# NOT WOKRING
+# heroku <TAB> grep: /Users/goofrider/Library/Caches/heroku/autocomplete/commands: No such file or directory
+# completion seems to already working without this
+
+# if type brew &>/dev/null; then
+#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+#
+#   autoload -Uz compinit
+#   # compinit		# called by ohmyzsh
+# fi
+
+
+
+##### ohmyzsh
+# debug_log "Setup Oh My Zsh"
+#source ~/.dotfiles/inc/zsh/ohmyzsh.zshrc
+
+##### antibody
+source ~/.dotfiles/inc/zsh/antibody.zshrc
+
+
+
 
 
 ###### ~/.zshrc ends #######

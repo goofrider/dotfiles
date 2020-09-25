@@ -1,8 +1,8 @@
-###### Antibody starts ######
+###### Antibody omz starts ######
 
 source <(antibody init)
 
-#### Configure Oh My Zsh with Antibody
+####### Configure Oh My Zsh with Antibody #######
 
 # see base omz config: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
@@ -13,9 +13,8 @@ source <(antibody init)
 ZSH_THEME=robbyrussell
 
 # you can do plugins the omz way if you want... or load with antibody later
-plugins=(
-	git rbenv pyenv direnv docker gem pip npm #asdf
-)
+# plugins=(git)
+source ~/.dotfiles/inc/zsh/omz-plugins.zshrc
 
 # tell omz where it lives
 export ZSH="$(antibody home)"/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh
@@ -32,6 +31,7 @@ antibody bundle ohmyzsh/ohmyzsh
 
 ### load .zsh_plugins.txt
 # antibody bundle < ~/.zsh_plugins.txt
+# antibody bundle < ~/.dotfiles/inc/zsh/zsh-plugins.list
 
 
 ###### Antibody ends ######

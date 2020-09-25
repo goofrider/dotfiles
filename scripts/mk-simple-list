@@ -8,9 +8,8 @@
 # 		s/[[:space:]]//g  ;  /^$/d' "$1"
 		
 
-# ### sed only alternative
-# first strip comme
+# first strip comments
 sed 's/#.*$//
-		# then stri
-		s/[[:space:
-		/^$/d' "$1"
+	# then strip leading spaces, trailing spaces and empty lines
+	s/[[:space:]]//g
+	/^$/d' "$1"
