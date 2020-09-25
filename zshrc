@@ -168,10 +168,10 @@ debug_log "Setup z"
 
 ##### ohmyzsh
 # debug_log "Setup Oh My Zsh"
-#source ~/.dotfiles/inc/zsh/ohmyzsh.zshrc
+#source ~/.dotfiles/inc/zsh/ohmyzsh.zsh
 
 ##### antibody
-source ~/.dotfiles/inc/zsh/antibody.zshrc
+source ~/.dotfiles/inc/zsh/antibody.zsh
 
 
 
