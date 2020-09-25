@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 
 # plugins=(git)
-source ~/.dotfiles/inc/zsh/omz-plugins.zshrc
+source ~/.dotfiles/inc/zsh/omz-plugins.zsh
 
 # init omz
 source $ZSH/oh-my-zsh.sh

@@ -14,7 +14,7 @@ ZSH_THEME=robbyrussell
 
 # you can do plugins the omz way if you want... or load with antibody later
 # plugins=(git)
-source ~/.dotfiles/inc/zsh/omz-plugins.zshrc
+source ~/.dotfiles/inc/zsh/omz-plugins.zsh
 
 # tell omz where it lives
 export ZSH="$(antibody home)"/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh
