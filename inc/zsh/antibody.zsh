@@ -28,9 +28,8 @@ antibody bundle ohmyzsh/ohmyzsh
 
 # this is the antibody way of loading omz plugins if you don't use the plugins variable
 # antibody bundle ohmyzsh/ohmyzsh path:plugins/colored-man-pages
-
-### load .zsh_plugins.txt
 # antibody bundle < ~/.zsh_plugins.txt
+
 # antibody bundle < ~/.dotfiles/inc/zsh/zsh-plugins.list
 
 
