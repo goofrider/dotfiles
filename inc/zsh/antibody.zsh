@@ -33,4 +33,9 @@ antibody bundle ohmyzsh/ohmyzsh
 # antibody bundle < ~/.dotfiles/inc/zsh/zsh-plugins.list
 
 
+# z
+antibody bundle rupa/z
+
+
+
 ###### Antibody ends ######

@@ -93,26 +93,34 @@ htop
 ################## devel #################
 ##########################################
 
-dnsmasq			# for faking pow.cx
-dive			# inspect docker layers
+dnsmasq					# for faking pow.cx
+dive					# inspect docker layers
 
-
-pipx			# installs pypi packages in virtualenv
+buildpacks/tap/pack		# Github cloud native buildpacks
+pipx					# installs pypi packages in virtualenv
 
 
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
+
 node
 kotlin
 
+
 direnv			# see https://github.com/direnv/direnv
+asdf			# see https://github.com/asdf-vm/asdf
+	## ===== asdf plugins =====
+	# direnv	https://github.com/asdf-community/asdf-direnv
+	# ruby		https://github.com/asdf-vm/asdf-ruby
+	# python	https://github.com/danhper/asdf-python
+	# node		https://github.com/asdf-vm/asdf-nodejs
+
+
 rbenv			# see https://github.com/rbenv/rbenv
 pyenv			# see https://github.com/pyenv/pyenv
-
-jenv			# see https://github.com/jenv/jenv
-asdf			# see https://github.com/asdf-vm/asdf
-
 pipenv			# Manages python verions and virtualenvs together
 				# Uses Pipfile instead of requirements.txt
+#jenv			# see https://github.com/jenv/jenv !!!SLOW!!!!
+
 
 #### node version managers
 #nodeenv		# Not a port of rbenv. It's baed on python virtualenv

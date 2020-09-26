@@ -18,7 +18,7 @@ export PATH="$HOME/.brew/bin:$PATH"
 ## ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-## Add user gem path
+## Add system user gem path ./gem/<system-ruby-version>/bin
 export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 
 ## ~/.scripts
