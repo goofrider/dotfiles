@@ -25,6 +25,7 @@ smartmontools
 ###### other stuff ######
 buku          				# Bookmark manager 					https://github.com/jarun/Buku
 googler						# Google search cli 				https://github.com/jarun/googler
+s-search					# web search cli					https://github.com/zquestz/s
 croc						# cli file transfer utility 		https://github.com/schollz/croc
 # citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
 							# https://github.com/citizen428/unsavory
