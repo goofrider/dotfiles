@@ -6,64 +6,97 @@ set -o errexit
 
 
 case "$1" in
+	#
+	# ========= Main Docker infrastructure =========
+	# 
 	ngx-proxy)
-	    docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro \
-			--name ngx-proxy jwilder/nginx-proxy
+	    docker run -it -p 80:80 --restart unless-stopped \
+			--name ngx-proxy \
+			-v /var/run/docker.sock:/tmp/docker.sock:ro \
+			jwilder/nginx-proxy
 		;;
 	dokku)
-		docker run \
-		  -e DOKKU_HOSTNAME=dokku.vm --name dokku -p 3022:22 -p 3020:80 -p 3021:443 \
-		  -e VIRTUAL_HOST="*.dokku.vm,dokku.vm,*.dokku" -e VIRTUAL_PORT=80 \
-		  --volume ~/Local/docker-data/dokku:/mnt/dokku \
-		  --volume /var/run/docker.sock:/var/run/docker.sock \
-		  dokku/dokku:0.21.4
-	    ;;
+		docker run -it -p 3022:22 -p 3020:80 -p 3021:443 --name dokku \
+		    -e DOKKU_HOSTNAME=dokku.vm  \
+			-e VIRTUAL_HOST="*.dokku.vm,dokku.vm,*.dokku" -e VIRTUAL_PORT=80 \
+			-v ~/Local/docker-data/dokku:/mnt/dokku \
+			-v /var/run/docker.sock:/var/run/docker.sock \
+			dokku/dokku:0.21.4
+		;;
+	#
+	# ========= Search engines =========
+	# 
 	osearch)
-	    docker run -d -p 9013:9090 -e VIRTUAL_HOST=osearch.\* \
-	    --name osearch \
-	    -v ~/Local/docker-data/opensearchserver:/srv \
-	    alexandretoyer/opensearchserver
-	    ;;
+	    docker run -it -p 9013:9090 \
+			-e VIRTUAL_HOST=osearch.\* --name osearch \
+			-v ~/Local/docker-data/opensearchserver:/srv \
+			alexandretoyer/opensearchserver
+		;;
 	searx)
-		docker run --rm -d -v ~/Local/docker-data/searx:/etc/searx \
-			-p 9010:8080 -e VIRTUAL_HOST=searx.\* --name searx searx/searx
-	    ;;
+		docker run -it -p 9010:8080 \
+			-e VIRTUAL_HOST=searx.\* --name searx \
+			-v ~/Local/docker-data/searx:/etc/searx \
+			searx/searx
+		;;
 	yacy)
-		docker run -d --name yacy -p 9011:9011 -p 9012:9012 \
-		  --log-opt max-size=200m --log-opt max-file=2 \
-		  -e VIRTUAL_HOST="yacy.*"  -e VIRTUAL_PORT=9011 \
-		  -v yacy:/opt/yacy_search_server/DATA \
-		  yacy/yacy_search_server
-	    ;;
+		docker run -it -p 9011:9011 -p 9012:9012 -e VIRTUAL_PORT=9011 \
+			-e VIRTUAL_HOST="yacy.*"  --name yacy \
+			--log-opt max-size=200m --log-opt max-file=2 \
+			-v yacy:/opt/yacy_search_server/DATA \
+			yacy/yacy_search_server
+		;;
 	# yacy-pvt)
-	# 	docker run -d --name yacy-pvt -p 9014:8090 -p 9015:8443 \
+	# 	docker run -it --name yacy-pvt -p 9014:8090 -p 9015:8443 \
 	# 	  -v ~/Local/docker-data/yacy-pvt:/opt/yacy_search_server/DATA \
 	# 	  -e VIRTUAL_HOST="yacy-pvt.*"  -e VIRTUAL_PORT=8090 \
 	# 	  --log-opt max-size=200m --log-opt max-file=2 \
 	# 	  yacy/yacy_search_server
 	# 	;;
+	#
+	# ========= Agent automation =========
+	# 
+	huginn)
+		docker run -it -p 9100:3000 \
+			-e VIRTUAL_HOST="huginn.*" --name huginn \
+			huginn/huginn
+		;;
+	n8n)
+		docker run -it -p 9101:5678 \
+			-e VIRTUAL_HOST="n8n.*" --name n8n \
+			-v n8n:/root/.n8n \
+			n8nio/n8n
+		;;
+	#
+	# ========= Bookmark managers =========
+	# 
 	bukuserver)
-		docker run -it -p 5001:5001 \
+		docker run -it -p 9023:5001 \
+			-e VIRTUAL_HOST=buku.\* --name bukuserver \
 			-v ~/.local/share/buku:/root/.local/share/buku \
 			bukuserver
 		;;
 	linkding)
-	    docker run -d --name linkding -p 9020:9090 \
-		    -v ~/Local/docker-data/linkding:/etc/linkding/data \
-		    -e VIRTUAL_HOST="linkding.*" \
-		    sissbruecker/linkding:latest
+	    docker run -it -p 9020:9090 \
+			-e VIRTUAL_HOST="linkding.*"  --name linkding \
+			-v ~/Local/docker-data/linkding:/etc/linkding/data \
+			sissbruecker/linkding:latest
 		;;
 	golinks)
-	    docker run -it -d -p 9021:8000 \
-	    --name golinks -e VIRTUAL_HOST=golinks.\* \
-	    prologic/golinks
+	    docker run -d -p 9021:8000 \
+		-e VIRTUAL_HOST=golinks.\* --name golinks \
+		prologic/golinks
 		;;
 	shaarli)
-		docker run -d --name shaarli -p 9022:80 -e VIRTUAL_HOST="shaarli.*" \
-		   -v ~/Local/docker-data/shaarli-data:/var/www/shaarli/data \
-		   -v shaarli-cache:/var/www/shaarli/cache \
-		   shaarli/shaarli:latest
+		docker run -it -p 9022:80 \
+			-e VIRTUAL_HOST="shaarli.*" --name shaarli \
+			-v ~/Local/docker-data/shaarli-data:/var/www/shaarli/data \
+			-v shaarli-cache:/var/www/shaarli/cache \
+			shaarli/shaarli:latest
 		;;
+	#
+	# ========= Other stuff =========
+	# 
+	#
 	# rover)
 	# 	# For localuse need to add:
 	# 	#     -e MAIN_NODE_IP_ADDRESS='127.0.0.1'
@@ -76,8 +109,9 @@ case "$1" in
 	# 		-v captain:/captain caprover/caprover
 	# 	;;
 	*)
-	    echo $"Usage: $0 {image name} {container name}"
-	    exit 1
+		# echo $"Usage: $0 {image name} {container name}"
+		echo $"Usage: $0 <image name>"
+		exit 1
 
 esac
 

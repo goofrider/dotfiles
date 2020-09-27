@@ -60,9 +60,9 @@ c or #                  Convert CSS/HEX color codes     https://www.packal.org/w
 ## Basic Commands
 <Enter>         Action the currently selected item
 Cmd O           Open file or application in default application
-Cmd <enter>     Reveal in Finder (if the result is a local file)
-Opt <enter>     Search the currently typed query in Spotlight
-Ctrl <enter>    Search the currently typed query in default web search
+Cmd <Enter>     Reveal in Finder (if the result is a local file)
+Option <Enter>  earch the currently typed query in Spotlight
+Ctrl <Enter>    Search the currently typed query in default web search
 
 
 open <file>     Find a file by name
@@ -124,7 +124,7 @@ forcequit       Force Quit the running application
 ## iTunes (Powerpack features)
 Cmd Ctrl <Enter>    Show the iTunes Mini Player
 itunes              Use keyword to show the iTunes Mini Player
-Cmd Ctrl <Down>     Play / Pause
+Cmd Ctrl <Down>     Play / Pausez
 play/pause          Play / Pause keywords
 Cmd Ctrl <Right>    Next Track
 next                Next Track
@@ -138,4 +138,7 @@ volmid              Half volume
 mute                Mute volume
 Cmd Ctrl [0-5]      Rate currently playing song from 0 to 5 stars
 <Backspace>         Go up a folder in iTunes Mini Player
-⌘ R                 Reindex iTunes library
+Cmd R                 Reindex iTunes library
+
+
+## ⌘ ⌥ ⇧ ⇥ ↩ ↑ ↓ ← → ##

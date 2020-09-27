@@ -10,7 +10,7 @@ git			# newer then the one provided in Xcode, less likely to have problem with x
 
 ###### osx tools ######
 lunchy		# see https://github.com/eddiezane/lunchy
-# lunchy-go   # see https://github.com/sosedoff/lunchy-go
+# lunchy-go	  # see https://github.com/sosedoff/lunchy-go
 afsctool	# apfs compression
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
@@ -23,16 +23,16 @@ smartmontools
 
 
 ###### other stuff ######
-buku          				# Bookmark manager 					https://github.com/jarun/Buku
-googler						# Google search cli 				https://github.com/jarun/googler
+buku						# Bookmark manager					https://github.com/jarun/Buku
+googler						# Google search cli					https://github.com/jarun/googler
 s-search					# web search cli					https://github.com/zquestz/s
-croc						# cli file transfer utility 		https://github.com/schollz/croc
+croc						# cli file transfer utility			https://github.com/schollz/croc
 # citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
 							# https://github.com/citizen428/unsavory
 
 
 ###### txt search tools ######
-ack 					# see https://beyondgrep.com/
+ack						# see https://beyondgrep.com/
 the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
 ripgrep					# see https://github.com/BurntSushi/ripgrep
 jq						# see https://github.com/stedolan/jq
@@ -45,14 +45,15 @@ fd						# find alternative		https://github.com/sharkdp/fd
 ########### more shell goodies ############
 ###########################################
 
+antibody		# see https://github.com/getantibody/antibody
 starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
 			# dep: nerd font
 
 ## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
 
-z			# bash dir jump 						https://github.com/rupa/z
-autojump	# dir jump 								https://github.com/wting/autojump
-bat			# cat clone for syntax highlighting 	https://github.com/sharkdp/bat
+z			# bash dir jump							https://github.com/rupa/z
+autojump	# dir jump								https://github.com/wting/autojump
+bat			# cat clone for syntax highlighting		https://github.com/sharkdp/bat
 exa			# ls alternative
 asciinema	# record terminal actions as animations https://asciinema.org/
 			# dependancy: python 3.8
@@ -64,8 +65,8 @@ cheat					# now in golang					https://github.com/cheat/cheat
 navi					# https://github.com/denisidoro/navi
 
 ## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
-#isacikgoz/taps/tldr		# interactive tldr in golang 	https://github.com/isacikgoz/tldr
-tealdeer				# tldr in rust 					https://github.com/dbrgn/tealdeer
+#isacikgoz/taps/tldr		# interactive tldr in golang	https://github.com/isacikgoz/tldr
+tealdeer				# tldr in rust					https://github.com/dbrgn/tealdeer
 
 
 
@@ -79,8 +80,8 @@ htop
 
 ###### fonts ######
 # Usage:
-#     $ brew tap homebrew/cask-fonts                  # you only have to do this once!
-#     $ brew cask install font-inconsolata
+#	  $ brew tap homebrew/cask-fonts				  # you only have to do this once!
+#	  $ brew cask install font-inconsolata
 
 # font-roboto-mono					# dependancy: svn
 # font-roboto-mono-for-powerline
@@ -96,31 +97,28 @@ htop
 
 dnsmasq					# for faking pow.cx
 dive					# inspect docker layers
-
 buildpacks/tap/pack		# Github cloud native buildpacks
 pipx					# installs pypi packages in virtualenv
-
-
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
-
 node
 kotlin
 
 
+#### node tools
+pnpm				# NPM
+yarn				# NPM. Usage: yarn global add [package]
+bower				# NPM
+webpack
+
+
+### Env/version mamangers
+
+
 direnv			# see https://github.com/direnv/direnv
-asdf			# see https://github.com/asdf-vm/asdf
-	## ===== asdf plugins =====
-	# direnv	https://github.com/asdf-community/asdf-direnv
-	# ruby		https://github.com/asdf-vm/asdf-ruby
-	# python	https://github.com/danhper/asdf-python
-	# node		https://github.com/asdf-vm/asdf-nodejs
-
-
 rbenv			# see https://github.com/rbenv/rbenv
 pyenv			# see https://github.com/pyenv/pyenv
 pipenv			# Manages python verions and virtualenvs together
 				# Uses Pipfile instead of requirements.txt
-#jenv			# see https://github.com/jenv/jenv !!!SLOW!!!!
 
 
 #### node version managers
@@ -130,12 +128,42 @@ n
 
 
 
-# rbenv-communal-gems		# install with rbenv-plug instead
-# rbenv-default-gems		# install with rbenv-plug instead
-# jawshooah/pyenv/pyenv-update              # need HEAD
-# jawshooah/pyenv/pyenv-default-packages      # not working
+### static gen
+hugo
+eleventy			# NPM upstream
+gatsby-cli			# NPM upstream
+
+## Also:
+# gem jekyll
+# npm gridsome
+# npm hexo
+
+
+
+# rbenv-communal-gems							# install with rbenv-plug instead
+# rbenv-default-gems							# install with rbenv-plug instead
+# jawshooah/pyenv/pyenv-update					# need HEAD
+# jawshooah/pyenv/pyenv-default-packages		# not working
 # pyenv-virtualenv
 
+
+
+### hosting provier cli
+heroku/brew/heroku			# NPM
+netlify-cli					# NPM
+serverless
+superfly/tap/flyctl
+# cask google-cloud-sdk
+# cask parse
+
+
+## Also:
+# gem dokku-cli
+
+
+#### deploy
+ansible
+salt					# dep: python, zeromq
 
 
 
@@ -151,8 +179,8 @@ hubflow
 git-url-sub
 # gitsh
 legit		# see https://frostming.github.io/legit/
-            # undo, sync might conflict with git-extras
-            # also: switch, publish, unpublish, branches
+			# undo, sync might conflict with git-extras
+			# also: switch, publish, unpublish, branches
 
 ### manage git repos
 repo		# manage multiple git repos. By Google. https://gerrit.googlesource.com/git-repo/
@@ -163,40 +191,11 @@ ghq			# centralized cloned repos https://github.com/x-motemen/ghq
 
 
 
-### hosting provier cli
-heroku/brew/heroku			# NPM
-netlify-cli					# NPM
-## Also:
-# gem dokku-cli
-
-### static gen
-hugo
-eleventy			# NPM
-gatsby-cli			# NPM
-
-## Also:
-# gem jekyll
-# npm gridsome
-
-
-
-#### node tools
-pnpm				# NPM
-yarn				# NPM. Usage: yarn global add [package]
-bower				# NPM
-
-
-
-
-
-#### deploy
-ansible
-salt					# dep: python, zeromq
 
 
 #### other dev tools
 bench					# code benchmarking tool in haskell		https://github.com/Gabriel439/bench
-hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyperfine
+hyperfine				# code benchmarking tool in rust		https://github.com/sharkdp/hyperfine
 
 #wrk					# benchmarking your HTTP APIs			https://github.com/wg/wrk
 						# also https://github.com/giltene/wrk2
@@ -209,15 +208,21 @@ hyperfine				# code benchmarking tool in rust 		https://github.com/sharkdp/hyper
 
 
 ######### not used #########
-antibody		# see https://github.com/getantibody/antibody
 # antigen		# see https://github.com/zsh-users/antigen # SLOW
 chruby
 ruby-install
 
-#brew-pip       # can't find pip. still need to set path to $(brew --prefix)/share/python
-#brew-gem        # deps: homebrew ruby (when installing gems)
+#brew-pip		# can't find pip. still need to set path to $(brew --prefix)/share/python
+#brew-gem		 # deps: homebrew ruby (when installing gems)
 
 
+# jenv			# see https://github.com/jenv/jenv !!!SLOW!!!!
+# asdf			# see https://github.com/asdf-vm/asdf !!!SLOW!!!!
+# 	## ===== asdf plugins =====
+# 	# direnv	https://github.com/asdf-community/asdf-direnv
+# 	# ruby		https://github.com/asdf-vm/asdf-ruby
+# 	# python	https://github.com/danhper/asdf-python
+# 	# node		https://github.com/asdf-vm/asdf-nodejs
 
 
 
@@ -234,7 +239,7 @@ ruby-install
 
 
 # android-platform-tools
-# appswitch  # DEAD formula, see https://github.com/nriley/appswitch/
+# appswitch	 # DEAD formula, see https://github.com/nriley/appswitch/
 # xapian
 # go
 
@@ -242,40 +247,84 @@ ruby-install
 
 ########### brew search git #########
 
-# bagit                            git-game                         git-series                       gitlab-gem
-# bash-git-prompt                  git-gerrit                       git-sh                           gitlab-runner
-# cgit                             git-gui                          git-sizer                        gitleaks
-# digitemp                         git-hooks                        git-ssh                          gitless
-# easy-git                         git-hooks-go                     git-standup                      gitmoji
-# git ✔                            git-if                           git-subrepo                      gitslave
-# git-absorb                       git-imerge                       git-svn-abandon                  gitter-cli
-# git-annex                        git-integration                  git-test                         gitui
-# git-annex-remote-rclone          git-interactive-rebase-tool      git-tf                           gitup
-# git-appraise                     git-lfs                          git-tig                          gitversion
-# git-archive-all                  git-multipush                    git-town                         lazygit
-# git-bug                          git-now                          git-tracker                      legit ✔
-# git-cal                          git-number                       git-trim                         libgit2 ✔
-# git-cinnabar                     git-octopus                      git-url-sub ✔                    libgit2-glib
-# git-cola                         git-open                         git-utils                        literate-git
-# git-credential-manager           git-plus                         git-vendor                       modgit
-# git-crypt                        git-quick-stats                  git-when-merged                  moz-git-tools
-# git-delta                        git-recent                       gitbatch                         pass-git-helper
-# git-extras ✔                     git-remote-codecommit            gitbucket                        pygitup
-# git-filter-repo                  git-remote-gcrypt                giter8                           sagittarius-scheme
-# git-fixup                        git-remote-hg                    gitfs                            stgit
-# git-flow ✔                       git-review                       gitg                             topgit
-# git-flow-avh                     git-revise                       github-keygen                    ungit
-# git-fresh                        git-secret                       github-markdown-toc              willgit
-# git-ftp                          git-secrets                      github-release                   zsh-git-prompt
+# bagit							   git-game							git-series						 gitlab-gem
+# bash-git-prompt				   git-gerrit						git-sh							 gitlab-runner
+# cgit							   git-gui							git-sizer						 gitleaks
+# digitemp						   git-hooks						git-ssh							 gitless
+# easy-git						   git-hooks-go						git-standup						 gitmoji
+# git ✔							   git-if							git-subrepo						 gitslave
+# git-absorb					   git-imerge						git-svn-abandon					 gitter-cli
+# git-annex						   git-integration					git-test						 gitui
+# git-annex-remote-rclone		   git-interactive-rebase-tool		git-tf							 gitup
+# git-appraise					   git-lfs							git-tig							 gitversion
+# git-archive-all				   git-multipush					git-town						 lazygit
+# git-bug						   git-now							git-tracker						 legit ✔
+# git-cal						   git-number						git-trim						 libgit2 ✔
+# git-cinnabar					   git-octopus						git-url-sub ✔					 libgit2-glib
+# git-cola						   git-open							git-utils						 literate-git
+# git-credential-manager		   git-plus							git-vendor						 modgit
+# git-crypt						   git-quick-stats					git-when-merged					 moz-git-tools
+# git-delta						   git-recent						gitbatch						 pass-git-helper
+# git-extras ✔					   git-remote-codecommit			gitbucket						 pygitup
+# git-filter-repo				   git-remote-gcrypt				giter8							 sagittarius-scheme
+# git-fixup						   git-remote-hg					gitfs							 stgit
+# git-flow ✔					   git-review						gitg							 topgit
+# git-flow-avh					   git-revise						github-keygen					 ungit
+# git-fresh						   git-secret						github-markdown-toc				 willgit
+# git-ftp						   git-secrets						github-release					 zsh-git-prompt
 # ==> Casks
-# adobe-digital-editions    gitbox                    githubpulse               gitup                     smartgit
-# deepgit                   gitee                     gitify                    gitx                      snagit
-# font-digital-numbers      giteye                    gitkraken                 lego-digital-designer     subgit
-# git-it                    gitfiend                  gitnote                   logitech-presentation     webplotdigitizer
-# gitahead                  gitfinder                 gitpigeon                 plotdigitizer
-# gitblade                  gitfox                    gitscout                  refined-github-safari
-# gitbook                   github                    gitter            rowanj-gitx
+# adobe-digital-editions	gitbox					  githubpulse				gitup					  smartgit
+# deepgit					gitee					  gitify					gitx					  snagit
+# font-digital-numbers		giteye					  gitkraken					lego-digital-designer	  subgit
+# git-it					gitfiend				  gitnote					logitech-presentation	  webplotdigitizer
+# gitahead					gitfinder				  gitpigeon					plotdigitizer
+# gitblade					gitfox					  gitscout					refined-github-safari
+# gitbook					github					  gitter			rowanj-gitx
 
+
+
+# ❯ brew search cli
+# ==> Formulae
+# aliyun-cli								  cloudformation-cli						  m-cli
+# amazon-ecs-cli							  coda-cli									  mruby-cli
+# angular-cli								  contentful-cli							  mycli
+# apache-brooklyn-cli						  cubejs-cli								  mysql-client
+# apibuilder-cli							  dcos-cli									  mysql-client@5.7
+# apollo-cli								  ddclient									  netlify-cli ✔
+# arduino-cli								  drone-cli									  newrelic-cli
+# argus-clients								  faas-cli									  now-cli
+# ask-cli									  fargatecli								  oci-cli
+# athenacli									  fb-client									  openshift-cli
+# atlassian-cli								  firebase-cli								  openstackclient
+# atomist-cli								  fon-flash-cli								  pcsc-lite
+# aurora-cli								  forcecli									  pgcli
+# awscli									  gandi.cli									  qcli
+# awscli@1									  gatsby-cli ✔								  rancher-cli
+# awsebcli									  geographiclib								  react-native-cli
+# azure-cli									  gitter-cli								  riemann-client
+# balena-cli								  gnu-scientific-library					  signal-cli
+# bareos-client								  graphql-cli								  simple-amqp-client
+# bbftp-client								  grunt-cli									  speedtest-cli
+# bitwarden-cli								  gulp-cli									  sstp-client
+# boot2docker-cli							  hapi-fhir-cli								  swagger2markup-cli
+# c14-cli									  haste-client								  teensy_loader_cli
+# cacli										  hasura-cli								  tektoncd-cli
+# cartridge-cli								  homeassistant-cli							  telegram-cli
+# cash-cli									  imageoptim-cli							  transmission-cli
+# chalk-cli									  ironcli									  trash-cli
+# chrome-cli								  jfrog-cli									  vault-cli
+# cli11										  jinja2-cli								  veclibfort
+# cli53										  kpcli										  virustotal-cli
+# clib										  kubernetes-cli							  vsts-cli
+# click										  kubernetes-service-catalog-client			  wakatime-cli
+# cliclick									  kyma-cli									  webtorrent-cli
+# clinfo									  lastpass-cli								  wp-cli
+# cling										  lean-cli									  wp-cli-completion
+# clingo									  libbitcoin-client							  wren-cli
+# clip										  libmongoclient							  xclip
+# clipper									  libmpdclient								  ykclient
+# clipsafe									  litecli									  zabbix-cli
+# clisp										  logcli									  zanata-client
 
 
 ########### notes ###########
@@ -288,27 +337,27 @@ ruby-install
 # parallel can cause all kinds of trouble.
 #
 # If you need to have sqlite first in your PATH run:
-#   echo 'export PATH="/Users/goofrider/.brew/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+#	echo 'export PATH="/Users/goofrider/.brew/opt/sqlite/bin:$PATH"' >> ~/.zshrc
 #
 # For compilers to find sqlite you may need to set:
-#   export LDFLAGS="-L/Users/goofrider/.brew/opt/sqlite/lib"
-#   export CPPFLAGS="-I/Users/goofrider/.brew/opt/sqlite/include"
+#	export LDFLAGS="-L/Users/goofrider/.brew/opt/sqlite/lib"
+#	export CPPFLAGS="-I/Users/goofrider/.brew/opt/sqlite/include"
 #
 # For pkg-config to find sqlite you may need to set:
-#   export PKG_CONFIG_PATH="/Users/goofrider/.brew/opt/sqlite/lib/pkgconfig"
+#	export PKG_CONFIG_PATH="/Users/goofrider/.brew/opt/sqlite/lib/pkgconfig"
 #
 # ==> python@3.8
 # Python has been installed as
-#   /Users/goofrider/.brew/bin/python3
+#	/Users/goofrider/.brew/bin/python3
 #
 # Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
 # `python3`, `python3-config`, `pip3` etc., respectively, have been installed into
-#   /Users/goofrider/.brew/opt/python@3.8/libexec/bin
+#	/Users/goofrider/.brew/opt/python@3.8/libexec/bin
 #
 # You can install Python packages with
-#   pip3 install <package>
+#	pip3 install <package>
 # They will install into the site-package directory
-#   /Users/goofrider/.brew/lib/python3.8/site-packages
+#	/Users/goofrider/.brew/lib/python3.8/site-packages
 #
 # See: https://docs.brew.sh/Homebrew-and-Python
 
