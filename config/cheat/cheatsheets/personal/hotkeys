@@ -2,20 +2,24 @@
 tags: osx
 ---
 
-OSX Hotkeys
+OSX Global Hotkeys
 ===========
 
+## TickTick
+Ctrl Shift A	Show Quick Add bar (User Defined)
+Cmd Ctrl O		Show/Hide Mini Window
+					
 
-## Shiori
-Ctrl Option F12     Find (User Defined)
+## Shiori (User Defined)
+Ctrl Option F12     Find
 
-## Bartender
-Ctrl F12    Show hidden items (User Defined)
-Ctrl F11    Show full menu bar (User Defined)
+## Bartender (User Defined)
+Ctrl F12    Show hidden items
+Ctrl F11    Show full menu bar
 
-## Clipto
-Ctrl Shift E    Show/Hide app (User Defined)
-Ctrl Shift P    Note from clipboard (User Defined)
+## Clipto (User Defined)
+Ctrl Shift E    Show/Hide app
+Ctrl Shift P    Note from clipboard
 
 
 
