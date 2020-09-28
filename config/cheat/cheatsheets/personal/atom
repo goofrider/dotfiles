@@ -1,0 +1,18 @@
+Atom Hotkeys
+============
+
+
+Cmd Shift P           Command palette
+
+Cmd-K Cmd-B			      Toggle file tree view
+^ 0                   Focus tree view
+
+Cmd-K ↑ ↓ ← →         Split pane
+Cmd-K Cmd ↑ ↓ ← →     Focus pane
+Cmd K Cmd-N/P         Focus next/prev pane
+
+^ ( or ^ *            Toogle Git pane / Github pane
+
+
+
+## ⌘ ⌥ ⇧ ⇥ ↩ ↑ ↓ ← → ##
