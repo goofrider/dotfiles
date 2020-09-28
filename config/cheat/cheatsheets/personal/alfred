@@ -9,107 +9,80 @@ Alfred App
 ## Alfred keywords are actions that need to be selected with <enter> first
 
 # Global Hotkeys
-Cmd Space       Activate
+Cmd <Space>             Activate
+Cmd Option \            Show list of available Actions for selected Finder item
+Cmd Option /            Go to last browsed path
+Cmd Option C            Open Clipboard History viewer
 
 
-
-## Custom Workflows
-
-caff                    Caffinate
-emoji                   Search emoji codes              https://github.com/carlosgaldino/alfred-emoji-workflow
-ip                      Get local/remote IP             https://jdfwarrior.tumblr.com
-kill                    Kill process                    https://github.com/nathangreenstein/alfred-process-killer
-
-w, ww                   Search open windows and tabs or browsers tabs only (Swift Window Swticher)
-ft, tf, fi, if, fp, pf  Open current Finder directory in Terminal/iTerm/Path Finder and vise versa
-tz, timezone            Timezones
-
-p                       Post a bookmark of current browser tab to Pinboard (Rusty Pin)
-ps, pt                  Search pinboard (by query or tag)
-pind                    Try to delete bookmark for current browser tab from Pinboard
-packal                  Packal Updater
-brew or cask            Homebrew search                 https://github.com/fniephaus/alfred-homebrew/
-pkgman                  Package search                     https://github.com/willfarrell/alfred-pkgman-workflow                                    npm, gems, pypi, yarn, yo, bower, grunt, gulp, composer, pear, alcatraz, cocoa, brew, hex,
-                            docker, rpm, apt-get, raspbian, maven, gradle, chef, puppet, cordova, atom, crates, st
-
-
-doc, cdoc               DevDocs                         https://github.com/yannickglt/alfred-devdocs
-vm                      VMware Control                  http://tedwise.com
-                            start, stop , reset, suspend, pause, unpause, snapshot, ip, mac, list, switch
-dc, dcstart, dcstop     Docker                          https://developers.alboompro.com/
-dd                      Docker Dashboard                https://sleeplessmind.com.mo
-
-
-subl                    Open current finder selection with Sublime Text
-subl*                   Open file in Sublime Text
-
-caniuse                 Can I Use…?
-dash                    Dash
-domainr                 Search domains                  http://ding.one
-faker, fakerlocale      Generate fake data              http://www.groenewege.com
-gh                      Github repos                    https://github.com/edgarjs/alfred-github-repos
-so                      Search Stack Overflow
-c or #                  Convert CSS/HEX color codes     https://www.packal.org/workflow/colors
-                        Press Command+C to copy, or press Return to paste immediately
-                        Modifiers:
-                            Command: Reveal selected color in the OS X color panel
-                            Option: Toggle alpha and copy
-
-
-                    
 ## Basic Commands
-<Enter>         Action the currently selected item
+<Enter>         Perform the selected action
 Cmd O           Open file or application in default application
 Cmd <Enter>     Reveal in Finder (if the result is a local file)
-Option <Enter>  earch the currently typed query in Spotlight
-Ctrl <Enter>    Search the currently typed query in default web search
+Option <Enter>  Search the currently typed query in Spotlight
+^ <Enter>       Search the currently typed query in default web search
 
 
 open <file>     Find a file by name
-find <file>     Find a file and revals in finder
-in <terms>      Find files that contain <terms>
 ' or <space>    Find a file by name
-
-## Work with files and applications
-~                       Navigate to your home folder
-/                       Navigate to your root folder
-Cmd-Option /            Go to last browsed path in the File System Navigation
-previous                Go to last browsed path in the File System Navigation
-Tab                     Show list of available Actions for selected item
-<Ctrl>,<Left> or fn     Show list of available Actions for selected item
-Cmd Option \            Show list of available Actions for selected Finder item
-Cmd <Down>              Browse selected folder in File System Navigation
-<Enter>                 Enter a folder in File System Navigation
-<Backspace>             Go up a folder
-<Tab>                   Autocomplete
-.                       Show hidden files in File System Navigation
+<tags>          Find a file by tags
+find <file>     Find a file and revals in Finder
+in <terms>      Find files that contain <terms>
 
 
-
-## Clipboard (Powerpack features)
-
-Cmd C               Copy selected clip to current Clipboard
-Cmd Option C        Open Clipboard History viewer
-Cmd S               While in the Clipboard Viewer, save current clip as a snippet
-snip                Access snippets from main Alfred window with this keyword
-clear               Use keyword to clear Clipboard History
+>               Perform shell commands
+Cmd L           Show selection in large yype
+Cmd Y / Shift   Quick look slected item
 
 
-
-
-## Goodies
+bm              Search Chrome/Safari bookmarks
 google, wiki…   Search the web
 define          Follow keyword by a word and get a definition
 spell           Follow keyword by a word and see results with suggested spelling
 13*567          Type a calculation into main window to get the result
 =               Start an advanced calculation (enable this function in the Calculator Preferences)
 
+
+
+## File System Navigation
+~                       Navigate to your home folder
+/                       Navigate to your root folder
+previous                Go to last browsed path
+<Enter>                 Enter selected folder
+<Backspace>             Go up a folder
+Cmd ↑ / ↓               Go up/down one folder level
+→                       Show list of available Actions for selected item
+or <Ctrl>/<fn>/<Tab>    Not enabled by default. If <Tab> is used, autocomplete with Shitt-<Tab> instead
+.                       Show hidden files in File System Navigation
+<Tab>                   Autocomplete
+
+Option ↑                Add to or remove from file buffer
+Option ↓                Add to file buffer and move to the next item
+Option ←                Remove last item from file buffer
+Option →                Perform action on all files in file buffer
+Option <Backspace>      Clear file buffer
+Option-Click            Remove file from file buffer
+                        (click on file icons aobve Alfred main search box)
+
+
+## Clipboard
+Cmd C               Copy selected clip to current Clipboard
+<Enter>				Auto-paste
+					(Default: Copy selected clip to current Clipboard)
+Cmd C-C             Append to last clip in Alfred
+                    (Optiornally auto-merge it back to system clipboard)
+Cmd S               save current clip as a snippet
+clip                Show Clipboard viewer  (Default was 'clipboard')
+snip                Search snippets
+clear               Use keyword to clear Clipboard History
+
+
 ## System
 screensaver     Start Screen Saver
 trash           Show Trash
 emptytrash      Empty Trash
 logout          Log Out
-sleep            Sleep your Mac
+sleep           Sleep your Mac
 sleepdisplays   Sleep your Mac's displays
 lock            Lock your Mac
 restart         Restart your Mac
@@ -121,24 +94,84 @@ forcequit       Force Quit the running application
 
 
 
+
+## Custom Workflows
+caff                    Caffinate
+emoji                   Search emoji codes              https://github.com/carlosgaldino/alfred-emoji-workflow
+ip                      Get local/remote IP             https://jdfwarrior.tumblr.com
+kill                    Kill process                    https://github.com/nathangreenstein/alfred-process-killer
+
+
+w, ww                   Search open windows and tabs or browsers tabs only (Swift Window Swticher)
+ft, tf, fi, if, fp, pf  Open current Finder directory in Terminal/iTerm/Path Finder and vise versa
+tz, timezone            Timezones
+
+
+packal                  Packal Updater
+pkgman                  Package search                  https://github.com/willfarrell/alfred-pkgman-workflow
+                            npm, gems, pypi, yarn, yo, bower, grunt, gulp, composer, pear, alcatraz, cocoa, brew, hex,
+                            docker, rpm, apt-get, raspbian, maven, gradle, chef, puppet, cordova, atom, crates, st
+
+p                       Post a bookmark of current browser tab to Pinboard (Rusty Pin)
+ps, pt                  Search pinboard (by query or tag)
+pind                    Try to delete bookmark for current browser tab from Pinboard
+
+
+## Custom Workflows (Devel)
+dc, dcstart, dcstop     Docker                          https://developers.alboompro.com/
+dd                      Docker Dashboard                https://sleeplessmind.com.mo
+vm                      VMware Control                  http://tedwise.com
+                            start, stop , reset, suspend, pause, unpause
+                            snapshot, ip, mac, list, switch
+dash                    Dash
+subl                    Open current finder selection with Sublime Text
+subl*                   Open file in Sublime Text
+
+doc, cdoc               DevDocs                         https://github.com/yannickglt/alfred-devdocs
+caniuse                 Can I Use…?
+domainr                 Search domains                  http://ding.one
+faker, fakerlocale      Generate fake data              http://www.groenewege.com
+gh                      Github repos                    https://github.com/edgarjs/alfred-github-repos
+so                      Search Stack Overflow
+c or #                  Convert CSS/HEX color codes     https://www.packal.org/workflow/colors
+    Cmd+C               Copy selected color to clipboard
+    <Enter>             Paste immediately
+    Cmd <Enter>         Reveal selected color in the OS X color panel
+    Option <Enter>      Toggle alpha and copy
+
+
+## Custom Workflows (Disabled)
+brew or cask            Homebrew search                 https://github.com/fniephaus/alfred-homebrew/
+                            (only works with Homebrew installed in /usr/local)
+                    
+
+
+
+
+
+
+
+
+
+
+
 ## iTunes (Powerpack features)
 Cmd Ctrl <Enter>    Show the iTunes Mini Player
 itunes              Use keyword to show the iTunes Mini Player
-Cmd Ctrl <Down>     Play / Pausez
+Cmd Ctrl ↓          Play / Pausez
 play/pause          Play / Pause keywords
-Cmd Ctrl <Right>    Next Track
-next                Next Track
-Cmd Ctrl <Left>     Back Track
-back                Back Track
+Cmd Ctrl ← / →      Next Track
+next / back         Back / Next Track
 previous            Previous Track
-Cmd Ctrl <Up>       Play Random Album
+Cmd Ctrl ↑          Play Random Album
 random              Play Random Album
 volmax              Maximum volume
 volmid              Half volume
 mute                Mute volume
 Cmd Ctrl [0-5]      Rate currently playing song from 0 to 5 stars
 <Backspace>         Go up a folder in iTunes Mini Player
-Cmd R                 Reindex iTunes library
+Cmd R               Reindex iTunes library
 
 
 ## ⌘ ⌥ ⇧ ⇥ ↩ ↑ ↓ ← → ##
+

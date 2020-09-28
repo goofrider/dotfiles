@@ -1,0 +1,50 @@
+TextMate Hotkeys
+================
+
+
+^ Cmd T				Select bundle tiem
+Fn <enter>			Open current URL	(Hyperlink helper bundle)
+Cmd Y				Git commands
+
+
+## Macros
+isoD ⇥				Insert date
+
+
+## Text
+Cmd |               Filter thru command
+^ Cmd Shift T       Tabs/Spaces converions
+            1       Convert spaces to tabs
+            2       Convert tabs to spaces
+            3       Convert spaces to tabs (estimate indents)
+
+
+## Navigate
+Cmd L           Jump to line…
+Cmd Shift T     Jump to symbol…
+Cmd J           Jump to selection
+
+
+## View
+Cmd +/-/0       Font size: increase/decrease/default
+Cmd Option I    Show/Hide invisible characters (editor pane need to have focus)
+Cmd Option W    Toggle soft wrap
+F1              Fold current block
+
+
+## File
+^ Cmd Option D  Toggle file pane sidebar
+Cmd Option I    Show/Hide hidden files (file pane need to have focus)
+
+^ Cmd N         New file in enclosing folder of selected item
+Cmd Shift N     New folder in enclosing folder of selected item
+
+Cmd ↑			Make enclosing folder the file sidebar pane root
+^ Cmd R			Select currently opened file
+Cmd Shift A		Select none in file sidebar
+
+
+## ⌘ ⌥ ⇧ ⇥ ↩ ↑ ↓ ← → ##
+
+
+

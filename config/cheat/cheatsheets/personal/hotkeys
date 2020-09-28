@@ -3,25 +3,35 @@ tags: osx
 ---
 
 OSX Global Hotkeys
-===========
+==================
+
+## Mission Control
+^ Cmd ↑			Mission Control
+^ Cmd ↓			Application Windows
+F11				Show Desktop
+^ Cmd ←/→		Move left/right a space
 
 ## TickTick
-Ctrl Shift A	Show Quick Add bar (User Defined)
-Cmd Ctrl O		Show/Hide Mini Window
-					
+^ Shift A		Show Quick Add bar (User Defined)
+^ Cmd O			Show/Hide Mini Window
 
-## Shiori (User Defined)
-Ctrl Option F12     Find
+## Yoink
+F5				Toggle Yoink
 
-## Bartender (User Defined)
-Ctrl F12    Show hidden items
-Ctrl F11    Show full menu bar
+## Shiori
+^ Opt F12		Find					(User Defined)
 
-## Clipto (User Defined)
-Ctrl Shift E    Show/Hide app
-Ctrl Shift P    Note from clipboard
+## Bartender		
+^ F12    		Show hidden items		(User Defined)
+^ F11    		Show full menu bar		(User Defined)
+
+## Clipto
+^ Shift E    	Show/Hide app					(User Defined)
+^ Shift P    	Toggle clipboard monitoring		(User Defined)
 
 
+
+## ⌘ ⌥ ⇧ ⇥ ↩ ↑ ↓ ← → ##
 
 
 
