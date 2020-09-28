@@ -11,7 +11,8 @@ Cmd-K ↑ ↓ ← →         Split pane
 Cmd-K Cmd ↑ ↓ ← →     Focus pane
 Cmd K Cmd-N/P         Focus next/prev pane
 
-^ ( or ^ *            Toogle Git pane / Github pane
+^ 9 or ^ 8            Opem/Switch to Git pane / Github pane
+^ ( or ^ *            Show/Hide Git pane / Github pane
 
 
 
