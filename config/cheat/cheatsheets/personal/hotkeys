@@ -5,6 +5,35 @@ tags: osx
 OSX Global Hotkeys
 ==================
 
+## Keyboar navigation
+^ F1			Tooogle keyboard navigation
+^ F2			Move foucs to menubar
+^ F3			Move foucs to the dock
+^ F8			Move foucs to menubar tiems (Not working?)
+^ F4			Move foucs to active or next window
+^ F6			Move foucs to floating window
+Cmd Option `	Move foucs to window drawer
+
+Cmd Opt D		Toggle dock hiding
+
+
+## Screen capture
+Cmd Shift 3		Capture entire screen and save to file
+Cmd Shift 4		Capture from cropped screen
+Cmd Shift 5		Capture current window
+^ Cmd Shift 3	Capture entire screen to clipboard
+^ Cmd Shift 4	Capture from cropped screen to clipboard
+
+
+## IME
+^ Space			Next input source
+^ Option Space  Prev input source
+^ Shift Space	Show/Hide trackpad handwriting
+
+
+## Finder
+Cmd Shft F		Recent files (Spotlight)
+
 ## Mission Control
 ^ Cmd ↑			Mission Control
 ^ Cmd ↓			Application Windows
@@ -17,6 +46,9 @@ F11				Show Desktop
 
 ## Yoink
 F5				Toggle Yoink
+^ Cmd Opt X		Add selected files to Yoink
+^ Cmd Opt Y		Add selected text to Yoink
+
 
 ## Shiori
 ^ Opt F12		Find					(User Defined)
