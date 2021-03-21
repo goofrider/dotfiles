@@ -1,0 +1,5 @@
+[.dotfiles]
+checkout = git clone 'git@github.com:goofrider/dotfiles.git' '.dotfiles'
+
+[Develop/goofadmin-notes]
+checkout = git clone 'git@github.com:goofrider/goofadmin.git' 'goofadmin-notes'
