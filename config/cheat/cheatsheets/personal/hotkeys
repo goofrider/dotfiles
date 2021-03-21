@@ -6,13 +6,13 @@ OSX Global Hotkeys
 ==================
 
 ## Keyboar navigation
-^ F1			Tooogle keyboard navigation
-^ F2			Move foucs to menubar
-^ F3			Move foucs to the dock
-^ F8			Move foucs to menubar tiems (Not working?)
-^ F4			Move foucs to active or next window
-^ F6			Move foucs to floating window
-Cmd Option `	Move foucs to window drawer
+^ F1			Toogle keyboard navigation
+^ F2			Move focus to menubar
+^ F3			Move focus to the dock
+^ F8			Move focus to menubar tiems (Not working?)
+^ F4			Move focus to active or next window
+^ F6			Move focus to floating window
+Cmd Option `	Move focus to window drawer
 
 Cmd Opt D		Toggle dock hiding
 
