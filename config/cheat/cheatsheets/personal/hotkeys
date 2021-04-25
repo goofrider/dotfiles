@@ -35,10 +35,11 @@ Cmd Shift 5		Capture current window
 Cmd Shft F		Recent files (Spotlight)
 
 ## Mission Control
-^ Cmd ↑			Mission Control
-^ Cmd ↓			Application Windows
+^ ↑				Mission Control
+^ ↓				Application Windows
 F11				Show Desktop
-^ Cmd ←/→		Move left/right a space
+^ ←/→			Move left/right a space
+^ 1-4		Switch top desktop 1-4
 
 ## TickTick
 ^ Shift A		Show Quick Add bar (User Defined)

@@ -5,12 +5,13 @@ rcm			# see https://github.com/thoughtbot/rcmpwgen
 wget
 tmux
 byobu
-git			# newer then the one provided in Xcode, less likely to have problem with xcodebuild at startup
+git			# newer then the one provided in Xcode
+			# less likely to have problem with xcodebuild at startup
 
 
 ###### osx tools ######
 lunchy		# see https://github.com/eddiezane/lunchy
-# lunchy-go	  # see https://github.com/sosedoff/lunchy-go
+# lunchy-go	# see https://github.com/sosedoff/lunchy-go
 afsctool	# apfs compression
 mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
@@ -25,7 +26,7 @@ smartmontools
 ###### other stuff ######
 buku						# Bookmark manager					https://github.com/jarun/Buku
 googler						# Google search cli					https://github.com/jarun/googler
-s-search					# web search cli					https://github.com/zquestz/s
+s-search					# web search cli						https://github.com/zquestz/s
 croc						# cli file transfer utility			https://github.com/schollz/croc
 # citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
 							# https://github.com/citizen428/unsavory
@@ -152,13 +153,13 @@ gatsby-cli			# NPM upstream
 heroku/brew/heroku			# NPM
 netlify-cli					# NPM
 serverless
-superfly/tap/flyctl
+superfly/tap/flyctl			# cli for fly.io
 # cask google-cloud-sdk
 # cask parse
 
 
 ## Also:
-# gem dokku-cli
+# gem dokku-cli			# use rubygems to install to ~/.gem instead
 
 
 #### deploy
