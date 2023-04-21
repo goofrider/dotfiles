@@ -103,6 +103,7 @@ pipx					# installs pypi packages in virtualenv
 puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 node
 kotlin
+android-platform-tools
 
 
 #### node tools
