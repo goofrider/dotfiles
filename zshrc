@@ -27,11 +27,28 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 
 
+##### ohmyzsh
+## installed using git 
+
+# _debug_log " "Setup Oh My Zsh"
+#source ~/.dotfiles/inc/zsh/ohmyzsh.zsh
+
+##### antibody
+## installed using homebrew
+## EOL. Switch to Antidote in the future 
+## https://github.com/mattmc3/antidote
+
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
+
+
+
+
 ########## Version Managers ##########
 
 
 
-#### ============= asdf / direnv begins ==================
+#### ============= direnv begins ==================
 
 
 # Notes: using asdf + dirnev integration. asdf is invoked from direnv using .envrc
@@ -48,8 +65,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # https://github.com/direnv/direnv
 
 _debug_log "Setup direnv"
-#### init direnv
-eval "$(direnv hook zsh)"
+
+# #### init direnv
+# eval "$(direnv hook zsh)"
 
 
 ### general direnv config
@@ -68,7 +86,8 @@ eval "$(direnv hook zsh)"
 ##### rbenv #####
 ## https://github.com/rbenv/rbenv
 _debug_log "Setup rbenv"
-eval "$(rbenv init -)"
+
+# eval "$(rbenv init -)"
 
 
 ##### pyenv #####
@@ -76,12 +95,14 @@ eval "$(rbenv init -)"
 # 
 ## Please make sure eval "$(pyenv init -)" is placed toward the end of the shell configuration file 
 ## since it manipulates PATH during the initialization.
-_debug_log "Setup pyenv"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
+
+# _debug_log "Setup pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
+# eval "$(pyenv init -)"
     
 
 #### nodenv #####
+
 _debug_log "Setup nodenv"
 eval "$(nodenv init -)"
 
@@ -102,15 +123,6 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 
 
 
-### s 
-## https://github.com/davesque/s
-## Add the following somewhere in your .bashrc:
-##   export S_BIN_PATH=<path to your script directory>
-##   export PATH="<path to s repo directory>:$S_BIN_PATH:$PATH"
-
-# _debug_log " "Setup s"
-# export S_BIN_PATH="$HOME/.scripts"
-# export PATH="$HOME/.fresh/source/davesque/s:$S_BIN_PATH:$PATH"
 
 
 
@@ -173,18 +185,12 @@ eval "$(starship init zsh)"
 
 
 
-##### ohmyzsh
-# _debug_log " "Setup Oh My Zsh"
-#source ~/.dotfiles/inc/zsh/ohmyzsh.zsh
-
-##### antibody
-source ~/.dotfiles/inc/zsh/antibody.zsh
-
 
 
 
 
 ###### ~/.zshrc ends #######
+
 _debug_log "###### ~/.zshrc ends #######"
 
 unset -f _debug_log

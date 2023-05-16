@@ -13,7 +13,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 ## homebrew
-export PATH="$HOME/.brew/bin:$PATH"
+export PATH="$HOME/.brew/bin:$HOME/.brew/sbin:$PATH"
 
 ## ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"

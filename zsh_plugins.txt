@@ -2,11 +2,31 @@
 # antibody bundle ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 
 
+# See https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ for all OMZ plugins
+
 ##### Init omz
 # following omz plugins might not load if this is not loaded first
 # Rails plugin has this problem, also needed ZSH to be set
-ohmyzsh/ohmyzsh
+#ohmyzsh/ohmyzsh
 
+
+
+##### shell helpers
+
+ohmyzsh/ohmyzsh       path:plugins/autojump
+        # Initializes autojump. Must have autojump already installed.
+rupa/z
+        # installs z, dir jumper
+		
+
+
+### Dev env ####
+
+ohmyzsh/ohmyzsh     path:plugins/direnv
+ohmyzsh/ohmyzsh     path:plugins/rbenv
+ohmyzsh/ohmyzsh     path:plugins/pyenv
+ohmyzsh/ohmyzsh     path:plugins/asdf
+ohmyzsh/ohmyzsh     path:plugins/dotenv
 
 
 ##### Goodies
@@ -23,9 +43,10 @@ ohmyzsh/ohmyzsh     path:plugins/docker
         # completion    
 ohmyzsh/ohmyzsh     path:plugins/thor
         # completion
-ohmyzsh/ohmyzsh     path:plugins/rails
+#ohmyzsh/ohmyzsh     path:plugins/rails
         # completion and aliases r*
         # !!!!! Only works with omz !!!!
+		# !!!! installing rails in Ruby 2.6.0 (Big Sur) is very borken !!!!
 ohmyzsh/ohmyzsh     path:plugins/bundler
         # completion and aliases b*
         # Adds a wrapper for common gems:
@@ -72,10 +93,5 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/pipenv
         # only provides short aliases
 
-##### shell helpers
 
-# ohmyzsh/ohmyzsh       plugins/autojump
-        # Initializes autojump. Must have autojump already installed.
-# rupa/z
-        # installs z, dir jumper
 
