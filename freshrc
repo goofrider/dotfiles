@@ -26,46 +26,7 @@ fresh freshshell/fresh README.markdown --file=docs/fresh.md
 ############ bash #############
 
 
-#fresh  		ashikahmad/PrettyPrompt   	pretty_prompt.sh		
 
-# ####  Filters
-# Filters allow you to run specified files through arbitrary commands at build time.
-#
-#     fresh neersighted/dotfiles config/muttrc.erb.asc --file=~/.muttrc --filter="gpg | erb"
-# 
-
-
-
-### dircolors
-### the folder ~/.dircolorsdb is arbituary
-
-# To use any of the database files, run this:
-#
-# eval `dircolors /path/to/dircolorsdb`
-#
-# To activate the theme for all future shell sessions, copy or link that file to ~/.dir_colors,
-# and include the above command in your ~/.profile (for bash) or ~/.zshrc (for zsh).
-
-# for c in 256dark ansi-dark ansi-light ansi-universal ;
-# do
-# 	fresh seebi/dircolors-solarized		dircolors.$c		--file=~/.dircolors/dircolors.$c
-# done
-
-
-#### bash completion
-
-# fresh freshshell/fresh contrib/completion/fresh-completion.bash
-# fresh bobthecow/git-flow-completion git-flow-completion.bash
-
-
-# ## provides: editlast
-# # `editlast` opens the last modified file in the editor
-# fresh jasoncodes/dotfiles shell/aliases/editor.sh
-#
-#
-# ## bundler and git aliases
-# fresh jasoncodes/dotfiles shell/aliases/ruby.sh
-# fresh jasoncodes/dotfiles shell/aliases/git.sh
 
 
 
@@ -133,6 +94,10 @@ fresh sdushantha/tmpmail		tmpmail		--bin
 ### git-subdir
 ### see https://github.com/andreyvit/git-subdir
 # fresh andreyvit/git-subdir		git-subdir  --bin
+
+
+
+########### end ############
 
 
 
@@ -220,5 +185,51 @@ fresh sdushantha/tmpmail		tmpmail		--bin
 #   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
 #   fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
 # fresh-options # this resets the fresh-options
+
+
+
+
+######## examples #########
+
+#fresh  		ashikahmad/PrettyPrompt   	pretty_prompt.sh		
+
+# ####  Filters
+# Filters allow you to run specified files through arbitrary commands at build time.
+#
+#     fresh neersighted/dotfiles config/muttrc.erb.asc --file=~/.muttrc --filter="gpg | erb"
+# 
+
+
+
+### dircolors
+### the folder ~/.dircolorsdb is arbituary
+
+# To use any of the database files, run this:
+#
+# eval `dircolors /path/to/dircolorsdb`
+#
+# To activate the theme for all future shell sessions, copy or link that file to ~/.dir_colors,
+# and include the above command in your ~/.profile (for bash) or ~/.zshrc (for zsh).
+
+# for c in 256dark ansi-dark ansi-light ansi-universal ;
+# do
+# 	fresh seebi/dircolors-solarized		dircolors.$c		--file=~/.dircolors/dircolors.$c
+# done
+
+
+#### bash completion
+
+# fresh freshshell/fresh contrib/completion/fresh-completion.bash
+# fresh bobthecow/git-flow-completion git-flow-completion.bash
+
+
+# ## provides: editlast
+# # `editlast` opens the last modified file in the editor
+# fresh jasoncodes/dotfiles shell/aliases/editor.sh
+#
+#
+# ## bundler and git aliases
+# fresh jasoncodes/dotfiles shell/aliases/ruby.sh
+# fresh jasoncodes/dotfiles shell/aliases/git.sh
 
 

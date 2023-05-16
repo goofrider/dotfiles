@@ -52,50 +52,6 @@ _debug_log "Setup direnv"
 eval "$(direnv hook zsh)"
 
 
-
-######### asdf (native) #########
-##
-## not using it anymore as it's shims doesn't work with system/homebrew python/ruby
-# _debug_log "Setup asdf"
-#
-# ### Init asdf
-# source $(brew --prefix asdf)/asdf.sh
-
-
-# ######### asdf + direnv integrated #########
-# _debug_log " "Setup direnv+asdf"
-#
-# ### Using asdf+direnv For better performance
-# ### Init asdf but bypassing shims. with direnv integration.
-# ### see https://github.com/asdf-community/asdf-direnv
-#
-# ## Dont source `~/.asdf/asdf.sh`
-# #PATH="$PATH:~/.asdf/bin"					# NOT needed for Homebrew installed asdf
-# source "$(brew --prefix)/opt/asdf/lib/asdf.sh" 	# just load the asdf wrapper function
-#
-# #### init direnv via asdf
-# #### See https://github.com/asdf-community/asdf-direnv
-# ## needs to specify direnv version in global .tool-versions to work
-# ## or set it in an  envar
-# eval "$(asdf exec direnv hook zsh)"
-# direnv() { asdf exec direnv "$@"; }
-#
-# ## alt init direnv+asdf
-# # eval "$(env ASDF_DIRENV_VERSION=2.20.0 asdf direnv hook bash)"
-# # direnv() { env ASDF_DIRENV_VERSION=2.20.0 asdf direnv "$@"; }
-
-
-##	When using asdf via direnv, not only .tool-versions is needed in project directory
-##	But also .envrc, as asdf is invoked by direnv rather than natively.
-##
-##	Once hooked into your shell, direnv will expect to find a .envrc file 
-##	whenever you need to change tool versions.
-##	In your project directory, create an .envrc file like this:
-##	# File: /your/project/.envrc
-##	 	use asdf
-
-
-
 ### general direnv config
 
 [ -x "$(command -v tmux)" ] && alias tmux='direnv exec / tmux'
@@ -104,7 +60,7 @@ eval "$(direnv hook zsh)"
     # See https://github.com/direnv/direnv/wiki/Tmux
 
 
-#### ============= asdf / direnv ends ==================
+#### ============= direnv ends ==================
 
 
 
