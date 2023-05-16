@@ -21,7 +21,9 @@ SYMLINK_DIRS="scripts lists config/cheat/*/personal"
 
 
 
+##### end ######
 
+############# help ##############
 
 
  # COPY_ALWAYS    always copy files that match the listed globs, never symlink them.

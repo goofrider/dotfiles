@@ -211,8 +211,8 @@ hyperfine				# code benchmarking tool in rust		https://github.com/sharkdp/hyperf
 
 ######### not used #########
 # antigen		# see https://github.com/zsh-users/antigen # SLOW
-chruby
-ruby-install
+# chruby
+# ruby-install
 
 #brew-pip		# can't find pip. still need to set path to $(brew --prefix)/share/python
 #brew-gem		 # deps: homebrew ruby (when installing gems)
