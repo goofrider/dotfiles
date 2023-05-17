@@ -60,7 +60,8 @@ antibody bundle < ~/.zsh_plugins.txt
 # Alternatively direnv can manage ruby, python etc, by utilizing ruby-install, rbenv, pyenv, etc directly.
 
 
-####### direnv (native) ########
+####### direnv (native) #######
+
 # https://direnv.net/
 # https://github.com/direnv/direnv
 
@@ -78,15 +79,57 @@ _debug_log "Setup direnv"
     # See https://github.com/direnv/direnv/wiki/Tmux
 
 
-#### ============= direnv ends ==================
+#######  direnv ends #######
 
 
 
 
-##### rbenv #####
-## https://github.com/rbenv/rbenv
-_debug_log "Setup rbenv"
+#######  asdf begins #######
 
+
+_debug_log "Setup asdf"
+
+
+
+#### asdf completions for zsh 
+## https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+## see also https://github.com/ohmyzsh/ohmyzsh/pull/8837
+
+
+# To make Homebrew’s completions available in zsh, you must insert the Homebrew-managed zsh/site-functions path 
+# into your FPATH before initialising zsh’s completion facility. Add the following to your ~/.zshrc:
+# 
+# 	if type brew &>/dev/null
+# 	then
+# 	  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+#
+# 	  autoload -Uz compinit
+# 	  compinit
+# 	fi
+# 
+# This must be done before compinit is called. Note that if you are using Oh My Zsh,
+# it will call compinit for you when you source oh-my-zsh.sh. In this case, instead of the above,
+# add the following line to your ~/.zshrc, before you source oh-my-zsh.sh:
+#
+# 	FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# 	You may also need to forcibly rebuild zcompdump:
+#
+# rm -f ~/.zcompdump; compinit
+# Additionally, if you receive “zsh compinit: insecure directories” warnings when attempting
+# to load these completions, you may need to run this:
+#
+# 	chmod -R go-w "$(brew --prefix)/share"
+
+
+#######  asdf ends #######
+
+
+
+
+# ##### rbenv #####
+# ## https://github.com/rbenv/rbenv
+# _debug_log "Setup rbenv"
+#
 # eval "$(rbenv init -)"
 
 
@@ -101,10 +144,10 @@ _debug_log "Setup rbenv"
 # eval "$(pyenv init -)"
     
 
-#### nodenv #####
-
-_debug_log "Setup nodenv"
-eval "$(nodenv init -)"
+# #### nodenv #####
+#
+# _debug_log "Setup nodenv"
+# eval "$(nodenv init -)"
 
 
 

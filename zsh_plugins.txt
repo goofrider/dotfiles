@@ -27,12 +27,11 @@ rupa/z
 
 ### Dev env ####
 
-ohmyzsh/ohmyzsh     path:plugins/direnv
-ohmyzsh/ohmyzsh     path:plugins/rbenv
-ohmyzsh/ohmyzsh     path:plugins/pyenv
+# ohmyzsh/ohmyzsh     path:plugins/direnv
+# ohmyzsh/ohmyzsh     path:plugins/rbenv
+# ohmyzsh/ohmyzsh     path:plugins/pyenv
+# ohmyzsh/ohmyzsh     path:plugins/dotenv
 ohmyzsh/ohmyzsh     path:plugins/asdf
-ohmyzsh/ohmyzsh     path:plugins/dotenv
-
 
 ##### Goodies
 ohmyzsh/ohmyzsh     path:plugins/frontend-search
