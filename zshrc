@@ -95,6 +95,8 @@ _debug_log "Setup asdf"
 ## https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 ## see also https://github.com/ohmyzsh/ohmyzsh/pull/8837
 
+## zsh completeion seems to work fine
+
 
 # To make Homebrew’s completions available in zsh, you must insert the Homebrew-managed zsh/site-functions path 
 # into your FPATH before initialising zsh’s completion facility. Add the following to your ~/.zshrc:
