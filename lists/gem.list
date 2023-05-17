@@ -1,12 +1,16 @@
-############## Gems 2020 ##############
-####### 
-(system, user-install, manually symlink to ~/.local/bin)
-dokku-cli		# see https://github.com/SebastianSzturo/dokku-cli
+############## Gems 2023 ##############
+
 doing			# see https://brettterpstra.com/projects/doing/
 
 
+
+############## dev ##############
+
+bundler
+dokku-cli		# see https://github.com/SebastianSzturo/dokku-cli
+
+
 ############## old default gems (dev) ##############
-# bundler
 # powify
 # powder
 # pkglookup

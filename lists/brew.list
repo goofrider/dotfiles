@@ -24,10 +24,13 @@ smartmontools
 
 
 ###### other stuff ######
+
+croc						# cli file transfer utility			https://github.com/schollz/croc
+
+
 buku						# Bookmark manager					https://github.com/jarun/Buku
 googler						# Google search cli					https://github.com/jarun/googler
 s-search					# web search cli						https://github.com/zquestz/s
-croc						# cli file transfer utility			https://github.com/schollz/croc
 # citizen428/tap/unsavory		# [TIMEOUT] remove dead links from pinboard
 							# https://github.com/citizen428/unsavory
 
@@ -69,7 +72,7 @@ fd						# find alternative		https://github.com/sharkdp/fd
 
 ###### cheatsheets ######
 cheat					# now in golang					https://github.com/cheat/cheat
-navi					# https://github.com/denisidoro/navi
+navi					# An interactive cheatsheet tool for the command-line	https://github.com/denisidoro/navi
 
 ## tldr: Collaborative cheatsheets for console commands https://github.com/tldr-pages/tldr
 #isacikgoz/taps/tldr		# interactive tldr in golang	https://github.com/isacikgoz/tldr
@@ -112,75 +115,20 @@ htop
 ##########################################
 
 dnsmasq					# for faking pow.cx
+
+
+
 dive					# inspect docker layers
-buildpacks/tap/pack		# Github cloud native buildpacks
-pipx					# installs pypi packages in virtualenv
-puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
-node
-kotlin
-android-platform-tools
-
-
-#### node tools
-pnpm				# NPM
-yarn				# NPM. Usage: yarn global add [package]
-bower				# NPM
-webpack
-
-
-### Env/version mamangers
-
-
-direnv			# see https://github.com/direnv/direnv
-rbenv			# see https://github.com/rbenv/rbenv
-pyenv			# see https://github.com/pyenv/pyenv
-pipenv			# Manages python verions and virtualenvs together
-				# Uses Pipfile instead of requirements.txt
-
-
-#### node version managers
-#nodeenv		# Not a port of rbenv. It's baed on python virtualenv
-nodenv			# based on rbenv
-n
-
-
-
-### static gen
-hugo
-eleventy			# NPM upstream
-gatsby-cli			# NPM upstream
-
-## Also:
-# gem jekyll
-# npm gridsome
-# npm hexo
-
-
-
-# rbenv-communal-gems							# install with rbenv-plug instead
-# rbenv-default-gems							# install with rbenv-plug instead
-# jawshooah/pyenv/pyenv-update					# need HEAD
-# jawshooah/pyenv/pyenv-default-packages		# not working
-# pyenv-virtualenv
-
-
-
-### hosting provier cli
-heroku/brew/heroku			# NPM
-netlify-cli					# NPM
-serverless
-superfly/tap/flyctl			# cli for fly.io
-# cask google-cloud-sdk
-# cask parse
-
-
 ## Also:
 # gem dokku-cli			# use rubygems to install to ~/.gem instead
 
 
-#### deploy
-ansible
-salt					# dep: python, zeromq
+node
+kotlin
+
+pipx					# installs pypi packages in virtualenv
+android-platform-tools
+puma/puma/puma-dev		# pow.cx alternative https://github.com/puma/puma-dev
 
 
 
@@ -202,11 +150,73 @@ legit		# see https://frostming.github.io/legit/
 ### manage git repos
 repo		# manage multiple git repos. By Google. https://gerrit.googlesource.com/git-repo/
 mr			# last updated in 2018. Use 'repo' instead https://myrepos.branchable.com/
-ghq			# centralized cloned repos https://github.com/x-motemen/ghq
+# ghq			# clone github repos to centralized dir like go https://github.com/x-motemen/ghq
 
 ## also 'gita' in pip3. see https://github.com/nosarthur/gita
 
 
+
+#### deploy
+ansible
+salt					# dep: python, zeromq
+
+
+
+
+### Env/version mamangers
+
+direnv			# see https://github.com/direnv/direnv
+rbenv			# see https://github.com/rbenv/rbenv
+pyenv			# see https://github.com/pyenv/pyenv
+pipenv			# Manages python verions and virtualenvs together
+				# Uses Pipfile instead of requirements.txt
+
+
+# rbenv-communal-gems							# install with rbenv-plug instead
+# rbenv-default-gems							# install with rbenv-plug instead
+# jawshooah/pyenv/pyenv-update					# need HEAD
+# jawshooah/pyenv/pyenv-default-packages		# not working
+# pyenv-virtualenv
+
+
+#### node version managers
+#nodeenv		# Not a port of rbenv. It's based on python virtualenv
+nodenv			# based on rbenv
+n
+
+
+
+
+### hosting provier cli
+#heroku/brew/heroku			# NPM
+netlify-cli					# NPM
+serverless
+superfly/tap/flyctl			# cli for fly.io
+# cask google-cloud-sdk
+buildpacks/tap/pack		# cloud native buildpacks
+## Buildpacks were first conceived by Heroku in 2011. Since then, they have been adopted by Cloud Foundry and other PaaS such as Google App Engine, Gitlab, Knative, Deis, Dokku, and Drie.
+# cask parse
+
+
+
+
+#### node tools
+yarn				# NPM. Usage: yarn global add [package]
+webpack
+# pnpm				# NPM
+# bower				# NPM
+
+
+
+### static gen
+hugo
+eleventy			# NPM upstream
+gatsby-cli			# NPM upstream
+
+## Also:
+# gem jekyll
+# npm gridsome
+# npm hexo
 
 
 
