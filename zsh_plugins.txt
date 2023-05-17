@@ -7,8 +7,13 @@
 ##### Init omz
 # following omz plugins might not load if this is not loaded first
 # Rails plugin has this problem, also needed ZSH to be set
-#ohmyzsh/ohmyzsh
+ohmyzsh/ohmyzsh
 
+
+
+##### Basics
+
+joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 
 ##### shell helpers
