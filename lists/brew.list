@@ -32,13 +32,7 @@ croc						# cli file transfer utility			https://github.com/schollz/croc
 							# https://github.com/citizen428/unsavory
 
 
-###### txt search tools ######
-ack						# see https://beyondgrep.com/
-the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
-ripgrep					# see https://github.com/BurntSushi/ripgrep
-jq						# see https://github.com/stedolan/jq
-fzf						# general-purpose interactive command-line fuzzy finder https://github.com/junegunn/fzf
-fd						# find alternative		https://github.com/sharkdp/fd
+
 
 
 
@@ -46,9 +40,10 @@ fd						# find alternative		https://github.com/sharkdp/fd
 ########### more shell goodies ############
 ###########################################
 
-antibody		# see https://github.com/getantibody/antibody
-starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
-			# dep: nerd font
+
+yank					# Yank terminal output to clipboard
+	 					# https://github.com/mptre/yank
+		
 
 ## see https://dev.to/_darrenburns/10-tools-to-power-up-your-command-line-4id4
 
@@ -61,6 +56,17 @@ asciinema	# record terminal actions as animations https://asciinema.org/
 			# and then use 'svg-term' (npm) to convert to SVG  https://github.com/marionebl/svg-term-cli
 
 
+
+###### txt search tools ######
+ack						# see https://beyondgrep.com/
+the_silver_searcher		# see https://github.com/ggreer/the_silver_searcher
+ripgrep					# see https://github.com/BurntSushi/ripgrep
+jq						# see https://github.com/stedolan/jq
+fzf						# general-purpose interactive command-line fuzzy finder https://github.com/junegunn/fzf
+fd						# find alternative		https://github.com/sharkdp/fd
+
+
+
 ###### cheatsheets ######
 cheat					# now in golang					https://github.com/cheat/cheat
 navi					# https://github.com/denisidoro/navi
@@ -71,12 +77,21 @@ tealdeer				# tldr in rust					https://github.com/dbrgn/tealdeer
 
 
 
+###### shell extras ######
+antibody		# see https://github.com/getantibody/antibody
+starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
+			# dep: nerd font
+
+			
+
 ###### other utilities ######
 pigz		# multithreaded zip
 p7zip		# 7zip cli
 unrar
 tree
 htop
+
+
 
 
 ###### fonts ######
