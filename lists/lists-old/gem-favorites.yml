@@ -1,4 +1,0 @@
-vagrant plugins:
-  vagrant-berkshelf
-  vagrant-omnibus
-  
