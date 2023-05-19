@@ -13,10 +13,9 @@
 
 HOSTNAME=$(hostname -s)
 DOTFILES_DIRS="$HOME/.dotfiles"
-EXCLUDES="misc"
-#SYMLINK_DIRS="scripts config/cheat/cheatsheats/personal"
-		# subdir symlink not working
-SYMLINK_DIRS="scripts config/cheat/*/personal"
+EXCLUDES="misc inc old archive"
+SYMLINK_DIRS="scripts config/cheat/cheatsheats/personal"
+
 
 
 
