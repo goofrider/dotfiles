@@ -1,22 +1,78 @@
 ---
+###
+### doing config file
+### default location: ~/.config/doing/config.yml
+### 
+### see https://github.com/ttscoff/doing/wiki/Configuration
+###
 plugins:
-  plugin_path: "/Users/goofrider/.config/doing/plugins"
-  command_path: "/Users/goofrider/.config/doing/commands"
+  # plugin_path: "/Users/goofrider/.config/doing/plugins"
+  # command_path: "/Users/goofrider/.config/doing/commands"
+  plugin_path: "~/.config/doing/plugins"
+  command_path: "~/.config/doing/commands"
   byday:
     item_width: 60
 autotag:
   whitelist: []
   synonyms: {}
+#######
+#
+# Use the editors section to define what editor apps will be used for commands that require them. 
+# An editor can be a command line tool like vim or subl, 
+# or (on Mac) an application name like "VS Code" or "TaskPaper."
+#
+# 	editors:
+# 	  default: vim
+# 	  doing_file: TaskPaper
+# 	  config: Sublime Text
+# 	  pager: less -Xr
+#
+# default is the fallback for all editor commands. If this isn't defined, 
+# whatever is set in $GIT_EDITOR or $EDITOR will be used (in that order).
+#
+# In the case of the doing now -e command or any command that edits entries or notes, 
+# default (or $EDITOR) will be called.
+#
+# The only requirements for default and editors set in the environment are that 
+# they be launchable from the command line and able to "wait." In the case of 
+# Sublime Text and TextMate, just use -w like this: subl -w. Vim automatically waits 
+# when run from the command line, but if you're using MacVim, you'll need to run mvim -f.
+#
+# doing_file is the app in which your Doing file will be opened with doing open. 
+# This can be any text editor or app (vim, VS Code, TaskPaper). If this is blank, 
+# the Doing file will be opened by whatever the system default is for the 
+# doing file extension (default is .md), or you can use -a app_name or -b bundle_id to override.
+#
+# config defines a separate app in which to open the config file when running doing config.
+#
+#######
 editors:
+  # default:
   default: "TextMate"
   doing_file:
   config:
   pager:
 disabled_commands: []
+###
+### Use ~/Notes as doing data directory
+### Manually symlink what_was_i_doing.md to Obsidian
+### (~/Notes/Obsidian is symlinked to Notes/ in Google Drive)
+### 	
+### 	mkdir ~/Notes
+### 	cd ~/Notes
+### 	ln -s ~/Google\ Drive/Notes Obsidian
+### 	ln -s Obsidian/devel-notes default-vault
+### 	ln -s default-vault/doing\ log.md what_was_i_doing.md
+### 
+###
+# doing_file: "~/.local/share/doing/what_was_i_doing.md"
 doing_file: "~/Notes/what_was_i_doing.md"
 doing_file_sort: desc
-backup_dir: "~/Notes/.doing_backup"
+# backup_dir: "~/.local/share/doing/doing_backup"
+backup_dir: "~/Notes/doing_backup"
 history_size: 15
+### You can rename the section that holds your current tasks. 
+### By default, this is Currently, but if you have some other bright idea, feel free
 current_section: Currently
 paginate: false
 never_time: []

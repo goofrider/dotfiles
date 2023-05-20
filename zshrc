@@ -29,9 +29,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 ##### ohmyzsh
 ## installed using git 
+## EOL: switched to using Antibody to install ohmyzsh
 
 # _debug_log " "Setup Oh My Zsh"
-#source ~/.dotfiles/inc/zsh/ohmyzsh.zsh
+# source ~/.dotfiles/inc/zsh/ohmyzsh.zsh
+
+
 
 ##### antibody
 ## installed using homebrew
@@ -199,13 +202,14 @@ eval "$(starship init zsh)"
 
 #### automjump (via homebrew)
 # see https://github.com/wting/autojump
-# also available as ohmyzsh plugin
+# shell init also available as ohmyzsh plugin https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump
+# (must have autojump already installed)
 
 # Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
 # to source the file to update your current session):
 
-  _debug_log "Setup autojump"
-  [ -f "$(brew --prefix)/etc/profile.d/autojump.sh" ] && . "$(brew --prefix)/etc/profile.d/autojump.sh"
+  # _debug_log "Setup autojump"
+  # [ -f "$(brew --prefix)/etc/profile.d/autojump.sh" ] && . "$(brew --prefix)/etc/profile.d/autojump.sh"
 
 # If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
 #   [ -f /Users/goofrider/.brew/share/autojump/autojump.fish ]; and source /Users/goofrider/.brew/share/autojump/autojump.fish

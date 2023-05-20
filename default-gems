@@ -1,12 +1,12 @@
 ############## Gems 2023 ##############
 
-doing			# see https://brettterpstra.com/projects/doing/
+# doing			# see https://brettterpstra.com/projects/doing/
 
 
 ############## dev ##############
 
 bundler
-dokku-cli		# see https://github.com/SebastianSzturo/dokku-cli
+# dokku-cli		# see https://github.com/SebastianSzturo/dokku-cli
 
 
 
