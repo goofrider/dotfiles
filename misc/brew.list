@@ -17,7 +17,8 @@ mas			# mac app store tool
 duti		# Select default apps for documents and URL schemes on macOS
 tag			# Manipulate and query tags on macOS files https://github.com/jdberry/tag/
 osxutils	# see https://github.com/specious/osxutils
-
+blacktop/tap/lporg		# launchpad settings backup
+						# see https://github.com/blacktop/lporg
 
 ###### system tools ######
 smartmontools
