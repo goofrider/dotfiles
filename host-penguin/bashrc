@@ -1,3 +1,6 @@
+###### Debian default section ######
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -111,3 +114,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+###### end Debian default section ######
+
+
+## asdf
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+
+
+## autojump
+
+. /usr/share/autojump/autojump.sh
+
