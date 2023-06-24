@@ -14,7 +14,8 @@
 HOSTNAME=$(hostname -s)
 DOTFILES_DIRS="$HOME/.dotfiles"
 EXCLUDES="misc inc old archive"
-SYMLINK_DIRS="scripts config/cheat/cheatsheats/personal"
+## symlink dirs can be unreliable. If it breaks it can overwrite atuff in  ~/.dotfiles with symlinks
+#SYMLINK_DIRS="scripts config/cheat/cheatsheats/personal"
 
 
 

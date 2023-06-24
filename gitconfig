@@ -2,9 +2,9 @@
 	protocol = https
 [core]
 	editor = nano
-	excludesfile = /Users/goofrider/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
-	name = Goofrider
+	name = Jeffrey Chan
 	email = goofrider@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -18,6 +18,6 @@
 	cmd = /Applications/Code/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/goofrider/.stCommitMsg
+	template = ~/.stCommitMsg
 [protocol]
 	version = 2
