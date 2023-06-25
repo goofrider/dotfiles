@@ -29,9 +29,14 @@ ohmyzsh/ohmyzsh       path:plugins/autojump
 rupa/z
         # installs z, dir jumper
 		# see https://github.com/rupa/z
+
+hyung/bashmarks
+  # see https://github.com/hyung/bashmarks
+
 #zpm-zsh/zshmarks
 		# port of https://github.com/twerth/bashmarks
 		# forked from https://github.com/jocelynmallon/zshmarks
+  # didn't work
 	    # If you were expecting this to be a port of similarly named Bashmarks (by huyng), you can setup zshmarks to behave in roughly the same way by adding the following aliases to your shell setup files/dotfiles:
 
 		   # alias g="c"
@@ -39,7 +44,7 @@ rupa/z
 		   # alias d="delmark"
 		   # alias p="marks"
 		   # alias l="marks"
-jocelynmallon/zshmarks
+#jocelynmallon/zshmarks
    		# port of https://github.com/twerth/bashmarks
    	    # If you were expecting this to be a port of similarly named Bashmarks (by huyng), you can setup zshmarks to behave in roughly the same way by adding the following aliases to your shell setup files/dotfiles:
 		
