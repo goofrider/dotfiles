@@ -3,6 +3,10 @@
 
 
 # See https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ for all OMZ plugins
+# See https://getantidote.github.io/usage for some examples
+
+
+
 
 ##### Init omz
 # following omz plugins might not load if this is not loaded first
@@ -10,9 +14,9 @@
 ohmyzsh/ohmyzsh
 
 
-
 ##### Basics
-
+ohmyzsh/ohmyzsh path:lib					# load OMZ as noted in https://github.com/mattmc3/antidote
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 
@@ -20,10 +24,29 @@ joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 ohmyzsh/ohmyzsh       path:plugins/autojump
         # Initializes autojump. Must have autojump already installed.
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump
 rupa/z
         # installs z, dir jumper
-		
+		# see https://github.com/rupa/z
+#zpm-zsh/zshmarks
+		# port of https://github.com/twerth/bashmarks
+		# forked from https://github.com/jocelynmallon/zshmarks
+	    # If you were expecting this to be a port of similarly named Bashmarks (by huyng), you can setup zshmarks to behave in roughly the same way by adding the following aliases to your shell setup files/dotfiles:
 
+		   # alias g="c"
+		   # alias s="mark"
+		   # alias d="delmark"
+		   # alias p="marks"
+		   # alias l="marks"
+jocelynmallon/zshmarks
+   		# port of https://github.com/twerth/bashmarks
+   	    # If you were expecting this to be a port of similarly named Bashmarks (by huyng), you can setup zshmarks to behave in roughly the same way by adding the following aliases to your shell setup files/dotfiles:
+		
+	       # alias g="jump"
+	       # alias s="bookmark"
+	       # alias d="deletemark"
+	       # alias p="showmarks"
+	       # alias l="showmarks
 
 ### Dev env ####
 
@@ -32,21 +55,26 @@ rupa/z
 # ohmyzsh/ohmyzsh     path:plugins/pyenv
 # ohmyzsh/ohmyzsh     path:plugins/dotenv
 ohmyzsh/ohmyzsh     path:plugins/asdf
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 
 ##### Goodies
 ohmyzsh/ohmyzsh     path:plugins/frontend-search
         # search packagaes online. Usage: frontend <context> <term> [<term>…] 
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/frontend-search
 ohmyzsh/ohmyzsh     path:plugins/urltools
         # provides `urlencode` and `urldecode`
+		# requires nodejs
 # ohmyzsh/ohmyzsh       path:plugins/git-prompt
         # installs zsh-git-prompt. Appears like so: (master↑3|✚1)
 
 
 ##### completion
 ohmyzsh/ohmyzsh     path:plugins/docker
-        # completion    
-ohmyzsh/ohmyzsh     path:plugins/thor
-        # completion
+        # docker completion    
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+#ohmyzsh/ohmyzsh     path:plugins/thor
+        # thor completion
+		# no longer exists
 #ohmyzsh/ohmyzsh     path:plugins/rails
         # completion and aliases r*
         # !!!!! Only works with omz !!!!
@@ -56,6 +84,7 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
         # Adds a wrapper for common gems:
         #       Looks for a binstub under ./bin/ and executes it (if present)
         #       Calls bundle exec <gem executable> otherwise
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/npx
         # automatically registers npx command-not-found handler if npx exists in your $PATH
 
@@ -96,6 +125,50 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
         # only provides shell init
 # ohmyzsh/ohmyzsh       path:plugins/pipenv
         # only provides short aliases
+
+
+
+
+
+### Antidote options
+
+# Kind
+# The kind annotation can be used to determine how a bundle should be treated.
+#
+# kind:zsh
+# The default is kind:zsh, which will look for files that match these globs:
+#
+# 	*.plugin.zsh
+# 	*.zsh
+# 	*.sh
+# 	*.zsh-theme
+#
+# kind:path
+# The kind:path mode will just put the plugin folder in your $PATH.
+#
+# kind:fpath
+# The kind:fpath only puts the plugin folder on the fpath, doing nothing else. It can be especially useful for completion scripts that aren’t intended to be sourced directly, or for prompts that support promptinit.
+#
+# kind:clone
+# The kind:clone only gets the plugin, doing nothing else. It can be useful for managing a package that isn’t directly used as a shell plugin.
+#
+# kind:defer
+# The kind:defer option defers loading of a plugin. This can be useful for plugins you don’t need available right away or are slow to load. Use with caution.
+#
+# Branch
+# You can also specify a branch to download, if you don’t want the main branch for whatever reason.
+#
+# Path
+# You may specify a subfolder or a specific file if the repo you are bundling contains multiple plugins. This is especially useful for frameworks like Oh-My-Zsh.
+#
+# You can also change how Antidote names the plugin directories by adding this to your .zshrc:
+# 	zstyle ':antidote:bundle' use-friendly-names 'yes'
+# Now, the directories where plugins are stored is nicer to read. For example:
+# 	https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions
+# becomes
+# 	zsh-users__zsh-autosuggestions
+
+
 
 
 

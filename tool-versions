@@ -1,3 +1,3 @@
-#ruby path:~/.brew/opt/ruby system 
 ruby 3.2.2 path:~/.brew/opt/ruby system
-
+nodejs 20.3.1 20.2.0 path:~/.brew/opt/node system
+python 3.11.3 ~/.brew/opt/python system

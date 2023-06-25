@@ -16,15 +16,16 @@ _debug_log "###### .zshrc begins ######"
 
 
 ##### default editor
-export EDITOR=/usr/bin/nano
-export VISUAL="$EDITOR"
-
+if type nano &>/dev/null ; then
+	export EDITOR=$(which nano)
+	export VISUAL="$EDITOR"
+fi
 
 
 ##### My Homebrew settings
-
-export HOMEBREW_NO_AUTO_UPDATE=1
-
+if type brew &>/dev/null ; then
+	export HOMEBREW_NO_AUTO_UPDATE=1
+fi
 
 
 ##### ohmyzsh
@@ -41,14 +42,49 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 ## EOL. Switch to Antidote in the future 
 ## https://github.com/mattmc3/antidote
 
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+# if type antibody &>/dev/null ; then
+# 	source <(antibody init)
+# 	if [ -f ~/.zsh_plugins.txt ] ; then
+# 		antibody bundle < ~/.zsh_plugins.txt
+# 	fi
+# fi
 
+
+#### antidote
+
+# To install antidote you can clone it with git:
+# 	git clone -depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+		 
+if type brew &>/dev/null && [ -f $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh ]; then
+	source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+	zstyle ':antidote:bundle' use-friendly-names 'yes'
+	test -e ${ZDOTDIR:-$HOME}/.zsh_plugins.txt && antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
+elif [ -f ~/.antidote/antidote.zsh ] ; then
+	source ~/.antidote/antidote.zsh
+	zstyle ':antidote:bundle' use-friendly-names 'yes'
+	test -e ${ZDOTDIR:-$HOME}/.zsh_plugins.txt && antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
+fi
+
+
+### https://github.com/zpm-zsh/bookmarks loaded with ~/.zsh_plugins.txt
+
+# alias g="c"
+# alias s="mark"
+# alias d="delmark"
+# alias p="marks"
+# alias l="marks"
+
+### https://github.com/jocelynmallon/zshmarks loaded with ~/.zsh_plugins.txt
+
+alias g="jump"
+alias s="bookmark"
+alias d="deletemark"
+alias p="showmarks"
+alias l="showmarks
 
 
 
 ########## Version Managers ##########
-
 
 
 #### ============= direnv begins ==================
@@ -91,8 +127,6 @@ _debug_log "Setup direnv"
 
 
 _debug_log "Setup asdf"
-
-
 
 #### asdf completions for zsh 
 ## https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
@@ -149,17 +183,6 @@ _debug_log "Setup asdf"
 # eval "$(pyenv init -)"
     
 
-# #### nodenv #####
-#
-# _debug_log "Setup nodenv"
-# eval "$(nodenv init -)"
-
-
-
-
-
-
-
 
 
 ########## manually installed tools ##########
@@ -168,9 +191,6 @@ _debug_log "Setup asdf"
 #### iTerm 2 Shell Integration ####
 _debug_log "Setup iTerm 2 integration"
 test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zsh || true
-
-
-
 
 
 
@@ -184,9 +204,11 @@ export BYOBU_PREFIX=$(brew --prefix)
 
 #### starship (cross-shell prompt)
 ## see https://github.com/starship/starship
+## Homebrew package not working, using MacPorts
 _debug_log "Setup Starship"
-eval "$(starship init zsh)"
-
+if type starship &>/dev/null ; then
+	eval "$(starship init zsh)"
+fi
 
 
 #### z (via homebrew)
