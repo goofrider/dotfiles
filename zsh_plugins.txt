@@ -17,6 +17,7 @@ ohmyzsh/ohmyzsh
 ##### Basics
 ohmyzsh/ohmyzsh path:lib					# load OMZ as noted in https://github.com/mattmc3/antidote
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/sudo
 joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 
