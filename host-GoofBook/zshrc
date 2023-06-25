@@ -199,8 +199,9 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 
 #### byobu
 _debug_log "Setup byobu"
-export BYOBU_PREFIX=$(brew --prefix)
-
+if type brew &>/dev/null && [ -x $(brew --prefix)/bin/byobu ] ; then
+  export BYOBU_PREFIX=$(brew --prefix)
+fi
 
 #### starship (cross-shell prompt)
 ## see https://github.com/starship/starship
