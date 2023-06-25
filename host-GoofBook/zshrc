@@ -76,11 +76,11 @@ fi
 
 ### https://github.com/jocelynmallon/zshmarks loaded with ~/.zsh_plugins.txt
 
-alias g="jump"
-alias s="bookmark"
-alias d="deletemark"
-alias p="showmarks"
-alias l="showmarks
+# alias g="jump"
+# alias s="bookmark"
+# alias d="deletemark"
+# alias p="showmarks"
+# alias l="showmarks
 
 
 
