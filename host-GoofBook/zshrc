@@ -104,10 +104,23 @@ fi
 # https://direnv.net/
 # https://github.com/direnv/direnv
 
-_debug_log "Setup direnv"
-
+# _debug_log "Setup direnv"
+#
 # #### init direnv
 # eval "$(direnv hook zsh)"
+
+
+## asdf-direnv
+_debug_log "Setup asdf+direnv"
+
+## run `asdf direnv setup --shell zsh --version system` first which updates ~/.config/asdf-direnv/zshrc
+
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ] ; then
+	source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+elif [ -x "$(command -v direnv)" ] ; then
+	eval "$(direnv hook zsh)"
+fi 
+
 
 
 ### general direnv config

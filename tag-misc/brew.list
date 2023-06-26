@@ -82,7 +82,9 @@ tealdeer				# tldr in rust					https://github.com/dbrgn/tealdeer
 
 
 ###### shell extras ######
-antibody		# see https://github.com/getantibody/antibody
+#antibody		# see https://github.com/getantibody/antibody
+antidote		# see https://github.com/mattmc3/antidote 
+				# and https://getantidote.github.io/
 starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
 			# dep: nerd font
 
@@ -166,9 +168,6 @@ salt					# dep: python, zeromq
 ### Env/version mamangers
 
 direnv			# see https://github.com/direnv/direnv
-
-
-
 asdf			# see https://github.com/asdf-vm/asdf !!!SLOW!!!!
 	## ===== asdf plugins =====
 	# direnv	https://github.com/asdf-community/asdf-direnv
