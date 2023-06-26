@@ -3,7 +3,7 @@
 
 
 # See https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ for all OMZ plugins
-# See https://getantidote.github.io/usage for some examples
+# See https://getantidote.github.io/usage and https://github.com/mattmc3/zdotdir/blob/main/.zplugins for some examples
 
 
 ##### Init omz
@@ -14,9 +14,13 @@ ohmyzsh/ohmyzsh
 
 
 ##### Basics
-ohmyzsh/ohmyzsh path:lib					# load OMZ as noted in https://github.com/mattmc3/antidote
+ohmyzsh/ohmyzsh path:lib					
+		# load OMZ as noted in https://github.com/mattmc3/antidote
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/lib
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/sudo
+		# press ESC twice to add sudo in front of cmdline
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
 joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 
@@ -61,7 +65,17 @@ huyng/bashmarks
 # ohmyzsh/ohmyzsh     path:plugins/pyenv
 # ohmyzsh/ohmyzsh     path:plugins/dotenv
 ohmyzsh/ohmyzsh     path:plugins/asdf
+		# initializes asdf
 		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+ohmyzsh/ohmyzsh     path:plugins/multipass
+		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/multipass
+		# 	mp	multipass
+		# 	mpl	multipass list
+		# 	mpla	multipass launch
+		# 	mpln	multipass launch --network en0 --network name=bridge0,mode=manual
+		# 	mps	multipass shell
+		# 	mpsp	multipass stop
+		# 	mpst	multipass start
 
 ##### Goodies
 ohmyzsh/ohmyzsh     path:plugins/frontend-search
