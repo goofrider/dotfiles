@@ -6,11 +6,10 @@
 # See https://getantidote.github.io/usage for some examples
 
 
-
-
 ##### Init omz
 # following omz plugins might not load if this is not loaded first
 # Rails plugin has this problem, also needed ZSH to be set
+
 ohmyzsh/ohmyzsh
 
 
@@ -23,7 +22,7 @@ joel-porquet/zsh-dircolors-solarized  		# dircolors-solarized
 
 ##### shell helpers
 
-ohmyzsh/ohmyzsh       path:plugins/autojump
+ohmyzsh/ohmyzsh	path:plugins/autojump
         # Initializes autojump. Must have autojump already installed.
 		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump
 rupa/z
@@ -31,7 +30,7 @@ rupa/z
 		# see https://github.com/rupa/z
 
 huyng/bashmarks
-  # see https://github.com/huyng/bashmarks
+  #see https://github.com/huyng/bashmarks
 
 #zpm-zsh/zshmarks
 		# port of https://github.com/twerth/bashmarks
@@ -47,7 +46,7 @@ huyng/bashmarks
 #jocelynmallon/zshmarks
    		# port of https://github.com/twerth/bashmarks
    	    # If you were expecting this to be a port of similarly named Bashmarks (by huyng), you can setup zshmarks to behave in roughly the same way by adding the following aliases to your shell setup files/dotfiles:
-		
+
 	       # alias g="jump"
 	       # alias s="bookmark"
 	       # alias d="deletemark"
@@ -57,6 +56,7 @@ huyng/bashmarks
 ### Dev env ####
 
 # ohmyzsh/ohmyzsh     path:plugins/direnv
+		# uses asdf+direnv integration instead
 # ohmyzsh/ohmyzsh     path:plugins/rbenv
 # ohmyzsh/ohmyzsh     path:plugins/pyenv
 # ohmyzsh/ohmyzsh     path:plugins/dotenv
@@ -65,7 +65,7 @@ ohmyzsh/ohmyzsh     path:plugins/asdf
 
 ##### Goodies
 ohmyzsh/ohmyzsh     path:plugins/frontend-search
-        # search packagaes online. Usage: frontend <context> <term> [<term>…] 
+        # search packagaes online. Usage: frontend <context> <term> [<term>…]
 		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/frontend-search
 ohmyzsh/ohmyzsh     path:plugins/urltools
         # provides `urlencode` and `urldecode`
@@ -76,7 +76,7 @@ ohmyzsh/ohmyzsh     path:plugins/urltools
 
 ##### completion
 ohmyzsh/ohmyzsh     path:plugins/docker
-        # docker completion    
+        # docker completion
 		# see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
 #ohmyzsh/ohmyzsh     path:plugins/thor
         # thor completion
@@ -95,6 +95,11 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
         # automatically registers npx command-not-found handler if npx exists in your $PATH
 
 
+
+
+
+
+
 ##### installed with Homebrew, may already have completions
 # ohmyzsh/ohmyzsh       path:plugins/git
         # only provides short aliase
@@ -103,7 +108,7 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 # ohmyzsh/ohmyzsh       path:plugins/git-flow
     # completion and aliases g*
 # ohmyzsh/ohmyzsh       path:plugins/gem
-        # completion for gem subcommands and installed gems 
+        # completion for gem subcommands and installed gems
         # (NOT woroking, already working under Homebrew?)
 # ohmyzsh/ohmyzsh       path:plugins/pip
         # completion

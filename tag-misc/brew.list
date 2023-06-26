@@ -82,8 +82,8 @@ tealdeer				# tldr in rust					https://github.com/dbrgn/tealdeer
 
 
 ###### shell extras ######
-#antibody		# see https://github.com/getantibody/antibody
-antidote		# see https://github.com/mattmc3/antidote 
+#antibody		# ZSH plugin manager, see https://github.com/getantibody/antibody
+antidote		# ZSH plugin manager, see https://github.com/mattmc3/antidote 
 				# and https://getantidote.github.io/
 starship	# minimal, blazing-fast shell prompt in rust https://github.com/starship/starship
 			# dep: nerd font
@@ -175,7 +175,12 @@ asdf			# see https://github.com/asdf-vm/asdf !!!SLOW!!!!
 	# python	https://github.com/danhper/asdf-python
 	# node		https://github.com/asdf-vm/asdf-nodejs
 
-
+lima			# run linux VMs like multipass
+	 			# see https://github.com/lima-vm/lima
+colima			# run Docker/k8s in a VM
+				# see https://github.com/abiosoft/colima
+sshocker		# ssh wrapper than provides reverse port forwarding and reverse file sharing
+				# see https://github.com/lima-vm/sshocker
 
 ### hosting provier cli
 #heroku/brew/heroku			# NPM
