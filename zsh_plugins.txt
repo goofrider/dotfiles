@@ -30,8 +30,8 @@ rupa/z
         # installs z, dir jumper
 		# see https://github.com/rupa/z
 
-hyung/bashmarks
-  # see https://github.com/hyung/bashmarks
+huyng/bashmarks
+  # see https://github.com/huyng/bashmarks
 
 #zpm-zsh/zshmarks
 		# port of https://github.com/twerth/bashmarks
@@ -135,9 +135,9 @@ ohmyzsh/ohmyzsh     path:plugins/bundler
 
 
 
-
-### Antidote options
-
+#
+# ## Antidote options
+#
 # Kind
 # The kind annotation can be used to determine how a bundle should be treated.
 #
