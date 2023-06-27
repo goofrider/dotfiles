@@ -5,3 +5,6 @@ Host *
 
 Host dokku.vm
     Port 3022
+
+Host *.vm 172.16.204.*
+	ForwardAgent yes

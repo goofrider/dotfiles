@@ -132,3 +132,35 @@ fi
 if [ -f /usr/share/autojump/autojump.sh ] ; then
 	. /usr/share/autojump/autojump.sh
 fi
+
+########## SSH agent for Chromebook
+## see https://gist.github.com/parsley42/f1871360204bb55c3d69f10ec05f5cee
+
+# Create your user systemd directory:
+# 	$ mkdir -p .config/systemd/user
+#
+# Edit the unit file .config/systemd/user/ssh-agent.service:
+#
+# 	[Unit]
+# 	Description=SSH key agent
+#
+# 	[Service]
+# 	Type=simple
+# 	Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+# 	ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+#
+# 	[Install]
+# 	WantedBy=default.target
+#
+# Enable the service:
+# 	$ systemctl --user enable ssh-agent
+#
+# Add setting of SSH_AUTH_SOCK to end of .bashrc:
+# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
+if [ -z "$SSH_AUTH_SOCK" ] && [ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]; then
+	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
+
+

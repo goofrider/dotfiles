@@ -70,12 +70,12 @@ fi
 # To install antidote you can clone it with git:
 # 	git clone -depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
 		 
-if type brew &>/dev/null && [ -f $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh ]; then
-	source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+if type brew &>/dev/null && [ -f "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh" ]; then
+	source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 	zstyle ':antidote:bundle' use-friendly-names 'yes'
 	test -e ${ZDOTDIR:-$HOME}/.zsh_plugins.txt && antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
-elif [ -f ~/.antidote/antidote.zsh ] ; then
-	source ~/.antidote/antidote.zsh
+elif [ -f "~/.antidote/antidote.zsh "] ; then
+	source "~/.antidote/antidote.zsh"
 	zstyle ':antidote:bundle' use-friendly-names 'yes'
 	test -e ${ZDOTDIR:-$HOME}/.zsh_plugins.txt && antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 fi
@@ -183,8 +183,8 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 
 #### byobu
 _debug_log "Setup byobu"
-if type brew &>/dev/null && [ -x $(brew --prefix)/bin/byobu ] ; then
-  export BYOBU_PREFIX=$(brew --prefix)
+if type brew &>/dev/null && [ -x "$(brew --prefix)/bin/byobu" ] ; then
+  export BYOBU_PREFIX="$(brew --prefix)"
 fi
 
 #### starship (cross-shell prompt)
