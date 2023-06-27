@@ -1,10 +1,14 @@
 Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-
+	AddKeysToAgent yes
+	UseKeychain yes
+	IdentityFile ~/.ssh/id_rsa
+	
+	RemoteForward	52698 localhost:52698
+		# for rmate. see https://github.com/textmate/rmate
+		# and https://github.com/aurora/rmate
+		
 Host dokku.vm
     Port 3022
 
 Host *.vm 172.16.204.*
-	ForwardAgent yes
+	ForwardAgent	yes
